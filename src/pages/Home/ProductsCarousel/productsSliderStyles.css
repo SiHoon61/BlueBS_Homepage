@@ -1,0 +1,26 @@
+.slider-container2 .slick-list{
+    width: 2550px;
+    height: 600px;
+}
+
+.slider-container2 .slick-slider{
+  position: static;
+}
+
+.slider-container2 .slick-prev {
+  z-index: 10;
+  left: 10.5%;
+  top: 250px;
+}
+
+.slider-container2 .slick-next {
+    z-index: 10;
+    left: 15%;
+    top: 250px;
+}
+
+.slider-container2 .slick-prev:before,
+.slider-container2 .slick-next:before
+{
+	display: none;				
+}
