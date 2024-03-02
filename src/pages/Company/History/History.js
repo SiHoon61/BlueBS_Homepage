@@ -128,7 +128,12 @@ const History = () => {
                             녹색경영대상 수상
                         </Content>
                     </MiddleHistoryContainer>
-                    <Img2011 $isFixed={is2011Fixed} />
+                    <ImgContainer $isFixed={is2011Fixed}>
+                        2011 ~ 2015
+                        <Img2011 />
+                        <ImgDescription>
+                        </ImgDescription>
+                    </ImgContainer>
                     <MiddleHistoryContainer>
                         <Year>
                             2011

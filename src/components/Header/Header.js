@@ -25,7 +25,10 @@ const Header = () => {
         navigate("/greeting");
     }
     const goHistory = () => {
-        navigate("/History");
+        navigate("/history");
+    }
+    const goAwards = () => {
+        navigate("/awards");
     }
     //마우스 호버
     const [companyHovered, setCompanyHovered] = useState(false);
@@ -67,7 +70,7 @@ const Header = () => {
                             $width={140}>
                             <TextTextBox onClick={goCeoGreeting}>CEO 인사말</TextTextBox>
                             <TextTextBox onClick={goHistory}>연혁</TextTextBox>
-                            <TextTextBox onClick={() => alert('인증 및 수상!')}>인증 및 수상</TextTextBox>
+                            <TextTextBox onClick={goAwards}>인증 및 수상</TextTextBox>
                             <TextTextBox onClick={() => alert('오시는길!')}>기업 부설 연구소</TextTextBox>
                         </HoverBox>
                     </IndexLI>

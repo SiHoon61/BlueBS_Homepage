@@ -28,7 +28,7 @@ export const TitleTextBox = styled.div`
     max-width: 1400px;
     margin: 0 auto;
     color: white;
-    font-size: 12px;
+    font-size: 14px;
     font-family: var(--font-sansRegular);
 `
 
@@ -126,12 +126,12 @@ export const ImgContainer = styled.div`
     position: ${props => props.$isFixed ? 'fixed' : 'absolute'};
     top: ${props => props.$isFixed ? '255' : 'auto'}px;
     right: 53%;
-    font-size: 36px;
+    font-size: 32px;
     font-family: var(--font-sansBold);
 `
 
 export const ImgDescription = styled.div`
-    
+
 `
 
 export const Img2007 = styled.img.attrs({

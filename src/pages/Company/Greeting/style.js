@@ -24,7 +24,7 @@ export const TitleTextBox = styled.div`
     max-width: 1400px;
     margin: 0 auto;
     color: white;
-    font-size: 12px;
+    font-size: 14px;
     font-family: var(--font-sansRegular);
 `
 
