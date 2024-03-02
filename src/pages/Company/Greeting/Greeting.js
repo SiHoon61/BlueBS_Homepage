@@ -7,6 +7,8 @@ import {
     TitleMainText,
     MainContainer,
     BodyTitle,
+    RedText,
+    GreenText,
     Body,
     PictureBox,
     Picture,
@@ -28,8 +30,8 @@ const Greeting = () => {
             </TitleBar>
             <MainContainer>
                 <BodyTitle>
-                    신개념의 초격차 기술을 확보한 블루비에스는<br/>
-                    환경분야의 최고 기업으로 발돋움하기 위해<br/>
+                    <RedText>신개념의 초격차 기술</RedText>을 확보한 블루비에스는<br/>
+                    <GreenText> 환경분야의 최고 기업</GreenText>으로 발돋움하기 위해<br />
                     최선을 다할 것입니다.
                 </BodyTitle>
                 <Body>

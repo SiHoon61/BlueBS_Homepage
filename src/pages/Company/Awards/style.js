@@ -137,6 +137,12 @@ export const EmptyBox = styled.div`
 export const AwardImg = styled.img`
     width: 300px;
     height: 425px;
+    border: 1px solid grey;
+`
+
+export const NoBorderAwardImg = styled.img`
+    width: 300px;
+    height: 425px;
 `
 
 export const AwardDescription = styled.div`

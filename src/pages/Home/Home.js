@@ -15,6 +15,7 @@ import {
     TechLeftImg,
     TechMiddleImg,
     TechRightImg,
+    TechTextContainer,
     TechTextBox,
     TectTextArrow,
     BusinessContainer,
@@ -31,7 +32,7 @@ import BusinessCarousel from './businessCarousel/BusinessCarousel'
 import ProductsCarousel from './ProductsCarousel/ProductsCarousel'
 
 function useWindowSize() {
-    
+
     // 초기 state 값은 with undefined width/height로 세팅한다.
     const [windowSize, setWindowSize] = useState({
         width: undefined,
@@ -81,22 +82,31 @@ const Home = () => {
                 </TechText>
                 <TechSubIndexContainer $width={size.width}>
                     <TechLeftImg $width={size.width / 3} >
-                        <TechTextBox>
-                            전기촉매장치
-                            <TectTextArrow/>
-                        </TechTextBox>
+                        <TechTextContainer>
+                            신개념 초격차
+                            <TechTextBox>
+                                전기촉매장치
+                                <TectTextArrow />
+                            </TechTextBox>
+                        </TechTextContainer>
                     </TechLeftImg>
                     <TechMiddleImg $width={size.width / 3} >
-                        <TechTextBox>
-                            FDA/MSF 여과장치
-                            <TectTextArrow />
-                        </TechTextBox>
+                        <TechTextContainer>
+                            무약품 세정
+                            <TechTextBox>
+                                FDA/MSF 여과장치
+                                <TectTextArrow />
+                            </TechTextBox>
+                        </TechTextContainer>
                     </TechMiddleImg>
                     <TechRightImg $width={size.width / 3} >
-                        <TechTextBox>
-                            나노버블장치
-                            <TectTextArrow />
-                        </TechTextBox>
+                        <TechTextContainer>
+                            막힘 없는
+                            <TechTextBox>
+                                나노버블장치
+                                <TectTextArrow />
+                            </TechTextBox>
+                        </TechTextContainer>
                     </TechRightImg>
                 </TechSubIndexContainer>
             </TechContainer>
@@ -109,14 +119,14 @@ const Home = () => {
                 </BusinessTextBox>
                 <BusinessCarousel />
             </BusinessContainer>
-            
+
             <ProductsContainer>
                 <ProductsText>
                     Products
                 </ProductsText>
                 <ProductsCarousel />
             </ProductsContainer>
-            
+
             <NewsContainer>
                 <NewsText>
                     News

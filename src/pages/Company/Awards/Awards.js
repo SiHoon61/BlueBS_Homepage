@@ -58,6 +58,7 @@ import {
     AwardDescription,
     AwardName,
     AwardImg,
+    NoBorderAwardImg,
     PatentName,
 } from './style'
 
@@ -105,7 +106,7 @@ const Awards = () => {
                 <CertificationPart $isSelect={isSelect}>
                     <RowContainer>
                         <AwardBox>
-                            <AwardImg src={certification1} alt='certification1' />
+                            <NoBorderAwardImg src={certification1} alt='certification1' />
                             <AwardDescription>
                                 GT-11-00001
                                 <AwardName>
@@ -114,7 +115,7 @@ const Awards = () => {
                             </AwardDescription>
                         </AwardBox>
                         <AwardBox>
-                            <AwardImg src={certification2} alt='certification2' />
+                            <NoBorderAwardImg src={certification2} alt='certification2' />
                             <AwardDescription>
                                 GT-11-00001
                                 <AwardName>
@@ -123,7 +124,7 @@ const Awards = () => {
                             </AwardDescription>
                         </AwardBox>
                         <AwardBox>
-                            <AwardImg src={certification3} alt='certification3' />
+                            <NoBorderAwardImg src={certification3} alt='certification3' />
                             <AwardDescription>
                                 GE-11-00012
                                 <AwardName>
@@ -132,7 +133,7 @@ const Awards = () => {
                             </AwardDescription>
                         </AwardBox>
                         <AwardBox>
-                            <AwardImg src={certification4} alt='certification4' />
+                            <NoBorderAwardImg src={certification4} alt='certification4' />
                             <AwardDescription>
                                 GE-11-00012
                                 <AwardName>
@@ -143,7 +144,7 @@ const Awards = () => {
                     </RowContainer>
                     <RowContainer>
                         <AwardBox>
-                            <AwardImg src={certification5} alt='certification5' />
+                            <NoBorderAwardImg src={certification5} alt='certification5' />
                             <AwardDescription>
                                 GT-16-00123
                                 <AwardName>
@@ -152,7 +153,7 @@ const Awards = () => {
                             </AwardDescription>
                         </AwardBox>
                         <AwardBox>
-                            <AwardImg src={certification6} alt='certification6' />
+                            <NoBorderAwardImg src={certification6} alt='certification6' />
                             <AwardDescription>
                                 GT-20-00822
                                 <AwardName>
@@ -161,7 +162,7 @@ const Awards = () => {
                             </AwardDescription>
                         </AwardBox>
                         <AwardBox>
-                            <AwardImg src={certification7} alt='certification7' />
+                            <NoBorderAwardImg src={certification7} alt='certification7' />
                             <AwardDescription>
                                 제 2009112311호
                                 <AwardName>
@@ -170,7 +171,7 @@ const Awards = () => {
                             </AwardDescription>
                         </AwardBox>
                         <AwardBox>
-                            <AwardImg src={certification8} alt='certification8' />
+                            <NoBorderAwardImg src={certification8} alt='certification8' />
                             <AwardDescription>
                                 제 20150113742호
                                 <AwardName>
@@ -181,7 +182,7 @@ const Awards = () => {
                     </RowContainer>
                     <RowContainer>
                         <AwardBox>
-                            <AwardImg src={certification9} alt='certification9' />
+                            <NoBorderAwardImg src={certification9} alt='certification9' />
                             <AwardDescription>
                                 제 2022-351호
                                 <AwardName>
@@ -190,7 +191,7 @@ const Awards = () => {
                             </AwardDescription>
                         </AwardBox>
                         <AwardBox>
-                            <AwardImg src={certification10} alt='certification10' />
+                            <NoBorderAwardImg src={certification10} alt='certification10' />
                             <AwardDescription>
                                 제 51-137호
                                 <AwardName>
@@ -199,7 +200,7 @@ const Awards = () => {
                             </AwardDescription>
                         </AwardBox>
                         <AwardBox>
-                            <AwardImg src={certification11} alt='certification11' />
+                            <NoBorderAwardImg src={certification11} alt='certification11' />
                             <AwardDescription>
                                 제 2023-7호
                                 <AwardName>
@@ -231,7 +232,7 @@ const Awards = () => {
                             </AwardDescription>
                         </AwardBox>
                         <AwardBox>
-                            <AwardImg src={award3}
+                            <NoBorderAwardImg src={award3}
                                 alt='award' />
                             <AwardDescription>
                                 <AwardName>
@@ -240,7 +241,7 @@ const Awards = () => {
                             </AwardDescription>
                         </AwardBox>
                         <AwardBox>
-                            <AwardImg src={award4}
+                            <NoBorderAwardImg src={award4}
                                 alt='award' />
                             <AwardDescription>
                                 <AwardName>
@@ -251,7 +252,7 @@ const Awards = () => {
                     </RowContainer>
                     <RowContainer>
                         <AwardBox>
-                            <AwardImg src={award5}
+                            <NoBorderAwardImg src={award5}
                                 alt='award' />
                             <AwardDescription>
                                 <AwardName>
@@ -267,11 +268,11 @@ const Awards = () => {
                 <PatentPart $isSelect={isSelect}>
                     <RowContainer>
                         <AwardBox>
-                            <AwardImg src={patent0}
+                            <NoBorderAwardImg src={patent0}
                                 alt='patent' />
                             <AwardDescription>
                                 <PatentName>
-                                    미국특허
+                                    전기분해를 이용한 질소, 인 제거 방법 및 장치
                                 </PatentName>
                             </AwardDescription>
                         </AwardBox>

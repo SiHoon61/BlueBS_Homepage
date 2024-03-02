@@ -116,15 +116,24 @@ export const TechRightImg = styled.div`
     }
     transition: opacity 0.3s, width 0.3s;
 `
+
+export const TechTextContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    color: #FFEA32;
+    font-size: 32px;
+    font-family: var(--font-sansBold);
+    position: absolute;
+    bottom: 15%;
+    left: 8%;
+`
+
 export const TechTextBox = styled.div`
     font-size: 48px;
     font-family: var(--font-sansBold);
     display: flex;
     flex-direction: row;
     align-items: center;
-    position: absolute;
-    bottom: 15%;
-    left: 8%;
     color: white;
 `
 

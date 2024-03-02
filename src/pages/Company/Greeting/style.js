@@ -43,9 +43,18 @@ export const MainContainer = styled.div`
 
 export const BodyTitle = styled.div`
     max-width: 1400px;
+    width: 985px;
     font-size: 48px;
     margin: 0 auto;
     font-family: var(--font-sansBold);
+`
+
+export const RedText = styled.span`
+    color: #C50000;
+`
+
+export const GreenText = styled.span`
+    color: #1E9500;
 `
 
 export const Body = styled.div`
