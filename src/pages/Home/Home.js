@@ -31,6 +31,7 @@ import BusinessCarousel from './businessCarousel/BusinessCarousel'
 import ProductsCarousel from './ProductsCarousel/ProductsCarousel'
 
 function useWindowSize() {
+    
     // 초기 state 값은 with undefined width/height로 세팅한다.
     const [windowSize, setWindowSize] = useState({
         width: undefined,

@@ -2,11 +2,11 @@ import styled from "styled-components";
 
 //img
 import downArrow from '../../assets/Home/downArrow.svg'
-import techLeft from '../../assets/Home/techLeft.svg'
-import techMiddle from '../../assets/Home/techMiddle.svg'
-import techRight from '../../assets/Home/techRight.svg'
+import techLeft from '../../assets/Home/techLeft.png'
+import techMiddle from '../../assets/Home/techMiddle.png'
+import techRight from '../../assets/Home/techRight.png'
 import boxArrow from '../../assets/Home/boxArrow.svg'
-import productsBackground from '../../assets/Home/productsBackground.svg'
+import productsBackground from '../../assets/Home/productsBackground.png'
 
 
 export const VideoContainer = styled.div`
@@ -62,6 +62,7 @@ export const TechSubIndexContainer = styled.div`
 
 export const TechLeftImg = styled.div`
     position: relative;
+    background-blend-mode: multiply;
     background: linear-gradient(180deg, rgba(36, 36, 36, 0.00) 0%, rgba(36, 36, 36, 0.00) 0.01%, rgba(36, 36, 36, 0.46) 81.5%), url(${techLeft});
     width: ${props => props.$width}px;
     background-size: cover;

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from "react-router-dom";
 
 //style
 import {
@@ -15,6 +16,17 @@ import {
 
 
 const Header = () => {
+    //navigation
+    const navigate = useNavigate();
+    const goHome = () => {
+        navigate("/");
+    }
+    const goCeoGreeting = () => {
+        navigate("/greeting");
+    }
+    const goHistory = () => {
+        navigate("/History");
+    }
     //마우스 호버
     const [companyHovered, setCompanyHovered] = useState(false);
     const [technologyHovered, setTechnologyHovered] = useState(false);
@@ -44,7 +56,7 @@ const Header = () => {
 
     return (
         <Container $state={headerStyle}>
-            {headerStyle === 'top' ? <WhiteLogo></WhiteLogo> : <BlueLogo></BlueLogo>}
+            {headerStyle === 'top' ? <WhiteLogo onClick={goHome}></WhiteLogo> : <BlueLogo onClick={goHome}></BlueLogo>}
             <IndexContainer>
                 <IndexUL>
                     <IndexLI onMouseEnter={() => setCompanyHovered(true)}
@@ -53,8 +65,8 @@ const Header = () => {
                         <HoverBox
                             $isHovered={companyHovered}
                             $width={140}>
-                            <TextTextBox onClick={() => alert('CEO 인사말!')}>CEO 인사말</TextTextBox>
-                            <TextTextBox onClick={() => alert(' 연혁!')}>연혁</TextTextBox>
+                            <TextTextBox onClick={goCeoGreeting}>CEO 인사말</TextTextBox>
+                            <TextTextBox onClick={goHistory}>연혁</TextTextBox>
                             <TextTextBox onClick={() => alert('인증 및 수상!')}>인증 및 수상</TextTextBox>
                             <TextTextBox onClick={() => alert('오시는길!')}>기업 부설 연구소</TextTextBox>
                         </HoverBox>

@@ -29,11 +29,20 @@ export const TextBox = styled.div`
 export const CompanyName = styled.div`
     font-size: 22px;
     margin-bottom: 15px;
+    padding: 0 20px;
  `
 
-export const CompanyInformation = styled.div`
+export const CompanyInformation = styled.ul`
+    display: flex;
+    width: 1200px;
+    list-style-type: none;
     font-size: 18px;
+    padding: 0px;
  `
+
+export const Content = styled.li`
+    padding: 0 20px;
+`
 
 export const EmptyBox = styled.div`
     margin: auto 80px;

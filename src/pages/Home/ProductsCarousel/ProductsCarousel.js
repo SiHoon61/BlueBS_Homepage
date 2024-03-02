@@ -5,12 +5,12 @@ import "slick-carousel/slick/slick-theme.css";
 import "./productsSliderStyles.css"
 
 //img
-import products1 from '../../../assets/Home/products1.svg'
-import products2 from '../../../assets/Home/products2.svg'
-import products3 from '../../../assets/Home/products3.svg'
-import products4 from '../../../assets/Home/products4.svg'
-import products5 from '../../../assets/Home/products5.svg'
-import products6 from '../../../assets/Home/products6.svg'
+import products1 from '../../../assets/Home/products1.png'
+import products2 from '../../../assets/Home/products2.png'
+import products3 from '../../../assets/Home/products3.png'
+import products4 from '../../../assets/Home/products4.png'
+import products5 from '../../../assets/Home/products5.png'
+import products6 from '../../../assets/Home/products6.png'
 
 //style
 import {
@@ -47,7 +47,7 @@ function SwipeToSlide() {
                 <Prev />
             </SlickButtonFix>
         )
-        
+
     };
     return (
         <SliderContainer className="slider-container2">

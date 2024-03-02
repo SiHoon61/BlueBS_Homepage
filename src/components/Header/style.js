@@ -23,6 +23,7 @@ export const WhiteLogo = styled.img.attrs({
     src: whiteLogo,
     alt: "흑백로고",
 })`
+    cursor: pointer;
     height: 60px;
     margin-left: 80px;
 `;
@@ -31,6 +32,7 @@ export const BlueLogo = styled.img.attrs({
     src: blueLogo,
     alt: "컬러로고",
 })`
+    cursor: pointer;
     height: 60px;
     margin-left: 80px;
 `;
@@ -71,7 +73,7 @@ export const HoverBox = styled.div`
     width: ${props => props.$width}px;
     top: ${({ $isHovered }) => ($isHovered ? 70 : 60)}px;;
     background-color: white; 
-    padding: 20px 0px 20px 0px; 
+    padding: 15px 0px 15px 0px; 
     box-shadow: 0px 10px 25px rgba(49,49,63,0.3);
     border-radius: 7px;
     opacity: ${({ $isHovered }) => ($isHovered ? 1 : 0)};
@@ -84,4 +86,5 @@ export const TextTextBox = styled.div`
     font-size: 16px;
     font-family: var(--font-sansRegular);
     margin: 8px;
+    cursor: pointer;
 `

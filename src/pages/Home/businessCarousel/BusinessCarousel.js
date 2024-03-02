@@ -5,13 +5,13 @@ import "slick-carousel/slick/slick-theme.css";
 import "./businessSliderStyles.css";
 
 //img
-import business1 from '../../../assets/Home/business1.svg'
-import business2 from '../../../assets/Home/business2.svg'
-import business3 from '../../../assets/Home/business3.svg'
-import business4 from '../../../assets/Home/business4.svg'
-import business5 from '../../../assets/Home/business5.svg'
-import business6 from '../../../assets/Home/business6.svg'
-import business7 from '../../../assets/Home/business7.svg'
+import business1 from '../../../assets/Home/business1.png'
+import business2 from '../../../assets/Home/business2.png'
+import business3 from '../../../assets/Home/business3.png'
+import business4 from '../../../assets/Home/business4.png'
+import business5 from '../../../assets/Home/business5.png'
+import business6 from '../../../assets/Home/business6.png'
+import business7 from '../../../assets/Home/business7.png'
 
 import {
     SliderContainer,
