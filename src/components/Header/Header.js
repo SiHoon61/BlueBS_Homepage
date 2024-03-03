@@ -30,6 +30,14 @@ const Header = () => {
     const goAwards = () => {
         navigate("/awards");
     }
+    const goElectroCatalyst = () => {
+        navigate("/electroCatalyst");
+    }
+    const goFilter = () => {
+        navigate("/filter");
+    }
+
+    
     //마우스 호버
     const [companyHovered, setCompanyHovered] = useState(false);
     const [technologyHovered, setTechnologyHovered] = useState(false);
@@ -79,8 +87,8 @@ const Header = () => {
                         <HoverBox
                             $isHovered={technologyHovered}
                             $width={170}>
-                            <TextTextBox onClick={() => alert('전기촉매 장치!')}>전기촉매 장치</TextTextBox>
-                            <TextTextBox onClick={() => alert(' FDA/MSF 여과 장치!')}>FDA/MSF 여과 장치</TextTextBox>
+                            <TextTextBox onClick={goElectroCatalyst}>전기촉매 장치</TextTextBox>
+                            <TextTextBox onClick={goFilter}>FDA/MSF 여과 장치</TextTextBox>
                             <TextTextBox onClick={() => alert('나노버블 장치!')}>나노버블 장치</TextTextBox>
                         </HoverBox>
                     </IndexLI>

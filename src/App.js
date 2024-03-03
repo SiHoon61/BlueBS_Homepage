@@ -8,6 +8,8 @@ import Home from './pages/Home/Home';
 import Greeting from './pages/Company/Greeting/Greeting';
 import History from './pages/Company/History/History';
 import Awards from './pages/Company/Awards/Awards';
+import ElectroCatalyst from './pages/Technology/ElectroCatalyst/ElectroCatalyst';
+import Filter from './pages/Technology/Filter/Filter';
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
           <Route path="/greeting" element={<Greeting />}></Route>
           <Route path="/history" element={<History />}></Route>
           <Route path="/awards" element={<Awards />}></Route>
+          <Route path="/electroCatalyst" element={<ElectroCatalyst />}></Route>
+          <Route path="/filter" element={<Filter />}></Route>
         </Routes>
         <Bottom></Bottom>
       </Router>
