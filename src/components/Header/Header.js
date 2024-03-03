@@ -37,6 +37,9 @@ const Header = () => {
         navigate("/filter");
     }
 
+    const goMap = () => {
+        navigate("/map");
+    }
     
     //마우스 호버
     const [companyHovered, setCompanyHovered] = useState(false);
@@ -125,7 +128,7 @@ const Header = () => {
                             $isHovered={communicationHovered}
                             $width={90}>
                             <TextTextBox onClick={() => alert('CEO 인사말!')}>뉴스룸</TextTextBox>
-                            <TextTextBox onClick={() => alert(' 오시는길!')}>오시는길</TextTextBox>
+                            <TextTextBox onClick={goMap}>오시는길</TextTextBox>
                         </HoverBox>
                     </IndexLI>
                 </IndexUL>
