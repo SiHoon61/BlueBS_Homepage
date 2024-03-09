@@ -2,9 +2,10 @@ import styled from "styled-components";
 
 //img
 import downArrow from '../../assets/Home/downArrow.svg'
-import techLeft from '../../assets/Home/techLeft.png'
-import techMiddle from '../../assets/Home/techMiddle.png'
-import techRight from '../../assets/Home/techRight.png'
+import tech1 from '../../assets/Home/tech1.png'
+import tech2 from '../../assets/Home/tech2.png'
+import tech3 from '../../assets/Home/tech3.png'
+import tech4 from '../../assets/Home/tech4.png'
 import boxArrow from '../../assets/Home/boxArrow.svg'
 import productsBackground from '../../assets/Home/productsBackground.png'
 
@@ -59,11 +60,10 @@ export const TechSubIndexContainer = styled.div`
     max-width: ${props => props.$width}px;
     display:flex;
 `
-
-export const TechLeftImg = styled.div`
+export const Tech1 = styled.div`
     position: relative;
     background-blend-mode: multiply;
-    background: linear-gradient(180deg, rgba(36, 36, 36, 0.00) 0%, rgba(36, 36, 36, 0.00) 0.01%, rgba(36, 36, 36, 0.46) 81.5%), url(${techLeft});
+    background: linear-gradient(180deg, rgba(36, 36, 36, 0.00) 0%, rgba(36, 36, 36, 0.00) 0.01%, rgba(36, 36, 36, 0.46) 81.5%), url(${tech1});
     width: ${props => props.$width}px;
     background-size: cover;
     background-repeat: no-repeat;
@@ -79,10 +79,29 @@ export const TechLeftImg = styled.div`
     transition: opacity 0.3s, width 0.3s;
 `
 
-export const TechMiddleImg = styled.div`
+export const Tech2 = styled.div`
     position: relative;
     background-blend-mode: multiply;
-    background: linear-gradient(180deg, rgba(36, 36, 36, 0.00) 0%, rgba(36, 36, 36, 0.00) 0.01%, rgba(36, 36, 36, 0.46) 81.5%), url(${techMiddle});
+    background: linear-gradient(180deg, rgba(36, 36, 36, 0.00) 0%, rgba(36, 36, 36, 0.00) 0.01%, rgba(36, 36, 36, 0.46) 81.5%), url(${tech2});
+    width: ${props => props.$width}px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    &:hover{
+        width: calc(${props => props.$width}px * 1.5);
+        transition: 0.3s;
+        img {
+            opacity: 1;
+            transition: 0.3s;
+        }
+    }
+    transition: opacity 0.3s, width 0.3s;
+`
+
+export const Tech3 = styled.div`
+    position: relative;
+    background-blend-mode: multiply;
+    background: linear-gradient(180deg, rgba(36, 36, 36, 0.00) 0%, rgba(36, 36, 36, 0.00) 0.01%, rgba(36, 36, 36, 0.46) 81.5%), url(${tech3});
     width: ${props => props.$width}px;
     background-size: cover;
     background-repeat: no-repeat;
@@ -98,10 +117,10 @@ export const TechMiddleImg = styled.div`
     transition: opacity 0.3s, width 0.3s;
 `
 
-export const TechRightImg = styled.div`
+export const Tech4 = styled.div`
     position: relative; 
     background-blend-mode: multiply;
-    background: linear-gradient(180deg, rgba(36, 36, 36, 0.00) 0%, rgba(36, 36, 36, 0.00) 0.01%, rgba(36, 36, 36, 0.46) 81.5%), url(${techRight});
+    background: linear-gradient(180deg, rgba(36, 36, 36, 0.00) 0%, rgba(36, 36, 36, 0.00) 0.01%, rgba(36, 36, 36, 0.46) 81.5%), url(${tech4});
     width: ${props => props.$width}px;
     background-size: cover;
     background-repeat: no-repeat;
@@ -121,7 +140,7 @@ export const TechTextContainer = styled.div`
     display: flex;
     flex-direction: column;
     color: #FFEA32;
-    font-size: 32px;
+    font-size: 30px;
     font-family: var(--font-sansBold);
     position: absolute;
     bottom: 15%;
@@ -129,7 +148,7 @@ export const TechTextContainer = styled.div`
 `
 
 export const TechTextBox = styled.div`
-    font-size: 48px;
+    font-size: 44px;
     font-family: var(--font-sansBold);
     display: flex;
     flex-direction: row;

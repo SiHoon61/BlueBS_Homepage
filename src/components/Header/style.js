@@ -63,6 +63,7 @@ export const IndexLI = styled.li`
     padding: 0 50px;
     font-size: 18px;
     font-family: var(--font-sansMedium);
+    cursor: pointer;
 `
 
 export const HoverBox = styled.div`

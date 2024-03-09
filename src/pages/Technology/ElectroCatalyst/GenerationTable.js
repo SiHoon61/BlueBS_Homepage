@@ -19,18 +19,19 @@ const TD = styled.td`
 
 const R1TD = styled.td`
   border: 1px solid #E2E2E2;
-  border-top: 3px solid black;
   text-align: center;
   padding: 18px;
 `;
 
 const R2TDLeft = styled.td`
+  font-family: var(--font-sansBold);
   border: 1px solid #E2E2E2;
   text-align: center;
   padding: 18px;
   background-color: #F4B39E;
 `
 const R2TDRight = styled.td`
+  font-family: var(--font-sansBold);
   border: 1px solid #E2E2E2;
   text-align: center;
   padding: 18px;

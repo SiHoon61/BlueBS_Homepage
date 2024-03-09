@@ -1,5 +1,11 @@
 import React, { useState, useEffect } from 'react';
 
+//img
+import img2007 from '../../../assets/Company/img2007.png'
+import img2011 from '../../../assets/Company/img2011.png'
+import img2016 from '../../../assets/Company/img2016.png'
+import img2023 from '../../../assets/Company/img2023.png'
+
 import {
     TitleBar,
     TitleTextBox,
@@ -16,42 +22,11 @@ import {
     MiddleContainer,
     MiddleHistoryContainer,
     ImgContainer,
-    Img2007,
-    Img2011,
+    HistoryImg,
     ImgDescription,
 } from './style'
 
 const History = () => {
-    const [is2007Fixed, setIs2007Fixed] = useState(false);
-    const [is2011Fixed, setIs2011Fixed] = useState(false);
-
-    const fixed2007Start = 550;
-    const fixed2011Start = 1220;
-    const fixed2016Start = 1920;
-    const handleScroll = () => {
-        const currentScroll = window.scrollY;
-        if (currentScroll >= fixed2007Start && currentScroll <= (fixed2011Start + 300)) {
-            setIs2007Fixed(true);
-        } else {
-            setIs2007Fixed(false);
-        }
-        if (currentScroll >= fixed2011Start && currentScroll <= fixed2016Start) {
-            setIs2011Fixed(true);
-            console.log(currentScroll);
-        } else {
-            setIs2011Fixed(false);
-        }
-    };
-
-    useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
-
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
-
-
     return (
         <>
             <TitleBar>
@@ -74,10 +49,28 @@ const History = () => {
                     </Bigcontent>
                 </HistoryStart>
                 <MiddleContainer>
-                    <ImgContainer $isFixed={is2007Fixed}>
-                        2007 ~ 2010
-                        <Img2007 />
+                    <ImgContainer $isTop={760}>
+                        <HistoryImg src={img2007} alt="2007" />
                         <ImgDescription>
+                            블루비에스 본사 수원 서울대학교 농생명과학 벤처
+                        </ImgDescription>
+                    </ImgContainer>
+                    <ImgContainer $isTop={1600}>
+                        <HistoryImg src={img2011} alt="2011" />
+                        <ImgDescription>
+                            농림축산식품부 2013 생명산업대전 수상
+                        </ImgDescription>
+                    </ImgContainer>
+                    <ImgContainer $isTop={2400}>
+                        <HistoryImg src={img2016} alt="2016" />
+                        <ImgDescription>
+                            새만금 5공구 FDA(MSF)마이크로 여과 농업용수
+                        </ImgDescription>
+                    </ImgContainer>
+                    <ImgContainer $isTop={3200}>
+                        <HistoryImg src={img2023} alt="2023" />
+                        <ImgDescription>
+                            2023년 농림수산식품과학기술대전 장관상 수상
                         </ImgDescription>
                     </ImgContainer>
                     <MiddleHistoryContainer>
@@ -128,12 +121,6 @@ const History = () => {
                             녹색경영대상 수상
                         </Content>
                     </MiddleHistoryContainer>
-                    <ImgContainer $isFixed={is2011Fixed}>
-                        2011 ~ 2015
-                        <Img2011 />
-                        <ImgDescription>
-                        </ImgDescription>
-                    </ImgContainer>
                     <MiddleHistoryContainer>
                         <Year>
                             2011
@@ -211,6 +198,8 @@ const History = () => {
                             </Month>
                             농어촌연구원 이동식 차량 녹조 시스템 프로젝트 수행
                         </Content>
+                    </MiddleHistoryContainer>
+                    <MiddleHistoryContainer>
                         <Year>
                             2015
                             <LineImg />
@@ -233,6 +222,8 @@ const History = () => {
                             </Month>
                             2015 WEFTEC 전시참여 (미국시카고)
                         </Content>
+                    </MiddleHistoryContainer>
+                    <MiddleHistoryContainer>
                         <Year>
                             2016
                             <LineImg />
@@ -261,6 +252,8 @@ const History = () => {
                             </Month>
                             녹색기술인증(제GT-16-00123호)
                         </Content>
+                    </MiddleHistoryContainer>
+                    <MiddleHistoryContainer>
                         <Year>
                             2017
                             <LineImg />
@@ -277,6 +270,8 @@ const History = () => {
                             </Month>
                             2017년 제주도 하수도 연찬회 ( 재이용 담수화 적용 사례)
                         </Content>
+                    </MiddleHistoryContainer>
+                    <MiddleHistoryContainer>
                         <Year>
                             2018
                             <LineImg />
@@ -293,6 +288,8 @@ const History = () => {
                             </Month>
                             인도네시아 공업용수 공급 FS 기술계약
                         </Content>
+                    </MiddleHistoryContainer>
+                    <MiddleHistoryContainer>
                         <Year>
                             2019
                             <LineImg />
@@ -303,6 +300,8 @@ const History = () => {
                             </Month>
                             한국건설기술연구원 패밀리 기업 협약
                         </Content>
+                    </MiddleHistoryContainer>
+                    <MiddleHistoryContainer>
                         <Year>
                             2020
                             <LineImg />
@@ -313,6 +312,8 @@ const History = () => {
                             </Month>
                             녹색기술 인증 (초고속 고액분리 장치를 이용한 재이용 기술)
                         </Content>
+                    </MiddleHistoryContainer>
+                    <MiddleHistoryContainer>
                         <Year>
                             2022
                             <LineImg />
@@ -335,6 +336,8 @@ const History = () => {
                             </Month>
                             농림식품 NET 신기술 등록
                         </Content>
+                    </MiddleHistoryContainer>
+                    <MiddleHistoryContainer>
                         <Year>
                             2023
                             <LineImg />
@@ -358,8 +361,6 @@ const History = () => {
                             농림축산식품과학기술대상 표창
                         </Content>
                     </MiddleHistoryContainer>
-
-
                 </MiddleContainer>
             </MainContainer>
         </>

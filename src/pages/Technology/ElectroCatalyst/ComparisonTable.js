@@ -17,6 +17,13 @@ const TD = styled.td`
   padding: 18px;
 `;
 
+const SmallTD = styled.span`
+  font-size: 15px;
+  font-family: var(--font-sansRegular);
+  text-align: center;
+  color: #313131;
+`;
+
 const R1TD = styled.td`
   border: 1px solid #E2E2E2;
   border-top: 3px solid black;
@@ -26,13 +33,16 @@ const R1TD = styled.td`
   font-family: var(--font-sansBold);
 `;
 
-const R4Td = styled.td`
+const R1C1TD = styled.td`
+  width: 200px;
   border: 1px solid #E2E2E2;
+  border-top: 3px solid black;
+  background-color: #E9E9E9;
   text-align: center;
   padding: 18px;
-  color: #C00000;
+  font-family: var(--font-sansBold);
+`;
 
-`
 
 const ComparisonTable = () => {
     return (
@@ -40,7 +50,7 @@ const ComparisonTable = () => {
             <StyledTable>
                 <tbody>
                     <TR>
-                        <R1TD>항목</R1TD>
+                        <R1C1TD>항목</R1C1TD>
                         <R1TD>전기촉매 필터(EF)</R1TD>
                         <R1TD>오존(O<sub>3</sub>) AOP</R1TD>
                         <R1TD>저온 플라즈마 AOP</R1TD>
@@ -65,8 +75,8 @@ const ComparisonTable = () => {
                     </TR>
                     <TR>
                         <TD>산화능력<br />
-                            (용존성 DOC)<br />
-                            (입자성 유기탄소 제외)</TD>
+                            <SmallTD>(용존성 DOC)<br />
+                                (입자성 유기탄소 제외)</SmallTD></TD>
                         <TD>하천수 50% (5분)</TD>
                         <TD>하천수 5% 미만 (5분)</TD>
                         <TD>하천수 15% 미만 (5분)</TD>

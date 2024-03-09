@@ -3,11 +3,7 @@ import styled from "styled-components";
 //img
 import company from '../../../assets/Company/company.png'
 import onlyLogo from '../../../assets/Company/onlyLogo.png'
-import img2007 from '../../../assets/Company/img2007.png'
-import img2010 from '../../../assets/Company/img2010.png'
-import line from '../../../assets/Company/line1.svg'
-import line2 from '../../../assets/Company/line2.svg'
-import line3 from '../../../assets/Company/line3.svg'
+import line from '../../../assets/Company/line4.svg'
 
 export const TitleBar = styled.div`
     display: flex;
@@ -113,44 +109,34 @@ export const Content = styled.div`
 `
 
 export const LineImg = styled.img.attrs({
-    src: line3,
+    src: line,
     alt: 'line'
 })`
     margin-top: 20px;
     margin-left: 30px;
     height: 20px;
 `
+
 export const ImgContainer = styled.div`
+    color: #313131;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 600px;
+    position: absolute;
+    margin-top: 50px;
     margin-right: 50px;
-    position: ${props => props.$isFixed ? 'fixed' : 'absolute'};
-    top: ${props => props.$isFixed ? '255' : 'auto'}px;
+    top: ${props => props.$isTop}px;
     right: 53%;
     font-size: 32px;
-    font-family: var(--font-sansBold);
 `
 
 export const ImgDescription = styled.div`
-
+    font-size: 18px;
+    font-family: var(--font-sansMedium);
 `
 
-export const Img2007 = styled.img.attrs({
-    src: img2007,
-    alt: 'img2007'
-})`
+export const HistoryImg = styled.img`
+    margin: 10px;
     width: 600px;
-    margin-right: 50px;
-`
-
-export const Img2011 = styled.img.attrs({
-    src: img2010,
-    alt: 'img2010'
-})`
-    width: 600px;
-    margin-right: 50px;
-    opacity:  ${props => props.$isFixed ? '1' : '0'};
-    position: fixed;
-    top: 255px;
-    right: 53%;
-    transition: opacity 0.5s ease;
 `

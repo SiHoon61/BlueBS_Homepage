@@ -30,11 +30,20 @@ const Header = () => {
     const goAwards = () => {
         navigate("/awards");
     }
+    const goLaboratory = () => {
+        navigate("/laboratory");
+    }
     const goElectroCatalyst = () => {
         navigate("/electroCatalyst");
     }
+    const goTower = () => {
+        navigate("/tower");
+    }
     const goFilter = () => {
         navigate("/filter");
+    }
+    const goNanoBubble = () => {
+        navigate("/nanoBubble");
     }
 
     const goMap = () => {
@@ -82,7 +91,7 @@ const Header = () => {
                             <TextTextBox onClick={goCeoGreeting}>CEO 인사말</TextTextBox>
                             <TextTextBox onClick={goHistory}>연혁</TextTextBox>
                             <TextTextBox onClick={goAwards}>인증 및 수상</TextTextBox>
-                            <TextTextBox onClick={() => alert('오시는길!')}>기업 부설 연구소</TextTextBox>
+                            <TextTextBox onClick={goLaboratory}>기업 부설 연구소</TextTextBox>
                         </HoverBox>
                     </IndexLI>
                     <IndexLI onMouseEnter={() => setTechnologyHovered(true)}
@@ -90,9 +99,10 @@ const Header = () => {
                         <HoverBox
                             $isHovered={technologyHovered}
                             $width={170}>
-                            <TextTextBox onClick={goElectroCatalyst}>전기촉매 장치</TextTextBox>
-                            <TextTextBox onClick={goFilter}>FDA/MSF 여과 장치</TextTextBox>
-                            <TextTextBox onClick={() => alert('나노버블 장치!')}>나노버블 장치</TextTextBox>
+                            <TextTextBox onClick={goElectroCatalyst}>전기촉매필터</TextTextBox>
+                            <TextTextBox onClick={goTower}>전기촉매타워</TextTextBox>
+                            <TextTextBox onClick={goFilter}>마이크로 여과필터</TextTextBox>
+                            <TextTextBox onClick={goNanoBubble}>울트라 나노버블</TextTextBox>
                         </HoverBox>
                     </IndexLI>
                     <IndexLI onMouseEnter={() => setBusinessHovered(true)}

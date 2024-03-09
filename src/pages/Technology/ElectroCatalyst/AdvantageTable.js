@@ -37,7 +37,6 @@ const R4Td = styled.td`
   text-align: center;
   padding: 18px;
   color: #C00000;
-
 `
 
 const R6Td = styled.td`
@@ -46,7 +45,7 @@ const R6Td = styled.td`
 `
 
 const Timg = styled.img`
-    width: 250px;
+    width: 300px;
 `
 
 

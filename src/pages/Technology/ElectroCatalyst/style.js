@@ -70,7 +70,7 @@ export const ImgSubTitle = styled.div`
 export const SubTitle = styled.div`
     margin-top: 10px;
     width: 1500px;
-    font-size: 48px;
+    font-size: 40px;
     font-family: var(--font-sansBold);
 `
 

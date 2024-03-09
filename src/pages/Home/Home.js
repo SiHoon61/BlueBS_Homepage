@@ -12,9 +12,10 @@ import {
     TechContainer,
     TechText,
     TechSubIndexContainer,
-    TechLeftImg,
-    TechMiddleImg,
-    TechRightImg,
+    Tech1,
+    Tech2,
+    Tech3,
+    Tech4,
     TechTextContainer,
     TechTextBox,
     TectTextArrow,
@@ -81,33 +82,42 @@ const Home = () => {
                     Technology
                 </TechText>
                 <TechSubIndexContainer $width={size.width}>
-                    <TechLeftImg $width={size.width / 3} >
+                    <Tech1 $width={size.width / 4} >
                         <TechTextContainer>
                             신개념 초격차
                             <TechTextBox>
-                                전기촉매장치
+                                전기촉매필터
                                 <TectTextArrow />
                             </TechTextBox>
                         </TechTextContainer>
-                    </TechLeftImg>
-                    <TechMiddleImg $width={size.width / 3} >
+                    </Tech1>
+                    <Tech2 $width={size.width / 4} >
+                        <TechTextContainer>
+                            초고속
+                            <TechTextBox>
+                                전기촉매타워
+                                <TectTextArrow />
+                            </TechTextBox>
+                        </TechTextContainer>
+                    </Tech2>
+                    <Tech3 $width={size.width / 4} >
                         <TechTextContainer>
                             무약품 세정
                             <TechTextBox>
-                                FDA/MSF 여과장치
+                                마이크로 여과필터
                                 <TectTextArrow />
                             </TechTextBox>
                         </TechTextContainer>
-                    </TechMiddleImg>
-                    <TechRightImg $width={size.width / 3} >
+                    </Tech3>
+                    <Tech4 $width={size.width / 4} >
                         <TechTextContainer>
                             막힘 없는
                             <TechTextBox>
-                                나노버블장치
+                                울트라 나노버블
                                 <TectTextArrow />
                             </TechTextBox>
                         </TechTextContainer>
-                    </TechRightImg>
+                    </Tech4>
                 </TechSubIndexContainer>
             </TechContainer>
 
