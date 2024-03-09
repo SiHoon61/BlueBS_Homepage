@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from "react-router-dom";
 
 //assets
 import mainVideo from '../../assets/videos/main.mp4';
@@ -64,6 +65,19 @@ function useWindowSize() {
 }
 
 const Home = () => {
+    const navigate = useNavigate();
+    const goElectroCatalyst = () => {
+        navigate("/electroCatalyst");
+    }
+    const goTower = () => {
+        navigate("/tower");
+    }
+    const goFilter = () => {
+        navigate("/filter");
+    }
+    const goNanoBubble = () => {
+        navigate("/nanoBubble");
+    }
     const size = useWindowSize();
     return (
         <>
@@ -82,7 +96,9 @@ const Home = () => {
                     Technology
                 </TechText>
                 <TechSubIndexContainer $width={size.width}>
-                    <Tech1 $width={size.width / 4} >
+                    <Tech1
+                        $width={size.width / 4}
+                        onClick={goElectroCatalyst}>
                         <TechTextContainer>
                             신개념 초격차
                             <TechTextBox>
@@ -91,7 +107,9 @@ const Home = () => {
                             </TechTextBox>
                         </TechTextContainer>
                     </Tech1>
-                    <Tech2 $width={size.width / 4} >
+                    <Tech2
+                        $width={size.width / 4}
+                        onClick={goTower}>
                         <TechTextContainer>
                             초고속
                             <TechTextBox>
@@ -100,7 +118,9 @@ const Home = () => {
                             </TechTextBox>
                         </TechTextContainer>
                     </Tech2>
-                    <Tech3 $width={size.width / 4} >
+                    <Tech3
+                        $width={size.width / 4}
+                        onClick={goFilter}>
                         <TechTextContainer>
                             무약품 세정
                             <TechTextBox>
@@ -109,7 +129,9 @@ const Home = () => {
                             </TechTextBox>
                         </TechTextContainer>
                     </Tech3>
-                    <Tech4 $width={size.width / 4} >
+                    <Tech4
+                        $width={size.width / 4}
+                        onClick={goNanoBubble}>
                         <TechTextContainer>
                             막힘 없는
                             <TechTextBox>

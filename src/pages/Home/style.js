@@ -77,6 +77,7 @@ export const Tech1 = styled.div`
         }
     }
     transition: opacity 0.3s, width 0.3s;
+    cursor: pointer;
 `
 
 export const Tech2 = styled.div`
@@ -96,6 +97,7 @@ export const Tech2 = styled.div`
         }
     }
     transition: opacity 0.3s, width 0.3s;
+    cursor: pointer;
 `
 
 export const Tech3 = styled.div`
@@ -115,6 +117,7 @@ export const Tech3 = styled.div`
         }
     }
     transition: opacity 0.3s, width 0.3s;
+    cursor: pointer;
 `
 
 export const Tech4 = styled.div`
@@ -134,6 +137,7 @@ export const Tech4 = styled.div`
         }
     }
     transition: opacity 0.3s, width 0.3s;
+    cursor: pointer;
 `
 
 export const TechTextContainer = styled.div`

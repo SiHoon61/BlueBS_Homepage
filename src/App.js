@@ -13,7 +13,9 @@ import ElectroCatalyst from './pages/Technology/ElectroCatalyst/ElectroCatalyst'
 import Tower from './pages/Technology/Tower/Tower';
 import Filter from './pages/Technology/Filter/Filter';
 import NanoBubble from './pages/Technology/NanoBubble/NanoBubble';
+import Purify from './pages/Business/Purify/Purify';
 import MapWay from './pages/Communication/MapWay/MapWay';
+
 
 import ScrollToTop from './Util/ScrollToTop'
 function App() {
@@ -32,6 +34,7 @@ function App() {
           <Route path="/tower" element={<Tower />}></Route>
           <Route path="/filter" element={<Filter />}></Route>
           <Route path="/nanoBubble" element={<NanoBubble />}></Route>
+          <Route path="/purify" element={<Purify />}></Route>
           <Route path="/map" element={<MapWay />}></Route>
         </Routes>
         <Bottom></Bottom>

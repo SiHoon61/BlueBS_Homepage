@@ -45,6 +45,9 @@ const Header = () => {
     const goNanoBubble = () => {
         navigate("/nanoBubble");
     }
+    const goPurify = () => {
+        navigate("/purify");
+    }
 
     const goMap = () => {
         navigate("/map");
@@ -110,7 +113,7 @@ const Header = () => {
                         <HoverBox
                             $isHovered={businessHovered}
                             $width={130}>
-                            <TextTextBox onClick={() => alert('CEO 인사말!')}>정수 분야</TextTextBox>
+                            <TextTextBox onClick={goPurify}>정수 분야</TextTextBox>
                             <TextTextBox onClick={() => alert(' 연혁!')}>하/폐수 분야</TextTextBox>
                             <TextTextBox onClick={() => alert('인증 및 수상!')}>농업 분야</TextTextBox>
                             <TextTextBox onClick={() => alert('오시는길!')}>축산 분야</TextTextBox>
