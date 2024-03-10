@@ -54,7 +54,9 @@ const Header = () => {
     const goAgriculture = () => {
         navigate("/agriculture");
     }
-
+    const goAnimalHusbandry = () => {
+        navigate("/animalHusbandry");
+    }
     const goMap = () => {
         navigate("/map");
     }
@@ -122,7 +124,7 @@ const Header = () => {
                             <TextTextBox onClick={goPurify}>정수 분야</TextTextBox>
                             <TextTextBox onClick={goSewer}>하/폐수 분야</TextTextBox>
                             <TextTextBox onClick={goAgriculture}>농업 분야</TextTextBox>
-                            <TextTextBox onClick={() => alert('오시는길!')}>축산 분야</TextTextBox>
+                            <TextTextBox onClick={goAnimalHusbandry}>축산 분야</TextTextBox>
                             <TextTextBox onClick={() => alert('오시는길!')}>녹조 분야</TextTextBox>
                             <TextTextBox onClick={() => alert('오시는길!')}>침출수 분야</TextTextBox>
                             <TextTextBox onClick={() => alert('오시는길!')}>운영관리 분야</TextTextBox>
