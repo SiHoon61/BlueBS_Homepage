@@ -55,7 +55,7 @@ const Agriculture = () => {
         <>
             <TitleBar>
                 <TitleTextBox>
-                    Home · Business ·농업분야
+                    Home · Business · 농업분야
                     <TitleMainText>
                         농업분야
                     </TitleMainText>
@@ -73,7 +73,7 @@ const Agriculture = () => {
                 </SubLargeContainer>
                 <BodyImg />
                 <SubRowContainer>
-                    <AgricultureImg src={agricultureImg1} alt="agricultureImg" margin={"0px 100px 0px 0px;"} />
+                    <AgricultureImg src={agricultureImg1} alt="agricultureImg" $margin={"0px 100px 0px 0px;"} />
                     <SubColumnContainer>
                         <ImgSubTitle>
                             농업 분야
@@ -92,7 +92,7 @@ const Agriculture = () => {
                             오염배출량을 감소시켜 수질을 개선하였으며, 수질오염 총량제에 기여하였습니다. 이를 통해 신규 수자원 개발 비용을 절감하는 동시에 물 산업의 발전을 촉진시키는 등 다양한 직·간접적인 효과를 나타냈습니다.<br /> 저희는 환경 보호와 지속 가능한 발전에 앞장서는 역할을 수행하고 있으며, 지역 사회와 전 세계적으로 긍정적인 변화를 이끌어 나갈 것을 약속드립니다.
                         </ImgSubContent>
                     </SubColumnContainer>
-                    <AgricultureImg src={agricultureImg2} alt="agricultureImg" margin={"0px 0px 0px 100px;"} />
+                    <AgricultureImg src={agricultureImg2} alt="agricultureImg" $margin={"0px 0px 0px 100px;"} />
                 </SubRowContainer>
 
                 <SubColumnContainer>

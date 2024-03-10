@@ -17,6 +17,9 @@ import Purify from './pages/Business/Purify/Purify';
 import Sewer from './pages/Business/Sewer/Sewer'
 import Agriculture from './pages/Business/Agriculture/Agriculture';
 import AnimalHusbandry from './pages/Business/AnimalHusbandry/AnimalHusbandry';
+import GreenAlgae from './pages/Business/GreenAlgae/GreenAlgae';
+import Leachate from './pages/Business/Leachate/Leachate';
+import Monitoring from './pages/Business/Monitoring/Monitoring';
 import MapWay from './pages/Communication/MapWay/MapWay';
 
 
@@ -41,6 +44,9 @@ function App() {
           <Route path="/sewer" element={<Sewer />}></Route>
           <Route path="/agriculture" element={<Agriculture />}></Route>
           <Route path="/animalHusbandry" element={<AnimalHusbandry />}></Route>
+          <Route path="/greenAlgae" element={<GreenAlgae />}></Route>
+          <Route path="/leachate" element={<Leachate />}></Route>
+          <Route path="/monitoring" element={<Monitoring />}></Route>
           <Route path="/map" element={<MapWay />}></Route>
         </Routes>
         <Bottom></Bottom>

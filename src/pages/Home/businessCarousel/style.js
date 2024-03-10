@@ -35,7 +35,7 @@ export const BusinessImage = styled.div`
     margin: auto;
     display: flex;
     position: relative;
-
+    cursor: pointer;
 `
 export const BusinessTextBox = styled.div`
     display:flex;

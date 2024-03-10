@@ -57,6 +57,15 @@ const Header = () => {
     const goAnimalHusbandry = () => {
         navigate("/animalHusbandry");
     }
+    const goGreenAlgae = () => {
+        navigate("/greenAlgae");
+    }
+    const goLeachate = () => {
+        navigate("/leachate");
+    }
+    const goMonitoring = () => {
+        navigate("/monitoring");
+    }
     const goMap = () => {
         navigate("/map");
     }
@@ -125,9 +134,9 @@ const Header = () => {
                             <TextTextBox onClick={goSewer}>하/폐수 분야</TextTextBox>
                             <TextTextBox onClick={goAgriculture}>농업 분야</TextTextBox>
                             <TextTextBox onClick={goAnimalHusbandry}>축산 분야</TextTextBox>
-                            <TextTextBox onClick={() => alert('오시는길!')}>녹조 분야</TextTextBox>
-                            <TextTextBox onClick={() => alert('오시는길!')}>침출수 분야</TextTextBox>
-                            <TextTextBox onClick={() => alert('오시는길!')}>운영관리 분야</TextTextBox>
+                            <TextTextBox onClick={goGreenAlgae}>녹조 분야</TextTextBox>
+                            <TextTextBox onClick={goLeachate}>침출수 분야</TextTextBox>
+                            <TextTextBox onClick={goMonitoring}>운영관리 분야</TextTextBox>
                         </HoverBox>
                     </IndexLI>
                     <IndexLI onMouseEnter={() => setProductsHovered(true)}

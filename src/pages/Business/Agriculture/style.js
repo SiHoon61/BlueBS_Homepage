@@ -97,7 +97,7 @@ export const BodyImg = styled.div`
 
 export const AgricultureImg = styled.img`
     width: 500px;
-    margin: ${props => props.margin};
+    margin: ${props => props.$margin};
 `
 
 export const ImgSubTitle = styled.div`

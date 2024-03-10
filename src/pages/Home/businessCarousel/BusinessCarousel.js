@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -26,16 +27,69 @@ import {
 
 
 function CenterMode() {
+    const navigate = useNavigate();
+    const goPurify = (e) => {
+        if (isSliding) {
+            e.stopPropagation(); // 슬라이드 중 클릭 이벤트를 무시
+        } else {
+            navigate("/purify");
+        }
+    }
+    const goSewer = (e) => {
+        if (isSliding) {
+            e.stopPropagation(); // 슬라이드 중 클릭 이벤트를 무시
+        } else {
+            navigate("/sewer");
+        }
+    }
+    const goAgriculture = (e) => {
+        if (isSliding) {
+            e.stopPropagation(); // 슬라이드 중 클릭 이벤트를 무시
+        } else {
+            navigate("/agriculture");
+        }
+    }
+    const goAnimalHusbandry = (e) => {
+        if (isSliding) {
+            e.stopPropagation(); // 슬라이드 중 클릭 이벤트를 무시
+        } else {
+            navigate("/animalHusbandry");
+        }
+    }
+    const goGreenAlgae = (e) => {
+        if (isSliding) {
+            e.stopPropagation(); // 슬라이드 중 클릭 이벤트를 무시
+        } else {
+            navigate("/greenAlgae");
+        }
+    }
+    const goLeachate = (e) => {
+        if (isSliding) {
+            e.stopPropagation(); // 슬라이드 중 클릭 이벤트를 무시
+        } else {
+            navigate("/leachate");
+        }
+    }
+    const goMonitoring = (e) => {
+        if (isSliding) {
+            e.stopPropagation(); // 슬라이드 중 클릭 이벤트를 무시
+        } else {
+            navigate("/monitoring");
+        }
+
+    }
     const SlickButtonFix = ({ currentSlide, slideCount, children, ...props }) => (
         <span {...props}>{children}</span>
     );
+
+    const [isSliding, setIsSliding] = useState(false);
 
     const settings = {
         className: "center1",
         centerMode: true,
         infinite: true,
         slidesToShow: 3,
-        speed: 500,
+        swipeToSlide: true,
         slidesToScroll: 1,
         nextArrow: (
             <SlickButtonFix>
@@ -46,14 +100,16 @@ function CenterMode() {
             <SlickButtonFix>
                 <Prev />
             </SlickButtonFix>
-        )
+        ),
+        beforeChange: () => setIsSliding(true), // 슬라이드 시작 시 isSliding을 true로 설정
+        afterChange: () => setIsSliding(false), // 슬라이드 종료 시 isSliding을 false로 설정
     };
     return (
 
         <SliderContainer className="slider-container1">
             <Slider {...settings}>
                 <ImageBox>
-                    <BusinessImage $src={business1}>
+                    <BusinessImage $src={business1} onClick={goPurify}>
                         <BusinessTextBox>
                             <BusinessTitleText>
                                 정수 분야
@@ -63,7 +119,7 @@ function CenterMode() {
                     </BusinessImage>
                 </ImageBox>
                 <ImageBox>
-                    <BusinessImage $src={business2}>
+                    <BusinessImage $src={business2} onClick={goSewer}>
                         <BusinessTextBox>
                             <BusinessTitleText>
                                 하·폐수 분야
@@ -73,7 +129,7 @@ function CenterMode() {
                     </BusinessImage>
                 </ImageBox>
                 <ImageBox>
-                    <BusinessImage $src={business3}>
+                    <BusinessImage $src={business3} onClick={goAgriculture}>
                         <BusinessTextBox>
                             <BusinessTitleText>
                                 농업 분야
@@ -83,7 +139,7 @@ function CenterMode() {
                     </BusinessImage>
                 </ImageBox>
                 <ImageBox>
-                    <BusinessImage $src={business4}>
+                    <BusinessImage $src={business4} onClick={goAnimalHusbandry}>
                         <BusinessTextBox>
                             <BusinessTitleText>
                                 축산 분야
@@ -93,7 +149,7 @@ function CenterMode() {
                     </BusinessImage>
                 </ImageBox>
                 <ImageBox>
-                    <BusinessImage $src={business5}>
+                    <BusinessImage $src={business5} onClick={goGreenAlgae}>
                         <BusinessTextBox>
                             <BusinessTitleText>
                                 녹조 분야
@@ -103,7 +159,7 @@ function CenterMode() {
                     </BusinessImage>
                 </ImageBox>
                 <ImageBox>
-                    <BusinessImage $src={business6}>
+                    <BusinessImage $src={business6} onClick={goLeachate}>
                         <BusinessTextBox>
                             <BusinessTitleText>
                                 침출수 분야
@@ -113,7 +169,7 @@ function CenterMode() {
                     </BusinessImage>
                 </ImageBox>
                 <ImageBox>
-                    <BusinessImage $src={business7}>
+                    <BusinessImage $src={business7} onClick={goMonitoring}>
                         <BusinessTextBox>
                             <BusinessTitleText>
                                 운영관리 분야

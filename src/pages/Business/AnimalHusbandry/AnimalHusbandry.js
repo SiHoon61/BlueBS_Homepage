@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 
 //img
-// import agricultureImg1 from '../../../assets/Business/Agriculture/agricultureImg1.png'
-// import agricultureImg2 from '../../../assets/Business/Agriculture/agricultureImg2.png'
-// import performanceImg from '../../../assets/Business/Agriculture/performanceImg.png'
-// import techImg1 from '../../../assets/Business/Agriculture/techImg1.png'
-// import techImg2 from '../../../assets/Business/Agriculture/techImg2.png'
-// import techImg3 from '../../../assets/Business/Agriculture/techImg3.png'
+
+import performanceImg from '../../../assets/Business/AnimalHusbandry/performanceImg.png'
+import techImg1 from '../../../assets/Business/AnimalHusbandry/techImg1.png'
+import techImg2 from '../../../assets/Business/AnimalHusbandry/techImg2.png'
+import techImg3 from '../../../assets/Business/AnimalHusbandry/techImg3.png'
 
 //style
 import {
@@ -14,7 +13,6 @@ import {
     TitleTextBox,
     TitleMainText,
     MainContainer,
-    SubRowContainer,
     SubColumnContainer,
     SubImgContainer,
     SubLargeTitle,
@@ -22,9 +20,6 @@ import {
     SubTitle,
     FullSubContent,
     BodyImg,
-    AgricultureImg,
-    ImgSubTitle,
-    ImgSubContent,
     PerformanceContent,
     PerformanceImgBox,
     PerformanceImg,
@@ -55,9 +50,9 @@ const AnimalHusbandry = () => {
         <>
             <TitleBar>
                 <TitleTextBox>
-                    Home · Business ·농업분야
+                    Home · Business · 축산분야
                     <TitleMainText>
-                        농업분야
+                        축산분야
                     </TitleMainText>
                 </TitleTextBox>
             </TitleBar>
@@ -67,8 +62,8 @@ const AnimalHusbandry = () => {
                         농업환경 분야
                     </SubLargeTitle>
                     <FullSubContent>
-                        농업을 숨쉬게 하는 물, BlueBS가 함께합니다.<br />
-                        생활하수를 재처리한 물에는 질소, 인 등의 영양분이 풍부하여 비옥한 토양이 만들어집니다.
+                        BlueBS는 전기 촉매 전극 시스템을 활용하여 고농도 오염물을 효과적으로 처리합니다.<br />
+                        저희만의 맞춤형 촉매 전극을 활용하여 안전한 유지관리 및 에너지 저감, 그리고 환경오염을 줄이는 친환경 기술입니다
                     </FullSubContent>
                 </SubLargeContainer>
                 <BodyImg />
@@ -77,33 +72,33 @@ const AnimalHusbandry = () => {
                         대표 실적
                     </SubTitle>
                     <PerformanceContent>
-                        제주도 성읍 지구
+                        여주시 돼지농장
                     </PerformanceContent>
                     <PerformanceImgBox>
-                        {/* <PerformanceImg src={performanceImg} alt="performanceImg" /> */}
+                        <PerformanceImg src={performanceImg} alt="performanceImg" />
                         <DescriptionBox>
                             <Description>
                                 위치
                                 <DescriptionStyle>
-                                    제주도 성읍 지구
+                                    여주시
                                 </DescriptionStyle>
                             </Description>
                             <Description>
                                 준공일
                                 <DescriptionStyle>
-                                    2017년 9월
+                                    2023년 5월
                                 </DescriptionStyle>
                             </Description>
                             <Description>
                                 용량
                                 <DescriptionStyle>
-                                    30,000m3/d
+                                    10m3/d
                                 </DescriptionStyle>
                             </Description>
                             <Description>
                                 맞춤형 공정
                                 <DescriptionStyle>
-                                    FDA 여과기
+                                    전기촉매시스템
                                 </DescriptionStyle>
                             </Description>
                             <Description>
@@ -120,19 +115,19 @@ const AnimalHusbandry = () => {
                         주요 기술
                     </SubTitle>
                     <SubImgContainer>
-                        {/* <ImgDescription>
+                        <ImgDescription>
                             <TechImg src={techImg1} alt="TechImg" />
-                            새만금 MSF / FDA 여과 농업용수 공급
+                            전기촉매 고도처리 연계 순환형 액비
                         </ImgDescription>
                         <ImgDescription>
                             <TechImg src={techImg2} alt="TechImg" />
-                            김해시 화목 MSF / FDA 여과 농업용수 공급
+                            폭기 반응조
                         </ImgDescription>
                         <ImgDescription>
                             <TechImg src={techImg3} alt="TechImg" />
-                            김해시 안양 정수장 마이크로시스티 제거
+                            축산 분뇨 처리 과정
                         </ImgDescription>
-                        <EmptyBox /> */}
+                        <EmptyBox />
                     </SubImgContainer>
                 </SubColumnContainer>
                 {modalState && (

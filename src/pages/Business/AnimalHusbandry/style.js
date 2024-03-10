@@ -39,12 +39,6 @@ export const MainContainer = styled.div`
     margin-top: 100px;
     width: 100%;
 `
-export const SubRowContainer = styled.div`
-    margin: 0 auto 150px auto;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-`
 
 export const SubColumnContainer = styled.div`
     margin: 0 auto 150px auto;
@@ -94,29 +88,6 @@ export const BodyImg = styled.div`
     background-position: center center;
     margin-bottom: 150px;
 `
-
-export const AgricultureImg = styled.img`
-    width: 500px;
-    margin: ${props => props.margin};
-`
-
-export const ImgSubTitle = styled.div`
-    margin-top: 80px;
-    width: 900px;
-    font-size: 40px;
-    font-family: var(--font-sansBold);
-`
-
-export const ImgSubContent = styled.div`
-    width: 900px;
-    display: flex;
-    align-items: center;
-    font-size: 20px;
-    font-family: var(--font-sansRegular);
-    color: #313131;
-    line-height: 45px; 
-`
-
 export const PerformanceContent = styled.div`
     width: 1500px;
     display: flex;
