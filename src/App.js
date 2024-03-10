@@ -14,7 +14,7 @@ import Tower from './pages/Technology/Tower/Tower';
 import Filter from './pages/Technology/Filter/Filter';
 import NanoBubble from './pages/Technology/NanoBubble/NanoBubble';
 import Purify from './pages/Business/Purify/Purify';
-import Sewer from './pages/Business/Sewer/Sewer';
+import Sewer from './pages/Business/Sewer/Sewer'
 import Agriculture from './pages/Business/Agriculture/Agriculture';
 import AnimalHusbandry from './pages/Business/AnimalHusbandry/AnimalHusbandry';
 import MapWay from './pages/Communication/MapWay/MapWay';
