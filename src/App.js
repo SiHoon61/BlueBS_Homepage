@@ -14,6 +14,8 @@ import Tower from './pages/Technology/Tower/Tower';
 import Filter from './pages/Technology/Filter/Filter';
 import NanoBubble from './pages/Technology/NanoBubble/NanoBubble';
 import Purify from './pages/Business/Purify/Purify';
+import Sewer from './pages/Business/Sewer/Sewer';
+import Agriculture from './pages/Business/Agriculture/Agriculture';
 import MapWay from './pages/Communication/MapWay/MapWay';
 
 
@@ -35,6 +37,8 @@ function App() {
           <Route path="/filter" element={<Filter />}></Route>
           <Route path="/nanoBubble" element={<NanoBubble />}></Route>
           <Route path="/purify" element={<Purify />}></Route>
+          <Route path="/sewer" element={<Sewer />}></Route>
+          <Route path="/agriculture" element={<Agriculture />}></Route>
           <Route path="/map" element={<MapWay />}></Route>
         </Routes>
         <Bottom></Bottom>

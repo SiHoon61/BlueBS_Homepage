@@ -6,7 +6,6 @@ import fiberFilter from '../../../assets/Technology/fiberFilter.png'
 import msFilter from '../../../assets/Technology/msFilter.png'
 
 const StyledTable = styled.table`
-  margin-top: 35px;
   width: 100%;
   font-size: 20px;
   border-collapse: collapse;
@@ -36,19 +35,17 @@ const R2Td = styled.td`
   padding: 0px;
 `
 
-
 const RedTd = styled.td`
+  font-family: var(--font-sansBold); 
   border: 1px solid #E2E2E2;
   text-align: center;
   padding: 18px;
   color: #C00000;
 `
 
-
 const Timg = styled.img`
     width: 300px;
 `
-
 
 const ComparisonTable = () => {
     return (
