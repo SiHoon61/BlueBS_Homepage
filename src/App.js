@@ -20,15 +20,20 @@ import AnimalHusbandry from './pages/Business/AnimalHusbandry/AnimalHusbandry';
 import GreenAlgae from './pages/Business/GreenAlgae/GreenAlgae';
 import Leachate from './pages/Business/Leachate/Leachate';
 import Monitoring from './pages/Business/Monitoring/Monitoring';
+import DrinkingPD from './pages/Products/Drinking/Drinking';
+import SewerPD from './pages/Products/Sewer/Sewer';
+import AgriculturePD from './pages/Products/Agriculture/Agriculture';
+import AnimalHusbandryPD from './pages/Products/AnimalHusbandry/AnimalHusbandry';
+import GreenAlgaePD from './pages/Products/GreenAlgae/GreenAlgae';
+import LeachatePD from './pages/Products/Leachate/Leachate';
 import MapWay from './pages/Communication/MapWay/MapWay';
-
 
 import ScrollToTop from './Util/ScrollToTop'
 function App() {
   return (
     <>
       <Router>
-        <ScrollToTop/>
+        <ScrollToTop />
         <Header></Header>
         <Routes>
           <Route path="/" element={<Home />}></Route>
@@ -46,6 +51,14 @@ function App() {
           <Route path="/animalHusbandry" element={<AnimalHusbandry />}></Route>
           <Route path="/greenAlgae" element={<GreenAlgae />}></Route>
           <Route path="/leachate" element={<Leachate />}></Route>
+          
+          <Route path="/drinkingPD" element={<DrinkingPD />}></Route>
+          <Route path="/sewerPD" element={<SewerPD />}></Route>
+          <Route path="/agriculturePD" element={<AgriculturePD />}></Route>
+          <Route path="/animalHusbandryPD" element={<AnimalHusbandryPD />}></Route>
+          <Route path="/greenAlgaePD" element={<GreenAlgaePD />}></Route>
+          <Route path="/leachatePD" element={<LeachatePD />}></Route>
+
           <Route path="/monitoring" element={<Monitoring />}></Route>
           <Route path="/map" element={<MapWay />}></Route>
         </Routes>

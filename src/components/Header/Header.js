@@ -63,13 +63,31 @@ const Header = () => {
     const goLeachate = () => {
         navigate("/leachate");
     }
+    const goDrinkingPD = () => {
+        navigate("/drinkingPD");
+    }
+    const goSewerPD = () => {
+        navigate("/sewerPD");
+    }
+    const goAgriculturePD = () => {
+        navigate("/agriculturePD");
+    }
+    const goAnimalHusbandryPD = () => {
+        navigate("/animalHusbandryPD");
+    }
+    const goGreenAlgaePD = () => {
+        navigate("/greenAlgaePD");
+    }
+    const goLeachatePD = () => {
+        navigate("/leachatePD");
+    }
     const goMonitoring = () => {
         navigate("/monitoring");
     }
     const goMap = () => {
         navigate("/map");
     }
-    
+
     //마우스 호버
     const [companyHovered, setCompanyHovered] = useState(false);
     const [technologyHovered, setTechnologyHovered] = useState(false);
@@ -143,13 +161,13 @@ const Header = () => {
                         onMouseLeave={() => setProductsHovered(false)}>Products
                         <HoverBox
                             $isHovered={productsHovered}
-                            $width={195}>
-                            <TextTextBox onClick={() => alert('CEO 인사말!')}>음용수/생활용수/담수화</TextTextBox>
-                            <TextTextBox onClick={() => alert(' 연혁!')}>하수/폐수 재이용</TextTextBox>
-                            <TextTextBox onClick={() => alert('인증 및 수상!')}>FDA/MSF 농업</TextTextBox>
-                            <TextTextBox onClick={() => alert('오시는길!')}>축산분뇨 처리</TextTextBox>
-                            <TextTextBox onClick={() => alert('오시는길!')}>녹조/저수지 복원 및 유지</TextTextBox>
-                            <TextTextBox onClick={() => alert('오시는길!')}>고농도 침출수 처리</TextTextBox>
+                            $width={215}>
+                            <TextTextBox onClick={goDrinkingPD}>음용수/생활용수/담수화</TextTextBox>
+                            <TextTextBox onClick={goSewerPD}>하/폐수 재이용 시스템</TextTextBox>
+                            <TextTextBox onClick={goAgriculturePD}>농업 용수 FDA/MSF 여과기</TextTextBox>
+                            <TextTextBox onClick={goAnimalHusbandryPD}>축산분뇨/악취 저감</TextTextBox>
+                            <TextTextBox onClick={goGreenAlgaePD}>녹조/저수지 복원 및 유지</TextTextBox>
+                            <TextTextBox onClick={goLeachatePD}>고농도 침출수 처리</TextTextBox>
                         </HoverBox>
                     </IndexLI>
                     <IndexLI onMouseEnter={() => setCommunicationHovered(true)}

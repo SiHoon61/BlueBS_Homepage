@@ -22,11 +22,11 @@ import {
     BusinessImage,
     BusinessTextBox,
     BusinessTitleText,
-
 } from './style'
 
 
 function CenterMode() {
+    const [isSliding, setIsSliding] = useState(false);
     const navigate = useNavigate();
     const goPurify = (e) => {
         if (isSliding) {
@@ -76,14 +76,10 @@ function CenterMode() {
         } else {
             navigate("/monitoring");
         }
-
     }
     const SlickButtonFix = ({ currentSlide, slideCount, children, ...props }) => (
         <span {...props}>{children}</span>
     );
-
-    const [isSliding, setIsSliding] = useState(false);
-
     const settings = {
         className: "center1",
         centerMode: true,

@@ -12,6 +12,7 @@ export const ProductsBox = styled.div`
 
 export const ProductsImg = styled.img`
     width: 500px;
+    cursor: pointer;
 `
 
 export const ProductsEmptyBox = styled.div`
@@ -30,6 +31,7 @@ export const ProductsOddText = styled.div`
     width: 500px;
     margin-top: 50px;
     margin-bottom: 20px;
+    cursor: pointer;
 `
 
 export const ProductsEvenText = styled.div`
@@ -37,6 +39,7 @@ export const ProductsEvenText = styled.div`
     width: 500px;
     margin-top: 20px;
     margin-bottom: 50px;
+    cursor: pointer;
 `
 
 export const NextTo = styled.div`

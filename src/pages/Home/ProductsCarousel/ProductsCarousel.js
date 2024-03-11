@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -27,10 +28,54 @@ import {
 
 
 function SwipeToSlide() {
+    const [isSliding, setIsSliding] = useState(false);
+    const navigate = useNavigate();
+    const goDrinkingPD = (e) => {
+        if (isSliding) {
+            e.stopPropagation(); // 슬라이드 중 클릭 이벤트를 무시
+        } else {
+            navigate("/drinkingPD");
+        }
+    }
+    const goSewerPD = (e) => {
+        if (isSliding) {
+            e.stopPropagation(); // 슬라이드 중 클릭 이벤트를 무시
+        } else {
+            navigate("/sewerPD");
+        }
+    }
+    const goAgriculturePD = (e) => {
+        if (isSliding) {
+            e.stopPropagation(); // 슬라이드 중 클릭 이벤트를 무시
+        } else {
+            navigate("/agriculturePD");
+        }
+    }
+    const goAnimalHusbandryPD = (e) => {
+        if (isSliding) {
+            e.stopPropagation(); // 슬라이드 중 클릭 이벤트를 무시
+        } else {
+            navigate("/animalHusbandryPD");
+        }
+    }
+    const goGreenAlgaePD = (e) => {
+        if (isSliding) {
+            e.stopPropagation(); // 슬라이드 중 클릭 이벤트를 무시
+        } else {
+            navigate("/greenAlgaePD");
+        }
+    }
+    const goLeachatePD = (e) => {
+        if (isSliding) {
+            e.stopPropagation(); // 슬라이드 중 클릭 이벤트를 무시
+        } else {
+            navigate("/leachatePD");
+        }
+    }
+
     const SlickButtonFix = ({ currentSlide, slideCount, children, ...props }) => (
         <span {...props}>{children}</span>
     );
-
     const settings = {
         className: "center2",
         infinite: false,
@@ -46,27 +91,29 @@ function SwipeToSlide() {
             <SlickButtonFix>
                 <Prev />
             </SlickButtonFix>
-        )
+        ),
+        beforeChange: () => setIsSliding(true), // 슬라이드 시작 시 isSliding을 true로 설정
+        afterChange: () => setIsSliding(false), // 슬라이드 종료 시 isSliding을 false로 설정
 
     };
     return (
         <SliderContainer className="slider-container2">
             <Slider {...settings}>
                 <ProductsBox>
-                    <ProductsOddText>
+                    <ProductsOddText onClick={goDrinkingPD}>
                         <ProductsTitleText>
                             음용수·생활용수·담수화
                         </ProductsTitleText>
                         전기촉매 기술을 활용해 맛냄새 유발물질인 2-MIB를 제거하는 시스템을 제공합니다.
                     </ProductsOddText>
-                    <ProductsImg src={products1} alt="products1">
+                    <ProductsImg src={products1} alt="products1" onClick={goDrinkingPD}>
                     </ProductsImg>
                 </ProductsBox>
 
                 <ProductsBox>
-                    <ProductsImg src={products2} alt="products2">
+                    <ProductsImg src={products2} alt="products2" onClick={goSewerPD}>
                     </ProductsImg>
-                    <ProductsEvenText>
+                    <ProductsEvenText onClick={goSewerPD}>
                         <ProductsTitleText>
                             하/폐수 재이용
                         </ProductsTitleText>
@@ -75,20 +122,20 @@ function SwipeToSlide() {
                 </ProductsBox>
 
                 <ProductsBox>
-                    <ProductsOddText>
+                    <ProductsOddText onClick={goAgriculturePD}>
                         <ProductsTitleText>
                             FDA/MSF 농업
                         </ProductsTitleText>
                         전기촉매 타워(ET)와 필터(EF)를 이용하여 농업용수를 연중 안전하게 공급합니다.
                     </ProductsOddText>
-                    <ProductsImg src={products3} alt="products3">
+                    <ProductsImg src={products3} alt="products3" onClick={goAgriculturePD}>
                     </ProductsImg>
                 </ProductsBox>
 
                 <ProductsBox>
-                    <ProductsImg src={products4} alt="products4">
+                    <ProductsImg src={products4} alt="products4" onClick={goAnimalHusbandryPD}>
                     </ProductsImg>
-                    <ProductsEvenText>
+                    <ProductsEvenText onClick={goAnimalHusbandryPD}>
                         <ProductsTitleText>
                             축산분뇨 처리
                         </ProductsTitleText>
@@ -97,20 +144,20 @@ function SwipeToSlide() {
                 </ProductsBox>
 
                 <ProductsBox>
-                    <ProductsOddText>
+                    <ProductsOddText onClick={goGreenAlgaePD}>
                         <ProductsTitleText>
                             녹조/저수지 복원 및 유지
                         </ProductsTitleText>
                         녹조, 부유물질, T-N, T-P, BOD, COD 등의 오염물질 저감을 위해 최적화된 기술을 제공합니다
                     </ProductsOddText>
-                    <ProductsImg src={products5} alt="products5">
+                    <ProductsImg src={products5} alt="products5" onClick={goGreenAlgaePD}>
                     </ProductsImg>
                 </ProductsBox>
 
                 <ProductsBox>
-                    <ProductsImg src={products6} alt="products6">
+                    <ProductsImg src={products6} alt="products6" onClick={goLeachatePD}>
                     </ProductsImg>
-                    <ProductsEvenText>
+                    <ProductsEvenText onClick={goLeachatePD}>
                         <ProductsTitleText>
                             침출수 처리
                         </ProductsTitleText>
