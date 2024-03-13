@@ -63,6 +63,9 @@ const Header = () => {
     const goLeachate = () => {
         navigate("/leachate");
     }
+    const goMonitoring = () => {
+        navigate("/monitoring");
+    }
     const goDrinkingPD = () => {
         navigate("/drinkingPD");
     }
@@ -81,9 +84,10 @@ const Header = () => {
     const goLeachatePD = () => {
         navigate("/leachatePD");
     }
-    const goMonitoring = () => {
-        navigate("/monitoring");
+    const goAIWaterSystemPD = () => {
+        navigate("/aIWaterSystemPD");
     }
+
     const goMap = () => {
         navigate("/map");
     }
@@ -136,7 +140,7 @@ const Header = () => {
                         onMouseLeave={() => setTechnologyHovered(false)}>Technology
                         <HoverBox
                             $isHovered={technologyHovered}
-                            $width={170}>
+                            $width={160}>
                             <TextTextBox onClick={goElectroCatalyst}>전기촉매필터</TextTextBox>
                             <TextTextBox onClick={goTower}>전기촉매타워</TextTextBox>
                             <TextTextBox onClick={goFilter}>마이크로 여과필터</TextTextBox>
@@ -161,13 +165,14 @@ const Header = () => {
                         onMouseLeave={() => setProductsHovered(false)}>Products
                         <HoverBox
                             $isHovered={productsHovered}
-                            $width={215}>
+                            $width={240}>
                             <TextTextBox onClick={goDrinkingPD}>음용수/생활용수/담수화</TextTextBox>
                             <TextTextBox onClick={goSewerPD}>하/폐수 재이용 시스템</TextTextBox>
                             <TextTextBox onClick={goAgriculturePD}>농업 용수 FDA/MSF 여과기</TextTextBox>
                             <TextTextBox onClick={goAnimalHusbandryPD}>축산분뇨/악취 저감</TextTextBox>
                             <TextTextBox onClick={goGreenAlgaePD}>녹조/저수지 복원 및 유지</TextTextBox>
                             <TextTextBox onClick={goLeachatePD}>고농도 침출수 처리</TextTextBox>
+                            <TextTextBox onClick={goAIWaterSystemPD}> 인공지능 스마트 물 관리 시스템</TextTextBox>
                         </HoverBox>
                     </IndexLI>
                     <IndexLI onMouseEnter={() => setCommunicationHovered(true)}

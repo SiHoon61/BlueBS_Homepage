@@ -122,25 +122,6 @@ const Nanobubble = () => {
                     </FullSubContent>
                     <NanoTable />
                 </SubColumnContainer>
-                <SubColumnContainer>
-                    <ExampleSubTitle>
-                        나노버블 발생장치 적용사례
-                    </ExampleSubTitle>
-                    <NanoExampleBox>
-                        <ImgDescription>
-                            <NanoExampleImg src={nanoExample1} alt="nano example" />
-                            울트라 나노버블 세척장치
-                        </ImgDescription>
-                        <ImgDescription>
-                            <NanoExampleImg src={nanoExample2} alt="nano example" />
-                            울트라 나노버블 세척장치
-                        </ImgDescription>
-                        <ImgDescription>
-                            <NanoExampleImg src={nanoExample3} alt="nano example" />
-                            울트라 나노버블 공기정화 장치
-                        </ImgDescription>
-                    </NanoExampleBox>
-                </SubColumnContainer>
                 <SubRowContainer>
                     <SubColumnContainer>
                         <MonitoringImgSubTitle>
@@ -185,9 +166,28 @@ const Nanobubble = () => {
                         </ImgDescription>
                         <ImgDescription>
                             <NanoSoftWareImg src={software4} alt="software" />
-                            라벨링
+                            개수/사이즈 측정
                         </ImgDescription>
                     </NanoSoftWareBox>
+                </SubColumnContainer>
+                <SubColumnContainer>
+                    <ExampleSubTitle>
+                        나노버블 발생장치 적용사례
+                    </ExampleSubTitle>
+                    <NanoExampleBox>
+                        <ImgDescription>
+                            <NanoExampleImg src={nanoExample1} alt="nano example" />
+                            울트라 나노버블 세척장치
+                        </ImgDescription>
+                        <ImgDescription>
+                            <NanoExampleImg src={nanoExample2} alt="nano example" />
+                            울트라 나노버블 세척장치
+                        </ImgDescription>
+                        <ImgDescription>
+                            <NanoExampleImg src={nanoExample3} alt="nano example" />
+                            울트라 나노버블 공기정화 장치
+                        </ImgDescription>
+                    </NanoExampleBox>
                 </SubColumnContainer>
             </MainContainer>
         </>

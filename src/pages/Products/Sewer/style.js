@@ -51,13 +51,6 @@ export const SubColumnContainer = styled.div`
     align-items: flex-start;
 `
 
-export const SubLargeContainer = styled.div`
-    margin: 0 auto 50px auto;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-`
-
 export const SubLargeTitle = styled.div`
     margin-top: 10px;
     width: 1500px;
@@ -80,4 +73,39 @@ export const FullSubContent = styled.div`
     font-family: var(--font-sansRegular);
     color: #313131;
     line-height: 45px; 
+`
+
+export const ProcessImg = styled.img`
+    margin-top: 35px;
+`
+
+export const ImgBox = styled.div`
+    width: 1500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 35px;
+`
+
+export const ImgDescription = styled.div`
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-sansMedium);
+    font-size: 18px;
+    align-items: center;
+`
+export const GreyDescription = styled.span`
+    font-size: 16px;
+    color: #313131;
+    font-family: var(--font-sansRegular);
+`
+
+export const Imgs = styled.img`
+    width: 450px;
+    margin-bottom: 5px;
+`
+
+export const DifferentImgs = styled.img`
+    height: 355px;
+    margin-bottom: 5px;
 `

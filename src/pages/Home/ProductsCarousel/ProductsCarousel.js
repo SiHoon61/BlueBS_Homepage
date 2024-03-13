@@ -12,6 +12,7 @@ import products3 from '../../../assets/Home/products3.png'
 import products4 from '../../../assets/Home/products4.png'
 import products5 from '../../../assets/Home/products5.png'
 import products6 from '../../../assets/Home/products6.png'
+import products7 from '../../../assets/Home/products7.png'
 
 //style
 import {
@@ -163,6 +164,17 @@ function SwipeToSlide() {
                         </ProductsTitleText>
                         전기 촉매(OH 라디칼)를 이용하여 산화, 흡착, 응집의 과정을 통해 침출수를 처리하는 기술을 제공합니다.
                     </ProductsEvenText>
+                </ProductsBox>
+
+                <ProductsBox>
+                    <ProductsOddText onClick={goGreenAlgaePD}>
+                        <ProductsTitleText>
+                            인공지능 스마트 물 관리 시스템
+                        </ProductsTitleText>
+                        IoT, AMI 및 데이터 기반 솔루션과 같은 첨단 기술을 통합하여 처리, 생산 및 공급 상황 전반에 걸쳐 실시간 모니터링 및 최적화를 제공합니다.
+                    </ProductsOddText>
+                    <ProductsImg src={products7} alt="products7" onClick={goGreenAlgaePD}>
+                    </ProductsImg>
                 </ProductsBox>
 
                 <ProductsBox>

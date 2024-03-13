@@ -1,14 +1,14 @@
 import styled from "styled-components";
 
 //img
-import DrinkingPD from '../../../assets/Products/Drinking/DrinkingPD.png'
+import drinkingPD from '../../../assets/Products/Drinking/DrinkingPD.png'
 
 export const TitleBar = styled.div`
     display: flex;
     height: 500px;
     width: 100%;
     background-blend-mode: multiply;
-    background-image: url(${DrinkingPD});
+    background-image: url(${drinkingPD});
     background-color: rgba(36, 36, 36, 0.40);
     background-size: cover;
     background-repeat: no-repeat;
@@ -51,13 +51,6 @@ export const SubColumnContainer = styled.div`
     align-items: flex-start;
 `
 
-export const SubLargeContainer = styled.div`
-    margin: 0 auto 50px auto;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-`
-
 export const SubLargeTitle = styled.div`
     margin-top: 10px;
     width: 1500px;
@@ -80,4 +73,8 @@ export const FullSubContent = styled.div`
     font-family: var(--font-sansRegular);
     color: #313131;
     line-height: 45px; 
+`
+export const FullImg = styled.img`
+    width: 1500px;
+    margin-top: 35px;
 `

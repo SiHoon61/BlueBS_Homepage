@@ -164,6 +164,7 @@ export const NanoExampleBox = styled.div`
 `
 
 export const NanoExampleImg = styled.img`
+    margin-bottom: 5px;
 `
 
 export const MonitoringImgSubTitle = styled.div`

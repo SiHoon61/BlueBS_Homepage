@@ -26,8 +26,8 @@ import AgriculturePD from './pages/Products/Agriculture/Agriculture';
 import AnimalHusbandryPD from './pages/Products/AnimalHusbandry/AnimalHusbandry';
 import GreenAlgaePD from './pages/Products/GreenAlgae/GreenAlgae';
 import LeachatePD from './pages/Products/Leachate/Leachate';
+import AIWaterSystemPD from './pages/Products/AIWaterSystem/AIWaterSystem';
 import MapWay from './pages/Communication/MapWay/MapWay';
-
 import ScrollToTop from './Util/ScrollToTop'
 function App() {
   return (
@@ -51,15 +51,14 @@ function App() {
           <Route path="/animalHusbandry" element={<AnimalHusbandry />}></Route>
           <Route path="/greenAlgae" element={<GreenAlgae />}></Route>
           <Route path="/leachate" element={<Leachate />}></Route>
-          
+          <Route path="/monitoring" element={<Monitoring />}></Route>
           <Route path="/drinkingPD" element={<DrinkingPD />}></Route>
           <Route path="/sewerPD" element={<SewerPD />}></Route>
           <Route path="/agriculturePD" element={<AgriculturePD />}></Route>
           <Route path="/animalHusbandryPD" element={<AnimalHusbandryPD />}></Route>
           <Route path="/greenAlgaePD" element={<GreenAlgaePD />}></Route>
           <Route path="/leachatePD" element={<LeachatePD />}></Route>
-
-          <Route path="/monitoring" element={<Monitoring />}></Route>
+          <Route path="/aIWaterSystemPD" element={<AIWaterSystemPD />}></Route>
           <Route path="/map" element={<MapWay />}></Route>
         </Routes>
         <Bottom></Bottom>
