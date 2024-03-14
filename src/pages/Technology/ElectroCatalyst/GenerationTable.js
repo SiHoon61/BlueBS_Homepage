@@ -19,8 +19,11 @@ const TD = styled.td`
 
 const R1TD = styled.td`
   border: 1px solid #E2E2E2;
+  border-top: 3px solid black;
+  background-color: #E9E9E9;
   text-align: center;
   padding: 18px;
+  font-family: var(--font-sansBold);
 `;
 
 const R2TDLeft = styled.td`
@@ -28,14 +31,12 @@ const R2TDLeft = styled.td`
   border: 1px solid #E2E2E2;
   text-align: center;
   padding: 18px;
-  background-color: #F4B39E;
 `
 const R2TDRight = styled.td`
   font-family: var(--font-sansBold);
   border: 1px solid #E2E2E2;
   text-align: center;
   padding: 18px;
-  background-color: #A3D19B;
 `
 
 const GenerationTable = () => {

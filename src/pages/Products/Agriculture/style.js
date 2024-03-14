@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 //img
 import AgriculturePD from '../../../assets/Products/Agriculture/AgriculturePD.png'
+import processArrow from '../../../assets/Products/Agriculture/processArrow.png'
 
 export const TitleBar = styled.div`
     display: flex;
@@ -51,8 +52,8 @@ export const SubColumnContainer = styled.div`
     align-items: flex-start;
 `
 
-export const SubLargeContainer = styled.div`
-    margin: 0 auto 50px auto;
+export const SubImgContainer = styled.div`
+    margin: 50px auto 50px auto;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -80,4 +81,66 @@ export const FullSubContent = styled.div`
     font-family: var(--font-sansRegular);
     color: #313131;
     line-height: 45px; 
+`
+export const SubImgTitle = styled.div`
+    margin: ${props => props.$margin};
+    width: ${props => props.$width};
+    font-size: 40px;
+    font-family: var(--font-sansBold);
+`
+
+export const SubImgContent = styled.div`
+    width: ${props => props.$width};
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-family: var(--font-sansRegular);
+    color: #313131;
+    line-height: 45px;
+`
+export const SubImg = styled.img`
+    width: ${props => props.$width};
+    margin: ${props => props.$margin};
+`
+
+export const ProcessBox = styled.div`
+    width: 1500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 35px;
+    align-items: center;
+`
+
+export const ProcessImgs = styled.img`
+    width: 410px;
+    margin-bottom: 5px;
+`
+
+export const ImgDescription = styled.div`
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-sansMedium);
+    font-size: 20px;
+    align-items: center;
+`
+
+export const GreyDescription = styled.span`
+    font-size: 18px;
+    color: #313131;
+    font-family: var(--font-sansRegular);
+`
+
+export const EmptyDescription = styled.div`
+    height: 26px;
+    width: 26px;
+`
+
+export const ProcessArrow = styled.img.attrs({
+    src: processArrow,
+    alt: 'processArrow'
+})`
+    width: 70px;
+    height: 70px;
+    margin-bottom: 40px;
 `

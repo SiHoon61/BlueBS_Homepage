@@ -86,19 +86,19 @@ const Purify = () => {
                             <Description>
                                 준공일
                                 <DescriptionStyle>
-                                    충남 아산 구룡지구
+                                    2023년
                                 </DescriptionStyle>
                             </Description>
                             <Description>
                                 용량
                                 <DescriptionStyle>
-                                    5,000m3/d
+                                    10m3/d
                                 </DescriptionStyle>
                             </Description>
                             <Description>
                                 맞춤형 공정
                                 <DescriptionStyle>
-                                    전기촉매 + 분리막
+                                    전기촉매
                                 </DescriptionStyle>
                             </Description>
                             <Description>

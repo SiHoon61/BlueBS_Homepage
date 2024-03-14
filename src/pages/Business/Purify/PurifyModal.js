@@ -80,11 +80,12 @@ const baseCellStyle = css`
     text-align: left;
     padding: 18px 30px;
     font-family: var(--font-sansMedium);
+    height: 40px;
 `;
 
 const TD = styled.td`
+    font-size: ${props => props.$size};
     ${baseCellStyle}
-    
     &:first-child {
         border-left: none;
     }
@@ -94,6 +95,7 @@ const TD = styled.td`
 `;
 
 const RSTD = styled.td`
+    font-size: ${props => props.$size};
     ${baseCellStyle}
     border-top: 2px solid black;
     &:first-child {
@@ -105,6 +107,7 @@ const RSTD = styled.td`
 `;
 
 const RFTD = styled.td`
+    font-size: ${props => props.$size};
     ${baseCellStyle}
     border-bottom: 2px solid black;
     &:first-child {
@@ -128,78 +131,67 @@ const Table = () => {
             <StyledTable>
                 <tbody>
                     <TR>
-                        <RSTD>제주 상/하수도 본부 판포 하수처리시설</RSTD>
+                        <RSTD $size={"20px"}>한국농어촌공사
+                            차량 이동식 담수화 시스템</RSTD>
                         <RSTD>
                             <DescriptionStyle>
                                 용량
                             </DescriptionStyle>
-                            5,000m3/d
+                            100m3/d
                         </RSTD>
                         <RSTD>
                             <DescriptionStyle>
                                 공정
                             </DescriptionStyle>
-                            전기촉매
+                            전기촉매 + 분리막
                         </RSTD>
                     </TR>
                     <TR>
-                        <TD >제주 상/하수도</TD>
+                        <TD $size={"20px"}>농림축산식품
+                            광양군 담수화 시스템</TD>
                         <TD >
                             <DescriptionStyle>
                                 용량
                             </DescriptionStyle>
-                            5,000m3/d
+                            100m3/d
                         </TD>
                         <TD >
                             <DescriptionStyle>
                                 공정
                             </DescriptionStyle>
-                            전기
+                            전기촉매 + 분리막
                         </TD>
                     </TR>
                     <TR>
-                        <TD >제주 상/하수도</TD>
+                        <TD $size={"20px"}>농림축산식품
+                            고흥군 담수화 시스템</TD>
                         <TD >
                             <DescriptionStyle>
                                 용량
                             </DescriptionStyle>
-                            5,000m3/d
+                            50m3/d
                         </TD>
                         <TD >
                             <DescriptionStyle>
                                 공정
                             </DescriptionStyle>
-                            전기
+                            전기촉매 + 분리막
                         </TD>
                     </TR>
                     <TR>
-                        <TD>제주 상/하수도 본부 판포 하수처리시설</TD>
-                        <TD>
-                            <DescriptionStyle>
-                                용량
-                            </DescriptionStyle>
-                            5,000m3/d
-                        </TD>
-                        <TD>
-                            <DescriptionStyle>
-                                공정
-                            </DescriptionStyle>
-                            전기촉매 EF + 분리막
-                        </TD>
-                    </TR>
-                    <TR>
-                        <RFTD>제주 상/하수도 본부 판포 하수처리시설</RFTD>
+                        <RFTD $size={"20px"}>한국건설기술연구원
+                            칠서 정수장 전처리 고액분리 시스템 </RFTD>
                         <RFTD>
                             <DescriptionStyle>
                                 용량
                             </DescriptionStyle>
-                            5,000m3/d
+                            100m3/d
                         </RFTD>
                         <RFTD>
                             <DescriptionStyle>
                                 공정
                             </DescriptionStyle>
-                            전기촉매 EF + 분리막
+                            전기촉매
                         </RFTD>
                     </TR>
                 </tbody>

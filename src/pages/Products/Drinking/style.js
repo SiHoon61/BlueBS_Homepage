@@ -74,6 +74,7 @@ export const FullSubContent = styled.div`
     color: #313131;
     line-height: 45px; 
 `
+
 export const FullImg = styled.img`
     width: 1500px;
     margin-top: 35px;

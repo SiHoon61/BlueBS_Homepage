@@ -79,7 +79,8 @@ const Sewer = () => {
                         대표 실적
                     </SubTitle>
                     <PerformanceContent>
-                        제주도 판포하수처리시설
+                        제주 상하수도본부
+                        판포하수처리 재이용 시스템
                     </PerformanceContent>
                     <PerformanceImgBox>
                         <PerformanceImgContainer>
@@ -96,7 +97,7 @@ const Sewer = () => {
                             <Description>
                                 준공일
                                 <DescriptionStyle>
-                                    2010년 10월
+                                    2009년
                                 </DescriptionStyle>
                             </Description>
                             <Description>

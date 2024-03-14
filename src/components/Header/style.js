@@ -75,7 +75,7 @@ export const HoverBox = styled.div`
     top: ${({ $isHovered }) => ($isHovered ? 70 : 60)}px;;
     background-color: white; 
     padding: 18px 0px 18px 0px; 
-    box-shadow: 0px 10px 25px rgba(49,49,63,0.3);
+    box-shadow: 0px 10px 25px rgba(49,49,63,0.4);
     border-radius: 7px;
     opacity: ${({ $isHovered }) => ($isHovered ? 1 : 0)};
     transition: all 0.3s ease;

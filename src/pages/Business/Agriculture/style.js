@@ -147,13 +147,13 @@ export const DescriptionBox = styled.ul`
 export const Description = styled.li`
     align-items: center;
     justify-content: center;
-    font-size: 16px;
+    font-size: 18px;
     font-family: var(--font-sansBold);
 `
 
 export const DescriptionStyle = styled.span`
     margin-left: 25px;
-    font-size: 16px;
+    font-size: 18px;
     font-family: var(--font-sansMedium);
 `
 

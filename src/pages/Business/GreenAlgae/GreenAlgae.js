@@ -72,7 +72,8 @@ const GreenAlgae = () => {
                         대표 실적
                     </SubTitle>
                     <PerformanceContent>
-                        낙동강 녹조 제거
+                        한국건설기술원
+                        부유 이동형 녹조저감시스템(녹조선)
                     </PerformanceContent>
                     <PerformanceImgBox>
                         <PerformanceImg src={performanceImg} alt="performanceImg" />
@@ -98,7 +99,7 @@ const GreenAlgae = () => {
                             <Description>
                                 맞춤형 공정
                                 <DescriptionStyle>
-                                    전기촉매 ZT
+                                    전기촉매
                                 </DescriptionStyle>
                             </Description>
                             <Description>

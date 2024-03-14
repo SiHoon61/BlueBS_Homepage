@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 //img
 import AnimalHusbandryPD from '../../../assets/Products/AnimalHusbandry/AnimalHusbandryPD.png'
+import processArrow from '../../../assets/Products/Agriculture/processArrow.png'
 
 export const TitleBar = styled.div`
     display: flex;
@@ -80,4 +81,47 @@ export const FullSubContent = styled.div`
     font-family: var(--font-sansRegular);
     color: #313131;
     line-height: 45px; 
+`
+
+
+export const ProcessBox = styled.div`
+    width: 1500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 35px;
+    align-items: center;
+`
+
+export const ProcessImgs = styled.img`
+    width: 410px;
+    margin-bottom: 5px;
+`
+
+export const ImgDescription = styled.div`
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-sansMedium);
+    font-size: 20px;
+    align-items: center;
+`
+
+export const GreyDescription = styled.span`
+    font-size: 18px;
+    color: #313131;
+    font-family: var(--font-sansRegular);
+`
+
+export const EmptyDescription = styled.div`
+    height: 26px;
+    width: 26px;
+`
+
+export const ProcessArrow = styled.img.attrs({
+    src: processArrow,
+    alt: 'processArrow'
+})`
+    width: 70px;
+    height: 70px;
+    margin-bottom: 40px;
 `

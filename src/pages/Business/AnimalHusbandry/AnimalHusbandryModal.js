@@ -80,11 +80,12 @@ const baseCellStyle = css`
     text-align: left;
     padding: 18px 30px;
     font-family: var(--font-sansMedium);
+    height: 40px;
 `;
 
 const TD = styled.td`
     ${baseCellStyle}
-    
+    font-size: ${props => props.$size};
     &:first-child {
         border-left: none;
     }
@@ -95,6 +96,7 @@ const TD = styled.td`
 
 const RSTD = styled.td`
     ${baseCellStyle}
+    font-size: ${props => props.$size};
     border-top: 2px solid black;
     &:first-child {
         border-left: none;
@@ -106,6 +108,7 @@ const RSTD = styled.td`
 
 const RFTD = styled.td`
     ${baseCellStyle}
+    font-size: ${props => props.$size};
     border-bottom: 2px solid black;
     &:first-child {
         border-left: none;
@@ -128,12 +131,13 @@ const Table = () => {
             <StyledTable>
                 <tbody>
                     <TR>
-                        <RSTD>제주 상/하수도 본부 판포 하수처리시설</RSTD>
+                        <RSTD $size={"20px"}>제주 해거름마을 영농조합 ㈜포엠
+                            제주 두부폐수처리시설</RSTD>
                         <RSTD>
                             <DescriptionStyle>
                                 용량
                             </DescriptionStyle>
-                            5,000m3/d
+                            30m3/d
                         </RSTD>
                         <RSTD>
                             <DescriptionStyle>
@@ -143,48 +147,19 @@ const Table = () => {
                         </RSTD>
                     </TR>
                     <TR>
-                        <TD >제주 상/하수도</TD>
-                        <TD >
+                        <RFTD $size={"20px"}>음성군
+                            총인 산업폐수처리시설</RFTD>
+                        <RFTD >
                             <DescriptionStyle>
                                 용량
                             </DescriptionStyle>
-                            5,000m3/d
-                        </TD>
-                        <TD >
-                            <DescriptionStyle>
-                                공정
-                            </DescriptionStyle>
-                            전기
-                        </TD>
-                    </TR>
-                    <TR>
-                        <TD>제주 상/하수도 본부 판포 하수처리시설</TD>
-                        <TD>
-                            <DescriptionStyle>
-                                용량
-                            </DescriptionStyle>
-                            5,000m3/d
-                        </TD>
-                        <TD>
-                            <DescriptionStyle>
-                                공정
-                            </DescriptionStyle>
-                            전기촉매 EF + 분리막
-                        </TD>
-                    </TR>
-                    <TR>
-                        <RFTD>제주 상/하수도 본부 판포 하수처리시설</RFTD>
-                        <RFTD>
-                            <DescriptionStyle>
-                                용량
-                            </DescriptionStyle>
-                            5,000m3/d
+                            1,000m3/d
                         </RFTD>
-                        <RFTD>
+                        <RFTD >
                             <DescriptionStyle>
                                 공정
                             </DescriptionStyle>
-                            전기촉매 EF + 분리막
+                            전기촉매
                         </RFTD>
                     </TR>
                 </tbody>

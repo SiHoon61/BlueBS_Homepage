@@ -91,11 +91,12 @@ export const ImgDescription = styled.div`
     display: flex;
     flex-direction: column;
     font-family: var(--font-sansMedium);
-    font-size: 18px;
+    font-size: 20px;
     align-items: center;
 `
+
 export const GreyDescription = styled.span`
-    font-size: 16px;
+    font-size: 18px;
     color: #313131;
     font-family: var(--font-sansRegular);
 `

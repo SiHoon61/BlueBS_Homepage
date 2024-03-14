@@ -100,7 +100,7 @@ const Agriculture = () => {
                         대표 실적
                     </SubTitle>
                     <PerformanceContent>
-                        제주도 성읍 지구
+                        한국농어촌공사 제주도 성읍저수지 다목적 농촌용수개발사업 농업용수 여과시스템
                     </PerformanceContent>
                     <PerformanceImgBox>
                         <PerformanceImg src={performanceImg} alt="performanceImg" />
@@ -114,7 +114,7 @@ const Agriculture = () => {
                             <Description>
                                 준공일
                                 <DescriptionStyle>
-                                    2017년 9월
+                                    2015년
                                 </DescriptionStyle>
                             </Description>
                             <Description>
@@ -126,7 +126,7 @@ const Agriculture = () => {
                             <Description>
                                 맞춤형 공정
                                 <DescriptionStyle>
-                                    FDA 여과기
+                                    FDA/MSF
                                 </DescriptionStyle>
                             </Description>
                             <Description>

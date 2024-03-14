@@ -72,7 +72,8 @@ const Leachate = () => {
                         대표 실적
                     </SubTitle>
                     <PerformanceContent>
-                        침출수 고도처리
+                        제주시
+                        제주 침출수 고도처리 시설
                     </PerformanceContent>
                     <PerformanceImgBox>
                         <PerformanceImg src={performanceImg} alt="performanceImg" />
@@ -86,7 +87,7 @@ const Leachate = () => {
                             <Description>
                                 준공일
                                 <DescriptionStyle>
-                                    2022년 10월
+                                    2022년
                                 </DescriptionStyle>
                             </Description>
                             <Description>
@@ -98,7 +99,7 @@ const Leachate = () => {
                             <Description>
                                 맞춤형 공정
                                 <DescriptionStyle>
-                                    전기촉매 기반의 고도처리 시스템
+                                    전기촉매 + 분리막
                                 </DescriptionStyle>
                             </Description>
                             <Description>

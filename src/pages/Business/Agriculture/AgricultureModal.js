@@ -80,11 +80,12 @@ const baseCellStyle = css`
     text-align: left;
     padding: 18px 30px;
     font-family: var(--font-sansMedium);
+    height: 40px;
 `;
 
 const TD = styled.td`
+    font-size: ${props => props.$size};
     ${baseCellStyle}
-    
     &:first-child {
         border-left: none;
     }
@@ -94,6 +95,7 @@ const TD = styled.td`
 `;
 
 const RSTD = styled.td`
+    font-size: ${props => props.$size};
     ${baseCellStyle}
     border-top: 2px solid black;
     &:first-child {
@@ -105,6 +107,7 @@ const RSTD = styled.td`
 `;
 
 const RFTD = styled.td`
+    font-size: ${props => props.$size};
     ${baseCellStyle}
     border-bottom: 2px solid black;
     &:first-child {
@@ -128,37 +131,40 @@ const Table = () => {
             <StyledTable>
                 <tbody>
                     <TR>
-                        <RSTD>제주 상/하수도 본부 판포 하수처리시설</RSTD>
+                        <RSTD $size={"20px"}>한국농어촌공사
+                            대구 하우스 시설 단지</RSTD>
                         <RSTD>
                             <DescriptionStyle>
                                 용량
                             </DescriptionStyle>
-                            5,000m3/d
+                            500m3/d
                         </RSTD>
                         <RSTD>
                             <DescriptionStyle>
                                 공정
                             </DescriptionStyle>
-                            전기촉매
+                            FDA/MSF
                         </RSTD>
                     </TR>
                     <TR>
-                        <TD >제주 상/하수도</TD>
+                        <TD $size={"20px"}>경북대학교
+                            대구 하우스 시설 단지 </TD>
                         <TD >
                             <DescriptionStyle>
                                 용량
                             </DescriptionStyle>
-                            5,000m3/d
+                            300m3/d
                         </TD>
                         <TD >
                             <DescriptionStyle>
                                 공정
                             </DescriptionStyle>
-                            전기
+                            FDA/MSF
                         </TD>
                     </TR>
                     <TR>
-                        <TD>제주 상/하수도 본부 판포 하수처리시설</TD>
+                        <TD $size={"20px"}>김해시
+                            김해시 화목가압장 농업용수 공급 여과기</TD>
                         <TD>
                             <DescriptionStyle>
                                 용량
@@ -169,11 +175,30 @@ const Table = () => {
                             <DescriptionStyle>
                                 공정
                             </DescriptionStyle>
-                            전기촉매 EF + 분리막
+                            FDA/MSF
                         </TD>
                     </TR>
                     <TR>
-                        <RFTD>제주 상/하수도 본부 판포 하수처리시설</RFTD>
+                        <TD $size={"20px"}>새만금 사업단
+                            김제시 새만금농생명용지 5공구 공급 여과기
+                        </TD>
+                        <TD>
+                            <DescriptionStyle>
+                                용량
+                            </DescriptionStyle>
+                            3,000m3/d
+                        </TD>
+                        <TD>
+                            <DescriptionStyle>
+                                공정
+                            </DescriptionStyle>
+                            FDA/MSF
+                        </TD>
+                    </TR>
+                    <TR>
+                        <RFTD $size={"20px"}>김해시
+                            하천수 농업용수 공급 안양 양수장
+                        </RFTD>
                         <RFTD>
                             <DescriptionStyle>
                                 용량
@@ -184,7 +209,7 @@ const Table = () => {
                             <DescriptionStyle>
                                 공정
                             </DescriptionStyle>
-                            전기촉매 EF + 분리막
+                            전기촉매 + MSF
                         </RFTD>
                     </TR>
                 </tbody>

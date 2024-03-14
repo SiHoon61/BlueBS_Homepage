@@ -72,7 +72,8 @@ const AnimalHusbandry = () => {
                         대표 실적
                     </SubTitle>
                     <PerformanceContent>
-                        여주시 돼지농장
+                        이천시
+                        유원농장 축산분뇨 시설
                     </PerformanceContent>
                     <PerformanceImgBox>
                         <PerformanceImg src={performanceImg} alt="performanceImg" />
@@ -80,7 +81,7 @@ const AnimalHusbandry = () => {
                             <Description>
                                 위치
                                 <DescriptionStyle>
-                                    여주시
+                                    이천시 여주군 유원농장
                                 </DescriptionStyle>
                             </Description>
                             <Description>
@@ -92,7 +93,7 @@ const AnimalHusbandry = () => {
                             <Description>
                                 용량
                                 <DescriptionStyle>
-                                    10m3/d
+                                    20m3/d
                                 </DescriptionStyle>
                             </Description>
                             <Description>

@@ -73,7 +73,13 @@ function SwipeToSlide() {
             navigate("/leachatePD");
         }
     }
-
+    const goAIWaterSystemPD = (e) => {
+        if (isSliding) {
+            e.stopPropagation(); // 슬라이드 중 클릭 이벤트를 무시
+        } else {
+            navigate("/aIWaterSystemPD");
+        }
+    }
     const SlickButtonFix = ({ currentSlide, slideCount, children, ...props }) => (
         <span {...props}>{children}</span>
     );
@@ -167,13 +173,13 @@ function SwipeToSlide() {
                 </ProductsBox>
 
                 <ProductsBox>
-                    <ProductsOddText onClick={goGreenAlgaePD}>
+                    <ProductsOddText onClick={goAIWaterSystemPD}>
                         <ProductsTitleText>
                             인공지능 스마트 물 관리 시스템
                         </ProductsTitleText>
                         IoT, AMI 및 데이터 기반 솔루션과 같은 첨단 기술을 통합하여 처리, 생산 및 공급 상황 전반에 걸쳐 실시간 모니터링 및 최적화를 제공합니다.
                     </ProductsOddText>
-                    <ProductsImg src={products7} alt="products7" onClick={goGreenAlgaePD}>
+                    <ProductsImg src={products7} alt="products7" onClick={goAIWaterSystemPD}>
                     </ProductsImg>
                 </ProductsBox>
 

@@ -70,7 +70,7 @@ const Drinking = () => {
                         음용수·생활용수·담수화
                     </SubTitle>
                     <FullSubContent>
-                        최근 남조류의 급속한 증가로 인해 곰팡이 냄새의 원인 물질인 2-MIB가 검출되고 있습니다.
+                        최근 남조류의 급속한 증가로 인해 곰팡이 냄새의 원인 물질인 2-MIB가 검출되고 있습니다.<br/>
                         전기촉매 기술을 활용하면 이를 10분 이내에 99%까지, 10ppt 이하로 효과적으로 처리할 수 있습니다.
                     </FullSubContent>
                     <FullImg src={drinkingImg2} alt="dringkingImg" />
