@@ -223,3 +223,12 @@ export const NewsText = styled.div`
     font-size: 96px;
     font-family: var(--font-sansBold);
 `
+
+export const NewsBox = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    width: 1500px;
+    justify-content: space-between;
+    height: 440px;
+    overflow: hidden;
+`

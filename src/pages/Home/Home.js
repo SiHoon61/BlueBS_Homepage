@@ -27,7 +27,12 @@ import {
     ProductsText,
     NewsContainer,
     NewsText,
+    NewsBox,
+
 } from './style';
+
+//news
+import News from '../../components/News/News'
 
 //carousel
 import BusinessCarousel from './businessCarousel/BusinessCarousel'
@@ -163,6 +168,9 @@ const Home = () => {
                 <NewsText>
                     News
                 </NewsText>
+                <NewsBox>
+                    <News/>
+                </NewsBox>
             </NewsContainer>
         </>
 
