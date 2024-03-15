@@ -133,7 +133,7 @@ const AnimalHusbandry = () => {
                 </SubColumnContainer>
                 {modalState && (
                     <ModalPortal>
-                        <AnimalHusbandryModal onClose={handleCloseModal} />
+                        <AnimalHusbandryModal onClose={handleCloseModal} show={modalState}/>
                     </ModalPortal>
                 )}
             </MainContainer>

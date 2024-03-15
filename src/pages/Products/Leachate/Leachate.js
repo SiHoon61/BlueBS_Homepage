@@ -92,21 +92,21 @@ const Leachate = () => {
                     </FullSubContent>
                     <ImgBox $width={'1500px'}>
                         <ImgDescription>
-                            <Imgs src={leachate1} alt="leachate" $width={"410px"} />
+                            <Imgs src={leachate1} alt="leachate" $width={"450px"} />
                             축산폐수
                             <GreyDescription>
                                 (고농도 질소, 유기물질 함유)
                             </GreyDescription>
                         </ImgDescription>
                         <ImgDescription>
-                            <Imgs src={leachate2} alt="leachate" $width={"410px"} />
+                            <Imgs src={leachate2} alt="leachate" $width={"450px"} />
                             음식물 폐수
                             <GreyDescription>
                                 (고농도 질소, COD, 고염분 함유)
                             </GreyDescription>
                         </ImgDescription>
                         <ImgDescription>
-                            <Imgs src={leachate3} alt="leachate" $width={"410px"} />
+                            <Imgs src={leachate3} alt="leachate" $width={"450px"} />
                             오일 & 가스 정제 산업폐수  
                             <GreyDescription>
                                 (질소, COD, 다양한 이온물질/TDS 함유)

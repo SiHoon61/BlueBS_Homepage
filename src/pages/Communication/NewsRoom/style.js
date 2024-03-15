@@ -37,3 +37,26 @@ export const MainContainer = styled.div`
     margin-top: 100px;
     width: 100%;
 `
+
+export const SubColumnContainer = styled.div`
+    margin: 0 auto 150px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+`
+
+
+export const SubTitle = styled.div`
+    margin-top: 10px;
+    width: 1500px;
+    font-size: 40px;
+    font-family: var(--font-sansBold);
+    margin-bottom: 35px;
+`
+
+export const NewsContainer = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    width: 1500px;
+    justify-content: space-between;
+`

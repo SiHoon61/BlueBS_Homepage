@@ -1,8 +1,26 @@
 import React, { useRef } from 'react';
-import styled, { css } from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 
 //
 import close from '../../../assets/Business/close.svg'
+
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
+
+const fadeOut = keyframes`
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+`;
 
 const Modal = styled.div`
     background: rgba(0, 0, 0, 0.4);
@@ -14,6 +32,7 @@ const Modal = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    animation: ${props => props.show ? fadeIn : fadeOut} 0.3s forwards;
 `
 const Content = styled.div`
     position: relative;
@@ -23,6 +42,7 @@ const Content = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    animation: ${props => props.show ? fadeIn : fadeOut} 0.2s forwards;
 `
 
 const CloseButton = styled.img`
@@ -38,9 +58,8 @@ const Title = styled.div`
     font-size: 30px;
     font-family: var(--font-sansBold);
 `
-const GreenAlgaeModal = ({ onClose }) => {
+const GreenAlgaeModal = ({ show, onClose }) => {
     const contentRef = useRef(null);
-
     const handleClickOutside = (event) => {
         if (contentRef.current && !contentRef.current.contains(event.target)) {
             onClose(); // 클릭된 영역이 Content 밖이라면 모달 닫기 함수 호출
@@ -48,8 +67,8 @@ const GreenAlgaeModal = ({ onClose }) => {
     };
     return (
         <>
-            <Modal onClick={handleClickOutside}>
-                <Content ref={contentRef}>
+            <Modal onClick={handleClickOutside} show={show}>
+                <Content ref={contentRef} show={show}>
                     <CloseButton
                         src={close}
                         alt="close"

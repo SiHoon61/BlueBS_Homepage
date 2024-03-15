@@ -87,6 +87,9 @@ const Header = () => {
     const goAIWaterSystemPD = () => {
         navigate("/aIWaterSystemPD");
     }
+    const goNewsRoom = () => {
+        navigate("/newsRoom");
+    }
 
     const goMap = () => {
         navigate("/map");
@@ -180,7 +183,7 @@ const Header = () => {
                         <HoverBox
                             $isHovered={communicationHovered}
                             $width={90}>
-                            <TextTextBox onClick={() => alert('CEO 인사말!')}>뉴스룸</TextTextBox>
+                            <TextTextBox onClick={goNewsRoom}>뉴스룸</TextTextBox>
                             <TextTextBox onClick={goMap}>오시는길</TextTextBox>
                         </HoverBox>
                     </IndexLI>

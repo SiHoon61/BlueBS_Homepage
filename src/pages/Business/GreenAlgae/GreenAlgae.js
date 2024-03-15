@@ -133,7 +133,7 @@ const GreenAlgae = () => {
                 </SubColumnContainer>
                 {modalState && (
                     <ModalPortal>
-                        <GreenAlgaeModal onClose={handleCloseModal} />
+                        <GreenAlgaeModal onClose={handleCloseModal} show={modalState} />
                     </ModalPortal>
                 )}
             </MainContainer>

@@ -129,7 +129,7 @@ const Purify = () => {
                 </SubColumnContainer>
                 {modalState && (
                     <ModalPortal>
-                        <PurifyModal onClose={handleCloseModal} />
+                        <PurifyModal onClose={handleCloseModal} show={modalState}/>
                     </ModalPortal>
                 )}
                 

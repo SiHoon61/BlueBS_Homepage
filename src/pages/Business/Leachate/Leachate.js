@@ -133,7 +133,7 @@ const Leachate = () => {
                 </SubColumnContainer>
                 {modalState && (
                     <ModalPortal>
-                        <LeachateModal onClose={handleCloseModal} />
+                        <LeachateModal onClose={handleCloseModal} show={modalState} />
                     </ModalPortal>
                 )}
             </MainContainer>

@@ -27,6 +27,7 @@ import AnimalHusbandryPD from './pages/Products/AnimalHusbandry/AnimalHusbandry'
 import GreenAlgaePD from './pages/Products/GreenAlgae/GreenAlgae';
 import LeachatePD from './pages/Products/Leachate/Leachate';
 import AIWaterSystemPD from './pages/Products/AIWaterSystem/AIWaterSystem';
+import NewsRoom from './pages/Communication/NewsRoom/NewsRoom';
 import MapWay from './pages/Communication/MapWay/MapWay';
 import ScrollToTop from './Util/ScrollToTop'
 function App() {
@@ -60,6 +61,7 @@ function App() {
           <Route path="/leachatePD" element={<LeachatePD />}></Route>
           <Route path="/aIWaterSystemPD" element={<AIWaterSystemPD />}></Route>
           <Route path="/map" element={<MapWay />}></Route>
+          <Route path="/newsRoom" element={<NewsRoom />}></Route>
         </Routes>
         <Bottom></Bottom>
       </Router>

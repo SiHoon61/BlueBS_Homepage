@@ -142,7 +142,7 @@ export const PlusImg = styled.img.attrs({
     src: plus,
     alt: 'plus'
 })`
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     margin-bottom: 40px;
 `

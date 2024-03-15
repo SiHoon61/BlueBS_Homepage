@@ -143,7 +143,7 @@ const Sewer = () => {
                 </SubColumnContainer>
                 {modalState && (
                     <ModalPortal>
-                        <SewerModal onClose={handleCloseModal} />
+                        <SewerModal onClose={handleCloseModal} show={modalState} />
                     </ModalPortal>
                 )}
             </MainContainer>

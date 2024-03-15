@@ -160,7 +160,7 @@ const Agriculture = () => {
                 </SubColumnContainer>
                 {modalState && (
                     <ModalPortal>
-                        <AgricultureModal onClose={handleCloseModal} />
+                        <AgricultureModal onClose={handleCloseModal} show={modalState} />
                     </ModalPortal>
                 )}
             </MainContainer>
