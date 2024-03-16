@@ -171,7 +171,7 @@ const Header = () => {
                             $width={240}>
                             <TextTextBox onClick={goDrinkingPD}>음용수/생활용수/담수화</TextTextBox>
                             <TextTextBox onClick={goSewerPD}>하/폐수 재이용 시스템</TextTextBox>
-                            <TextTextBox onClick={goAgriculturePD}>농업 용수 FDA/MSF 여과기</TextTextBox>
+                            <TextTextBox onClick={goAgriculturePD}>농업용수 FDA/MSF 여과기</TextTextBox>
                             <TextTextBox onClick={goAnimalHusbandryPD}>축산분뇨/악취 저감</TextTextBox>
                             <TextTextBox onClick={goGreenAlgaePD}>녹조/저수지 복원 및 유지</TextTextBox>
                             <TextTextBox onClick={goLeachatePD}>고농도 침출수 처리</TextTextBox>

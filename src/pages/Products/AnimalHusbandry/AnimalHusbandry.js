@@ -5,6 +5,10 @@ import processImg1 from '../../../assets/Products/AnimalHusbandry/process1.png'
 import processImg2 from '../../../assets/Products/AnimalHusbandry/process2.png'
 import processImg3 from '../../../assets/Products/AnimalHusbandry/process3.png'
 import applyImg1 from '../../../assets/Products/AnimalHusbandry/apply1.png'
+import applyImg2 from '../../../assets/Products/AnimalHusbandry/apply2.png'
+import applyImg3 from '../../../assets/Products/AnimalHusbandry/apply3.png'
+import applyImg4 from '../../../assets/Products/AnimalHusbandry/apply4.png'
+import applyImg5 from '../../../assets/Products/AnimalHusbandry/apply5.png'
 
 //style
 import {
@@ -36,9 +40,21 @@ const AnimalHusbandry = () => {
             alt: 'applyImg'
         },
         {
-            src: applyImg1,
+            src: applyImg2,
             alt: 'applyImg'
         },
+        {
+            src: applyImg3,
+            alt: 'applyImg'
+        },
+        {
+            src: applyImg4,
+            alt: 'applyImg'
+        },
+        {
+            src: applyImg5,
+            alt: 'applyImg'
+        }
     ];
     return (
         <>
@@ -88,8 +104,8 @@ const AnimalHusbandry = () => {
                     </SubTitle>
                     <FullSubContent>
                         기존의 축산분뇨 처리 기술은 속도가 느리고, 이에 따른 토목 구조물과 부대 설비의 추가 비용, 처리 과정에서 필터의 손실, 과다한 에너지 소비, 운영 및 유지보수의 어려움 등 여러 문제를 안고 있습니다.
-                        BlueBS는 이러한 문제를 해결하기 위해 전기 촉매 전극 시스템을 활용한 혁신적인 기술을 개발하였습니다.<br/>
-                        이 기술은 고농도의 오염물질 처리는 물론, 초고도 처리를 통한 물 재이용까지 가능하게 하는 전기화학적 제거 기술입니다. 
+                        BlueBS는 이러한 문제를 해결하기 위해 전기 촉매 전극 시스템을 활용한 혁신적인 기술을 개발하였습니다.<br />
+                        이 기술은 고농도의 오염물질 처리는 물론, 초고도 처리를 통한 물 재이용까지 가능하게 하는 전기화학적 제거 기술입니다.
                     </FullSubContent>
                 </SubColumnContainer>
                 <SubColumnContainer>

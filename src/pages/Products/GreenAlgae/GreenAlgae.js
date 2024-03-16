@@ -9,7 +9,9 @@ import afterImg from '../../../assets/Products/GreenAlgae/after.png'
 import tech1 from '../../../assets/Products/GreenAlgae/tech1.png'
 import tech2 from '../../../assets/Products/GreenAlgae/tech2.png'
 import applyImg1 from '../../../assets/Products/GreenAlgae/apply1.png'
-
+import applyImg2 from '../../../assets/Products/GreenAlgae/apply2.png'
+import applyImg3 from '../../../assets/Products/GreenAlgae/apply3.png'
+import applyImg4 from '../../../assets/Products/GreenAlgae/apply4.png'
 //style
 import {
     TitleBar,
@@ -43,7 +45,15 @@ const GreenAlgae = () => {
             alt: 'applyImg'
         },
         {
-            src: applyImg1,
+            src: applyImg2,
+            alt: 'applyImg'
+        },
+        {
+            src: applyImg3,
+            alt: 'applyImg'
+        },
+        {
+            src: applyImg4,
             alt: 'applyImg'
         },
     ];

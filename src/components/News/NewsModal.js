@@ -45,11 +45,11 @@ const Content = styled.div`
     border-radius: 5px;
     background: #A4A4A4;
     }
-    width: 900px;
+    width: 1000px;
     position: relative;
     background: white;
     padding: 60px 70px 70px 70px;
-    height: 685px;
+    height: 75%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -89,6 +89,7 @@ const NewsBody = styled.div`
     margin-top: 35px;
     font-size: 18px;
     margin-bottom: 30px;
+    line-height: 40px;
 `
 
 const HR = styled.hr`

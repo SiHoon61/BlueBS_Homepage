@@ -124,7 +124,7 @@ function SwipeToSlide() {
                         <ProductsTitleText>
                             하/폐수 재이용
                         </ProductsTitleText>
-                        하수 및 폐수를 초고도로 재이용하여 친환경 수자원으로 다시 활용합니다
+                        전기촉매 기술을 활용해 하수 및 폐수를 초고도로 재이용하여 친환경 수자원으로 다시 활용합니다.
                     </ProductsEvenText>
                 </ProductsBox>
 
@@ -133,7 +133,7 @@ function SwipeToSlide() {
                         <ProductsTitleText>
                             FDA/MSF 농업
                         </ProductsTitleText>
-                        전기촉매 타워(ET)와 필터(EF)를 이용하여 농업용수를 연중 안전하게 공급합니다.
+                        전기촉매(EF)와 마이크로필터여과(MSF) 기술을 혼용한 무약품 친환경 농업용수를안전하게 공급합니다.
                     </ProductsOddText>
                     <ProductsImg src={products3} alt="products3" onClick={goAgriculturePD}>
                     </ProductsImg>

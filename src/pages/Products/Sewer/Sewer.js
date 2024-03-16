@@ -9,6 +9,16 @@ import sewer5 from '../../../assets/Products/Sewer/sewer5.png'
 import sewer6 from '../../../assets/Products/Sewer/sewer6.png'
 import sewerProcess from '../../../assets/Products/Sewer/sewerProcess.svg'
 import applyImg1 from '../../../assets/Products/Sewer/apply1.png'
+import applyImg2 from '../../../assets/Products/Sewer/apply2.png'
+import applyImg3 from '../../../assets/Products/Sewer/apply3.png'
+import applyImg4 from '../../../assets/Products/Sewer/apply4.png'
+import applyImg5 from '../../../assets/Products/Sewer/apply5.png'
+import applyImg6 from '../../../assets/Products/Sewer/apply6.png'
+import applyImg7 from '../../../assets/Products/Sewer/apply7.png'
+import applyImg8 from '../../../assets/Products/Sewer/apply8.png'
+import applyImg9 from '../../../assets/Products/Sewer/apply9.png'
+import applyImg10 from '../../../assets/Products/Sewer/apply10.png'
+import applyImg11 from '../../../assets/Products/Sewer/apply11.png'
 
 //style
 import {
@@ -40,9 +50,45 @@ const Sewer = () => {
             alt: 'applyImg'
         },
         {
-            src: applyImg1,
+            src: applyImg2,
             alt: 'applyImg'
         },
+        {
+            src: applyImg3,
+            alt: 'applyImg'
+        },
+        {
+            src: applyImg4,
+            alt: 'applyImg'
+        },
+        {
+            src: applyImg5,
+            alt: 'applyImg'
+        },
+        {
+            src: applyImg6,
+            alt: 'applyImg'
+        },
+        {
+            src: applyImg7,
+            alt: 'applyImg'
+        },
+        {
+            src: applyImg8,
+            alt: 'applyImg'
+        },
+        {
+            src: applyImg9,
+            alt: 'applyImg'
+        },
+        {
+            src: applyImg10,
+            alt: 'applyImg'
+        },
+        {
+            src: applyImg11,
+            alt: 'applyImg'
+        }
     ];
     return (
         <>

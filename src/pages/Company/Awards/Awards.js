@@ -12,6 +12,7 @@ import certification8 from '../../../assets/Company/Awards/certification8.png'
 import certification9 from '../../../assets/Company/Awards/certification9.png'
 import certification10 from '../../../assets/Company/Awards/certification10.png'
 import certification11 from '../../../assets/Company/Awards/certification11.png'
+import certification12 from '../../../assets/Company/Awards/certification12.png'
 import award1 from '../../../assets/Company/Awards/award1.png'
 import award2 from '../../../assets/Company/Awards/award2.png'
 import award3 from '../../../assets/Company/Awards/award3.png'
@@ -184,6 +185,15 @@ const Awards = () => {
                         <AwardBox>
                             <NoBorderAwardImg src={certification9} alt='certification9' />
                             <AwardDescription>
+                                제 20220914030036호
+                                <AwardName>
+                                    벤처기업 확인서
+                                </AwardName>
+                            </AwardDescription>
+                        </AwardBox>
+                        <AwardBox>
+                            <NoBorderAwardImg src={certification10} alt='certification9' />
+                            <AwardDescription>
                                 제 2022-351호
                                 <AwardName>
                                     혁신제품 지정 인증서
@@ -191,7 +201,7 @@ const Awards = () => {
                             </AwardDescription>
                         </AwardBox>
                         <AwardBox>
-                            <NoBorderAwardImg src={certification10} alt='certification10' />
+                            <NoBorderAwardImg src={certification11} alt='certification10' />
                             <AwardDescription>
                                 제 51-137호
                                 <AwardName>
@@ -200,7 +210,7 @@ const Awards = () => {
                             </AwardDescription>
                         </AwardBox>
                         <AwardBox>
-                            <NoBorderAwardImg src={certification11} alt='certification11' />
+                            <NoBorderAwardImg src={certification12} alt='certification11' />
                             <AwardDescription>
                                 제 2023-7호
                                 <AwardName>
@@ -208,7 +218,7 @@ const Awards = () => {
                                 </AwardName>
                             </AwardDescription>
                         </AwardBox>
-                        <EmptyBox />
+                      
                     </RowContainer>
                 </CertificationPart>
                 <AwardsPart $isSelect={isSelect}>

@@ -7,8 +7,8 @@ import applyImg1 from '../../../assets/Products/Drinking/apply1.png'
 import applyImg2 from '../../../assets/Products/Drinking/apply2.png'
 import applyImg3 from '../../../assets/Products/Drinking/apply3.png'
 import applyImg4 from '../../../assets/Products/Drinking/apply4.png'
-
-
+import applyImg5 from '../../../assets/Products/Drinking/apply5.png'
+import applyImg6 from '../../../assets/Products/Drinking/apply6.png'
 //style
 import {
     TitleBar,
@@ -41,6 +41,14 @@ const Drinking = () => {
         },
         {
             src: applyImg4,
+            alt: 'applyImg'
+        },
+        {
+            src: applyImg5,
+            alt: 'applyImg'
+        },
+        {
+            src: applyImg6,
             alt: 'applyImg'
         }
     ];

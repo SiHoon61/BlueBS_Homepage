@@ -127,7 +127,7 @@ const RSTD = styled.td`
 
 const RFTD = styled.td`
     ${baseCellStyle}
-     font-size: ${props => props.$size};
+    font-size: ${props => props.$size};
     border-bottom: 2px solid black;
     &:first-child {
         border-left: none;
@@ -151,7 +151,7 @@ const Table = () => {
                 <tbody>
                     <TR>
                         <RSTD $size={"20px"}>제주 상하수도본부
-                            월정하수처리 재이용 시스템</RSTD>
+                            판포하수처리 재이용 시스템</RSTD>
                         <RSTD>
                             <DescriptionStyle>
                                 용량
@@ -164,6 +164,22 @@ const Table = () => {
                             </DescriptionStyle>
                             전기촉매 + 분리막
                         </RSTD>
+                    </TR>
+                    <TR>
+                        <TD $size={"20px"}>제주 상하수도본부
+                            월정하수처리 재이용 시스템</TD>
+                        <TD>
+                            <DescriptionStyle>
+                                용량
+                            </DescriptionStyle>
+                            5,000m3/d
+                        </TD>
+                        <TD>
+                            <DescriptionStyle>
+                                공정
+                            </DescriptionStyle>
+                            전기촉매 + 분리막
+                        </TD>
                     </TR>
                     <TR>
                         <TD $size={"20px"}>김해시

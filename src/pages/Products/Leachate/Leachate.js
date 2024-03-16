@@ -8,6 +8,9 @@ import leachate1 from '../../../assets/Products/Leachate/leachate1.png'
 import leachate2 from '../../../assets/Products/Leachate/leachate2.png'
 import leachate3 from '../../../assets/Products/Leachate/leachate3.png'
 import applyImg1 from '../../../assets/Products/Leachate/apply1.png'
+import applyImg2 from '../../../assets/Products/Leachate/apply2.png'
+import applyImg3 from '../../../assets/Products/Leachate/apply3.png'
+import applyImg4 from '../../../assets/Products/Leachate/apply4.png'
 //style
 import {
     TitleBar,
@@ -38,9 +41,17 @@ const Leachate = () => {
             alt: 'applyImg'
         },
         {
-            src: applyImg1,
+            src: applyImg2,
             alt: 'applyImg'
         },
+        {
+            src: applyImg3,
+            alt: 'applyImg'
+        },
+        {
+            src: applyImg4,
+            alt: 'applyImg'
+        }
     ];
     return (
         <>
@@ -107,7 +118,7 @@ const Leachate = () => {
                         </ImgDescription>
                         <ImgDescription>
                             <Imgs src={leachate3} alt="leachate" $width={"450px"} />
-                            오일 & 가스 정제 산업폐수  
+                            오일 & 가스 정제 산업폐수
                             <GreyDescription>
                                 (질소, COD, 다양한 이온물질/TDS 함유)
                             </GreyDescription>

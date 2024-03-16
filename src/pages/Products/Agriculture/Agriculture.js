@@ -9,6 +9,17 @@ import agriculture2 from '../../../assets/Products/Agriculture/agriculture2.png'
 import applyImg1 from '../../../assets/Products/Agriculture/apply1.png'
 import applyImg2 from '../../../assets/Products/Agriculture/apply2.png'
 import applyImg3 from '../../../assets/Products/Agriculture/apply3.png'
+import applyImg4 from '../../../assets/Products/Agriculture/apply4.png'
+import applyImg5 from '../../../assets/Products/Agriculture/apply5.png'
+import applyImg6 from '../../../assets/Products/Agriculture/apply6.png'
+import applyImg7 from '../../../assets/Products/Agriculture/apply7.png'
+import applyImg8 from '../../../assets/Products/Agriculture/apply8.png'
+import applyImg9 from '../../../assets/Products/Agriculture/apply9.png'
+import applyImg10 from '../../../assets/Products/Agriculture/apply10.png'
+import applyImg11 from '../../../assets/Products/Agriculture/apply11.png'
+import applyImg12 from '../../../assets/Products/Agriculture/apply12.png'
+
+
 //style
 import {
     TitleBar,
@@ -49,15 +60,51 @@ const Agriculture = () => {
         {
             src: applyImg3,
             alt: 'applyImg'
+        },
+        {
+            src: applyImg4,
+            alt: 'applyImg'
+        },
+        {
+            src: applyImg5,
+            alt: 'applyImg'
+        },
+        {
+            src: applyImg6,
+            alt: 'applyImg'
+        },
+        {
+            src: applyImg7,
+            alt: 'applyImg'
+        },
+        {
+            src: applyImg8,
+            alt: 'applyImg'
+        },
+        {
+            src: applyImg9,
+            alt: 'applyImg'
+        },
+        {
+            src: applyImg10,
+            alt: 'applyImg'
+        },
+        {
+            src: applyImg11,
+            alt: 'applyImg'
+        },
+        {
+            src: applyImg12,
+            alt: 'applyImg'
         }
     ];
     return (
         <>
             <TitleBar>
                 <TitleTextBox>
-                    Home · Products · 농업 용수 FDA/MSF 여과기
+                    Home · Products · 농업용수 FDA/MSF 여과기
                     <TitleMainText>
-                        농업 용수 FDA/MSF 여과기
+                        농업용수 FDA/MSF 여과기
                     </TitleMainText>
                 </TitleTextBox>
             </TitleBar>
