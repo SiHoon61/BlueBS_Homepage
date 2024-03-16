@@ -35,11 +35,21 @@ const Modal = styled.div`
     animation: ${props => props.$show ? fadeIn : fadeOut} 0.3s forwards;
 `
 const Content = styled.div`
+    margin-top: 70px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    &::-webkit-scrollbar {
+    width: 6px;
+    }
+    &::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: #A4A4A4;
+    }
     width: 900px;
     position: relative;
     background: white;
     padding: 60px 70px 70px 70px;
-    height: auto;
+    height: 685px;
     display: flex;
     flex-direction: column;
     align-items: center;

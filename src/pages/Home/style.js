@@ -232,3 +232,4 @@ export const NewsBox = styled.div`
     height: 440px;
     overflow: hidden;
 `
+
