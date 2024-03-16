@@ -3,6 +3,9 @@ import React from 'react';
 //img
 import monitoringBody from '../../../assets/Business/Monitoring/MonitoringBody.png'
 import performanceImg from '../../../assets/Business/Monitoring/performanceImg.png'
+import techImg1 from '../../../assets/Business/Monitoring/techImg1.png'
+import techImg2 from '../../../assets/Business/Monitoring/techImg2.png'
+import techImg3 from '../../../assets/Business/Monitoring/techImg3.png'
 
 //style
 import {
@@ -14,10 +17,12 @@ import {
     SubLargeTitle,
     SubLargeContainer,
     SubTitle,
-
     FullSubContent,
     BodyImg,
     FullImg,
+    SubImgContainer,
+    TechImg,
+    ImgDescription,
 } from './style'
 
 const Monitoring = () => {
@@ -48,6 +53,25 @@ const Monitoring = () => {
                         운영관리 시스템
                     </SubTitle>
                     <FullImg src={performanceImg} alt="performanceImg" />
+                </SubColumnContainer>
+                <SubColumnContainer>
+                    <SubTitle>
+                        주요 실적
+                    </SubTitle>
+                    <SubImgContainer>
+                        <ImgDescription>
+                            <TechImg src={techImg1} alt="TechImg" />
+                            원격제어 시스템
+                        </ImgDescription>
+                        <ImgDescription>
+                            <TechImg src={techImg2} alt="TechImg" />
+                            원격제어 시스템
+                        </ImgDescription>
+                        <ImgDescription>
+                            <TechImg src={techImg3} alt="TechImg" />
+                            원격제어 시스템
+                        </ImgDescription>
+                    </SubImgContainer>
                 </SubColumnContainer>
             </MainContainer>
         </>

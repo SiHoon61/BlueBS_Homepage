@@ -73,7 +73,7 @@ const Leachate = () => {
                     </SubTitle>
                     <PerformanceContent>
                         제주시
-                        제주 침출수 고도처리 시설
+                        침출수 고도처리 시설
                     </PerformanceContent>
                     <PerformanceImgBox>
                         <PerformanceImg src={performanceImg} alt="performanceImg" />

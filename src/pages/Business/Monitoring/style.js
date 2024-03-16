@@ -96,6 +96,26 @@ export const ImgBox = styled.div`
     justify-content: space-between;
 `
 
-export const Imgs = styled.img`
+export const SubImgContainer = styled.div`
+    margin-top: 35px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 1500px;
+`
 
+export const TechImg = styled.img`
+    width: 480px;
+    height: 300px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+`
+
+
+export const ImgDescription = styled.div`
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-sansMedium);
+    font-size: 18px;
+    align-items: center;
 `

@@ -271,8 +271,9 @@ const Awards = () => {
                             <NoBorderAwardImg src={patent0}
                                 alt='patent' />
                             <AwardDescription>
+                                US 8361327 B2
                                 <PatentName>
-                                    전기분해를 이용한 질소, 인 제거 방법 및 장치
+                                    전기분해 전처리를 이용한 농업용수 공급 시스템
                                 </PatentName>
                             </AwardDescription>
                         </AwardBox>

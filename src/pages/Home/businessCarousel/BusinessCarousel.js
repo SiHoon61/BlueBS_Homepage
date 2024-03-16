@@ -138,7 +138,7 @@ function CenterMode() {
                     <BusinessImage $src={business4} onClick={goAnimalHusbandry}>
                         <BusinessTextBox>
                             <BusinessTitleText>
-                                축산 분야
+                                축산 & 폐수 분야
                             </BusinessTitleText>
                             전기 촉매 전극 시스템을 활용하여 고농도 오염물을 효과적으로 처리합니다
                         </BusinessTextBox>

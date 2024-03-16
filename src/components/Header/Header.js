@@ -154,11 +154,11 @@ const Header = () => {
                         onMouseLeave={() => setBusinessHovered(false)}>Business
                         <HoverBox
                             $isHovered={businessHovered}
-                            $width={130}>
+                            $width={145}>
                             <TextTextBox onClick={goPurify}>정수 분야</TextTextBox>
-                            <TextTextBox onClick={goSewer}>하/폐수 분야</TextTextBox>
+                            <TextTextBox onClick={goSewer}>하 · 폐수 분야</TextTextBox>
                             <TextTextBox onClick={goAgriculture}>농업 분야</TextTextBox>
-                            <TextTextBox onClick={goAnimalHusbandry}>축산 분야</TextTextBox>
+                            <TextTextBox onClick={goAnimalHusbandry}>축산 & 폐수 분야</TextTextBox>
                             <TextTextBox onClick={goGreenAlgae}>녹조 분야</TextTextBox>
                             <TextTextBox onClick={goLeachate}>침출수 분야</TextTextBox>
                             <TextTextBox onClick={goMonitoring}>운영관리 분야</TextTextBox>

@@ -1,9 +1,10 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 
 //img
 import performanceVideo from '../../../assets/Business/Purify/performanceVideo.mp4'
 import techImg1 from '../../../assets/Business/Purify/techImg1.png'
 import techImg2 from '../../../assets/Business/Purify/techImg2.png'
+import techImg3 from '../../../assets/Business/Purify/techImg3.png'
 
 //style
 import {
@@ -37,7 +38,7 @@ import PurifyModal from './PurifyModal';
 
 const Purify = () => {
     const [modalState, setModalState] = useState(false);
-    
+
     const handleOpenModal = () => {
         setModalState(true);
     };
@@ -57,7 +58,7 @@ const Purify = () => {
             <MainContainer>
                 <SubLargeContainer>
                     <SubLargeTitle>
-                        정수분야
+                        정수 분야
                     </SubLargeTitle>
                     <FullSubContent>
                         BlueBS의 혁신적인 정수 기술을 통해 우리가 마시는 물을 안전하게 공급합니다.<br />
@@ -98,7 +99,7 @@ const Purify = () => {
                             <Description>
                                 맞춤형 공정
                                 <DescriptionStyle>
-                                    전기촉매
+                                    전기촉매 EF + VZ
                                 </DescriptionStyle>
                             </Description>
                             <Description>
@@ -123,17 +124,21 @@ const Purify = () => {
                             <TechImg src={techImg2} alt="TechImg" />
                             정수장 전처리 ZT 정수 시스템
                         </ImgDescription>
+                        <ImgDescription>
+                            <TechImg src={techImg3} alt="TechImg" />
+                            이동식 담수화 시스템
+                        </ImgDescription>
                         <EmptyBox />
-                        <EmptyBox />
+
                     </SubImgContainer>
                 </SubColumnContainer>
                 {modalState && (
                     <ModalPortal>
-                        <PurifyModal onClose={handleCloseModal} show={modalState}/>
+                        <PurifyModal onClose={handleCloseModal} show={modalState} />
                     </ModalPortal>
                 )}
-                
-                
+
+
             </MainContainer>
         </>
     );

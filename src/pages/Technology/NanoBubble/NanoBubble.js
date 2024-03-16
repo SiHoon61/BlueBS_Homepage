@@ -45,6 +45,8 @@ import {
     NanoDevelopImg,
     NanoSoftWareBox,
     NanoSoftWareImg,
+    GreyDescription,
+    GreyStyle,
 } from './style'
 
 const Nanobubble = () => {
@@ -177,15 +179,21 @@ const Nanobubble = () => {
                     <NanoExampleBox>
                         <ImgDescription>
                             <NanoExampleImg src={nanoExample1} alt="nano example" />
-                            울트라 나노버블 세척장치
+                            <GreyDescription>
+                                울트라 나노버블 세척장치 <GreyStyle>(N-1)</GreyStyle>
+                            </GreyDescription>
                         </ImgDescription>
                         <ImgDescription>
                             <NanoExampleImg src={nanoExample2} alt="nano example" />
-                            울트라 나노버블 세척장치
+                            <GreyDescription>
+                                울트라 나노버블 세척장치 <GreyStyle>(N-2)</GreyStyle>
+                            </GreyDescription>
                         </ImgDescription>
                         <ImgDescription>
                             <NanoExampleImg src={nanoExample3} alt="nano example" />
-                            울트라 나노버블 공기정화 장치
+                            <GreyDescription>
+                                울트라 나노버블 공기정화 장치 <GreyStyle>(N-3)</GreyStyle>
+                            </GreyDescription>
                         </ImgDescription>
                     </NanoExampleBox>
                 </SubColumnContainer>

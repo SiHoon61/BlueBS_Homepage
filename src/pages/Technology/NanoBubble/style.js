@@ -123,6 +123,18 @@ export const ImgDescription = styled.div`
     align-items: center;
 `
 
+export const GreyDescription = styled.span`
+    font-size: 18px;
+    color: black;
+    font-family: var(--font-sansMedium);
+`
+
+export const GreyStyle = styled.span`
+    font-size: 18px;
+    color: #313131;
+    font-family: var(--font-sansMedium);
+`
+
 export const NanoFeatureImg = styled.img.attrs({
     src: nanoFeature,
     alt: 'nanoFeature'

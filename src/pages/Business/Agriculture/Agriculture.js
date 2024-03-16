@@ -100,7 +100,7 @@ const Agriculture = () => {
                         대표 실적
                     </SubTitle>
                     <PerformanceContent>
-                        한국농어촌공사 제주도 성읍저수지 다목적 농촌용수개발사업 농업용수 여과시스템
+                        한국농어촌공사 농업용수 여과시스템
                     </PerformanceContent>
                     <PerformanceImgBox>
                         <PerformanceImg src={performanceImg} alt="performanceImg" />

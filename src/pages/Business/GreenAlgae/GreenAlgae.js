@@ -6,6 +6,7 @@ import performanceImg from '../../../assets/Business/GreenAlgae/performanceImg.p
 import techImg1 from '../../../assets/Business/GreenAlgae/techImg1.png'
 import techImg2 from '../../../assets/Business/GreenAlgae/techImg2.png'
 import techImg3 from '../../../assets/Business/GreenAlgae/techImg3.png'
+import techImg4 from '../../../assets/Business/GreenAlgae/techImg4.png'
 
 //style
 import {
@@ -122,13 +123,16 @@ const GreenAlgae = () => {
                         </ImgDescription>
                         <ImgDescription>
                             <TechImg src={techImg2} alt="TechImg" />
-                            컨테이너 형 녹조 제거 시스템 
+                            컨테이너 형 녹조 제거 시스템
                         </ImgDescription>
                         <ImgDescription>
                             <TechImg src={techImg3} alt="TechImg" />
                             녹조선 시스템
                         </ImgDescription>
-                        <EmptyBox />
+                        <ImgDescription>
+                            <TechImg src={techImg4} alt="TechImg" />
+                            천연응집제
+                        </ImgDescription>
                     </SubImgContainer>
                 </SubColumnContainer>
                 {modalState && (

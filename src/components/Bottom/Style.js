@@ -43,9 +43,3 @@ export const CompanyInformation = styled.ul`
 export const Content = styled.li`
     padding: 0 20px;
 `
-
-export const EmptyBox = styled.div`
-    margin: auto 80px;
-    height: 120px;
-    width: 50px;
-`

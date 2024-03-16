@@ -6,6 +6,7 @@ import performanceImg2 from '../../../assets/Business/Sewer/performanceImg2.png'
 import techImg1 from '../../../assets/Business/Sewer/techImg1.png'
 import techImg2 from '../../../assets/Business/Sewer/techImg2.png'
 import techImg3 from '../../../assets/Business/Sewer/techImg3.png'
+import techImg4 from '../../../assets/Business/Sewer/techImg4.png'
 //style
 import {
     TitleBar,
@@ -79,8 +80,7 @@ const Sewer = () => {
                         대표 실적
                     </SubTitle>
                     <PerformanceContent>
-                        제주 상하수도본부
-                        판포하수처리 재이용 시스템
+                        하수처리 재이용 시스템
                     </PerformanceContent>
                     <PerformanceImgBox>
                         <PerformanceImgContainer>
@@ -136,9 +136,12 @@ const Sewer = () => {
                         </ImgDescription>
                         <ImgDescription>
                             <TechImg src={techImg3} alt="TechImg" />
-                            RO 분리막
+                            전처리 사이클론 시스템
                         </ImgDescription>
-                        <EmptyBox />
+                        <ImgDescription>
+                            <TechImg src={techImg4} alt="TechImg" />
+                            전기촉매 고액분리 기반의 RO 분리막
+                        </ImgDescription>
                     </SubImgContainer>
                 </SubColumnContainer>
                 {modalState && (

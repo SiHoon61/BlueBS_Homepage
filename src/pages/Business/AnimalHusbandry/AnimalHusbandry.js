@@ -6,6 +6,7 @@ import performanceImg from '../../../assets/Business/AnimalHusbandry/performance
 import techImg1 from '../../../assets/Business/AnimalHusbandry/techImg1.png'
 import techImg2 from '../../../assets/Business/AnimalHusbandry/techImg2.png'
 import techImg3 from '../../../assets/Business/AnimalHusbandry/techImg3.png'
+import techImg4 from '../../../assets/Business/AnimalHusbandry/techImg4.png'
 
 //style
 import {
@@ -52,14 +53,14 @@ const AnimalHusbandry = () => {
                 <TitleTextBox>
                     Home · Business · 축산분야
                     <TitleMainText>
-                        축산분야
+                        축산분뇨 & 폐수처리분야
                     </TitleMainText>
                 </TitleTextBox>
             </TitleBar>
             <MainContainer>
                 <SubLargeContainer>
                     <SubLargeTitle>
-                        농업환경 분야
+                        축산분뇨 & 폐수처리 분야
                     </SubLargeTitle>
                     <FullSubContent>
                         BlueBS는 전기 촉매 전극 시스템을 활용하여 고농도 오염물을 효과적으로 처리합니다.<br />
@@ -122,18 +123,21 @@ const AnimalHusbandry = () => {
                         </ImgDescription>
                         <ImgDescription>
                             <TechImg src={techImg2} alt="TechImg" />
-                            폭기 반응조
+                            축산 분뇨 처리 과정
                         </ImgDescription>
                         <ImgDescription>
                             <TechImg src={techImg3} alt="TechImg" />
-                            축산 분뇨 처리 과정
+                            페수 인 및 부유물질 처리 시스템
                         </ImgDescription>
-                        <EmptyBox />
+                        <ImgDescription>
+                            <TechImg src={techImg4} alt="TechImg" />
+                            두부 폐수처리 시스템
+                        </ImgDescription>
                     </SubImgContainer>
                 </SubColumnContainer>
                 {modalState && (
                     <ModalPortal>
-                        <AnimalHusbandryModal onClose={handleCloseModal} show={modalState}/>
+                        <AnimalHusbandryModal onClose={handleCloseModal} show={modalState} />
                     </ModalPortal>
                 )}
             </MainContainer>

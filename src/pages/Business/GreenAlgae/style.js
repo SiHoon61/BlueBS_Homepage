@@ -11,7 +11,7 @@ export const TitleBar = styled.div`
     width: 100%;
     background-image: url(${greenAlgae});
     background-blend-mode: multiply;
-    background-color: rgba(36, 36, 36, 0.35);
+    background-color: rgba(36, 36, 36, 0.25);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
