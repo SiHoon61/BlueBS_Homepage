@@ -12,6 +12,7 @@ import applyImg1 from '../../../assets/Products/GreenAlgae/apply1.png'
 import applyImg2 from '../../../assets/Products/GreenAlgae/apply2.png'
 import applyImg3 from '../../../assets/Products/GreenAlgae/apply3.png'
 import applyImg4 from '../../../assets/Products/GreenAlgae/apply4.png'
+import applyImg5 from '../../../assets/Products/GreenAlgae/apply5.png'
 //style
 import {
     TitleBar,
@@ -54,6 +55,10 @@ const GreenAlgae = () => {
         },
         {
             src: applyImg4,
+            alt: 'applyImg'
+        },
+        {
+            src: applyImg5,
             alt: 'applyImg'
         },
     ];

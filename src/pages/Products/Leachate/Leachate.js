@@ -66,7 +66,7 @@ const Leachate = () => {
             <MainContainer>
                 <SubColumnContainer>
                     <SubLargeTitle>
-                        축산분뇨 처리 프로세스
+                        침출수 처리 프로세스
                     </SubLargeTitle>
                     <FullSubContent>
                         BlueBS의 맞춤형 촉매 전극은 축산분뇨 처리에 있어 효과적이며, 유지보수 및 에너지 절감을 지원하는 동시에 환경오염 감소에 기여하는 친환경적인 솔루션을 제공합니다.
@@ -127,7 +127,7 @@ const Leachate = () => {
                 </SubColumnContainer>
                 <SubColumnContainer>
                     <SubTitle>
-                        실제 적용 사례: 녹조 제거 및 저수지 복원
+                        실제 적용 사례: 침출수 처리
                     </SubTitle>
                     <Carousel imgJson={imgJson} />
                 </SubColumnContainer>
