@@ -238,7 +238,7 @@ const History = () => {
                             <Month>
                                 03
                             </Month>
-                            농림부, 농어촌공사, KT 공동 (방글라데시 농업담수화 시스템 모니터링 )
+                            농림부, 농어촌공사, KT 공동 (방글라데시 농업담수화 시스템 모니터링)
                         </Content>
                         <Content>
                             <Month>
@@ -262,13 +262,13 @@ const History = () => {
                             <Month>
                                 04
                             </Month>
-                            물 4차산업혁명 국회의정 발표 ( 가뭄대비 고도수처리 기술)
+                            물 4차산업혁명 국회의정 발표 (가뭄대비 고도수처리 기술)
                         </Content>
                         <Content>
                             <Month>
                                 12
                             </Month>
-                            2017년 제주도 하수도 연찬회 ( 재이용 담수화 적용 사례)
+                            2017년 제주도 하수도 연찬회 (재이용 담수화 적용 사례)
                         </Content>
                     </MiddleHistoryContainer>
                     <MiddleHistoryContainer>
@@ -311,6 +311,18 @@ const History = () => {
                                 01
                             </Month>
                             녹색기술 인증 (초고속 고액분리 장치를 이용한 재이용 기술)
+                        </Content>
+                    </MiddleHistoryContainer>
+                    <MiddleHistoryContainer>
+                        <Year>
+                            2021
+                            <LineImg />
+                        </Year>
+                        <Content>
+                            <Month>
+                                09
+                            </Month>
+                            환경산업기술원 산업화 지원화(EF 기반의 물재이용기술)프로젝트 수행
                         </Content>
                     </MiddleHistoryContainer>
                     <MiddleHistoryContainer>
