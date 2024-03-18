@@ -165,21 +165,6 @@ const Table = () => {
                             전기촉매 + 분리막
                         </RSTD>
                     </TR>
-                    <TR>
-                        <RFTD $size={"20px"}>강릉시 침출수 고도처리 시스템</RFTD>
-                        <RFTD>
-                            <DescriptionStyle>
-                                용량
-                            </DescriptionStyle>
-                            200m3/d
-                        </RFTD>
-                        <RFTD>
-                            <DescriptionStyle>
-                                공정
-                            </DescriptionStyle>
-                            시공 준비중
-                        </RFTD>
-                    </TR>
                 </tbody>
             </StyledTable>
         </>
