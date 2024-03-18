@@ -82,7 +82,7 @@ const Leachate = () => {
                             <Imgs src={processImg2} alt="processImg" $width={"410px"} />
                             ET +EF 고도처리
                             <GreyDescription>
-                                (탁도 및색도 제거)
+                                (질소 및 색도, 탁도 제거)
                             </GreyDescription>
                         </ImgDescription>
                         <ProcessArrow />
