@@ -82,38 +82,40 @@ export const PatentButtonText = styled.div`
 export const EmptyColumn = styled.div`
     height: ${props => {
         if (props.$isSelect === '0') {
-            return '1530'
+            return '1630'
         }
         else if (props.$isSelect === '1') {
-            return '972'
+            return '1052'
         }
         else {
-            return '2820'
+            return '2980'
         }
     }}px;
 `
 
 export const CertificationPart = styled.div`
     position: absolute;
+    width: 1444px;
     top: 80px;
-    flex-direction: column;
     align-items: center;
+    flex-wrap: wrap;
     display: ${props => props.$isSelect === '0' ? 'flex' : 'none'};
 `
 
 export const AwardsPart = styled.div`
     position: absolute;
+    width: 1444px;
     top: 80px;
-    flex-direction: column;
     align-items: center;
+    flex-wrap: wrap;
     display: ${props => props.$isSelect === '1' ? 'flex' : 'none'};
 `
 
 export const PatentPart = styled.div`
     position: absolute;
+    width: 1449px;
     top: 80px;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
     display: ${props => props.$isSelect === '2' ? 'flex' : 'none'};
 `
 
@@ -126,7 +128,7 @@ export const AwardBox = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 30px;
+    margin: 0 30px 70px 30px;
 `
 export const EmptyBox = styled.div`
     margin: 0 30px;
@@ -155,6 +157,7 @@ export const AwardDescription = styled.div`
 `
 
 export const AwardName = styled.div`
+    margin-top: 5px;
     color: black;
     font-size: 18px;
     font-family: var(--font-sansMedium);
