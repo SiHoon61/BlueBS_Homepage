@@ -129,7 +129,7 @@ const Home = () => {
                         <TechTextContainer>
                             무약품 세정
                             <TechTextBox>
-                                마이크로 여과필터
+                                마이크로<br/>여과필터
                                 <TectTextArrow />
                             </TechTextBox>
                         </TechTextContainer>
@@ -140,7 +140,8 @@ const Home = () => {
                         <TechTextContainer>
                             막힘 없는
                             <TechTextBox>
-                                울트라 나노버블
+                                울트라<br />
+                                나노버블
                                 <TectTextArrow />
                             </TechTextBox>
                         </TechTextContainer>

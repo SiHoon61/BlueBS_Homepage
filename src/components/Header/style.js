@@ -3,6 +3,8 @@ import styled from 'styled-components';
 //img
 import whiteLogo from '../../assets/whiteLogo.svg'
 import blueLogo from '../../assets/blueLogo.svg'
+import whiteMenu from '../../assets/Home/whiteMenu.svg'
+import blackMenu from '../../assets/Home/blackMenu.svg'
 
 export const Container = styled.div`
     display: flex;
@@ -41,10 +43,16 @@ export const EmptyBox = styled.div`
     width: 150px;
     height: 60px;
     margin-right: 80px;
+    @media (max-width: 1200px) {
+        margin-right: 10px;
+    }
 `
 
 export const IndexContainer = styled.div`
     display: flex;
+    @media (max-width: 1000px) {
+        display: none;
+    }
 `;
 
 export const IndexUL = styled.ul`
@@ -64,6 +72,11 @@ export const IndexLI = styled.li`
     font-size: 18px;
     font-family: var(--font-sansMedium);
     cursor: pointer;
+
+    @media (max-width: 1200px) {
+        padding: 0 30px;
+        font-size: 16px;
+    }
 `
 
 export const HoverBox = styled.div`
@@ -88,4 +101,25 @@ export const TextTextBox = styled.div`
     font-family: var(--font-sansRegular);
     margin: 8px;
     cursor: pointer;
+`
+export const WhiteMenu = styled.img.attrs({
+    src: whiteMenu,
+    alt: 'menu'
+})`
+    margin-right: 30px;
+    display: none;
+    @media (max-width: 1000px) {
+        display: flex;
+    }
+`
+
+export const BlackMenu = styled.img.attrs({
+    src: blackMenu,
+    alt: 'menu'
+})`
+    margin-right: 30px;
+    display: none;
+    @media (max-width: 1000px) {
+        display: flex;
+    }
 `

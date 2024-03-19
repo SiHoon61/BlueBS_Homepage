@@ -10,7 +10,7 @@ import {
     CompanyName,
     CompanyInformation,
     Content,
-} from './Style';
+} from './style';
 
 const Bottom = () => {
     return (

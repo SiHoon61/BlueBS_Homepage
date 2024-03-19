@@ -45,16 +45,21 @@ export const ProductsEvenText = styled.div`
 export const NextTo = styled.div`
     background-image: url(${emptyArrow});
     background-size: contain;
-    //opacity: 70%;
     height: 60px;
     width: 60px;
+    
+    @media (max-width: 1350px) {
+        display: none;
+    }
 `
 
 export const Prev = styled.div`
     transform: rotate(180deg);
-    //opacity: 70%;
     background-image: url(${emptyArrow});
     background-size: contain;
     height: 60px;
     width: 60px;
+    @media (max-width: 1350px) {
+        display: none;
+    }
 `

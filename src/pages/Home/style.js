@@ -149,6 +149,12 @@ export const TechTextContainer = styled.div`
     position: absolute;
     bottom: 15%;
     left: 8%;
+    @media (max-width: 1480px) {
+        font-size: 25px;
+    }
+    @media (max-width: 1220px) {
+        font-size: 20px;
+    }
 `
 
 export const TechTextBox = styled.div`
@@ -156,8 +162,14 @@ export const TechTextBox = styled.div`
     font-family: var(--font-sansBold);
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-end;
     color: white;
+    @media (max-width: 1480px) {
+        font-size: 35px;
+    }
+    @media (max-width: 1220px) {
+        font-size: 30px;
+    }
 `
 
 export const TectTextArrow = styled.img.attrs({
@@ -165,9 +177,12 @@ export const TectTextArrow = styled.img.attrs({
     alt: 'boxArrow'
 })`
     opacity: 0;
-    margin-top: 3px;
-    margin-left: 15px;
+    margin-bottom: 10px;
+    margin-left: 20px;
     height: 35px;
+    @media (max-width: 1220px) {
+        height: 25px;
+    }
 `
 
 export const BusinessContainer = styled.div`
@@ -216,6 +231,7 @@ export const NewsContainer = styled.div`
     justify-content: center;
     align-items: center;
     width: 100%;
+    overflow: hidden;
 `
 
 export const NewsText = styled.div`
@@ -231,5 +247,8 @@ export const NewsBox = styled.div`
     justify-content: space-between;
     height: 440px;
     overflow: hidden;
+    @media (max-width: 1550px) {
+        width: 950px;
+    }
 `
 
