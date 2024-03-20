@@ -17,6 +17,7 @@ import {
 } from './style';
 
 //modal
+import ModalPortal from '../../modal/ModalPortal';
 import MenuModal from './MenuModal';
 
 const Header = () => {
@@ -99,7 +100,6 @@ const Header = () => {
     const goNewsRoom = () => {
         navigate("/newsRoom");
     }
-
     const goMap = () => {
         navigate("/map");
     }
@@ -202,7 +202,9 @@ const Header = () => {
                 <EmptyBox />
                 {headerStyle === 'top' ? <WhiteMenu onClick={openModal}></WhiteMenu> : <BlackMenu onClick={openModal}></BlackMenu>}
             </Container>
-            {isModalOpen && <MenuModal onClose={closeModal} />}
+                <ModalPortal>
+                    <MenuModal isOpen={isModalOpen} onClose={closeModal} />
+                </ModalPortal>
         </>
     );
 };

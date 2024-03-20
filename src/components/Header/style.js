@@ -28,6 +28,9 @@ export const WhiteLogo = styled.img.attrs({
     cursor: pointer;
     height: 60px;
     margin-left: 80px;
+    @media (max-width: 1000px) {
+        margin-left: 20px;
+    }
 `;
 
 export const BlueLogo = styled.img.attrs({
@@ -37,6 +40,9 @@ export const BlueLogo = styled.img.attrs({
     cursor: pointer;
     height: 60px;
     margin-left: 80px;
+    @media (max-width: 1000px) {
+        margin-left: 20px;
+    }
 `;
 
 export const EmptyBox = styled.div`

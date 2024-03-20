@@ -59,6 +59,9 @@ export const TechSubIndexContainer = styled.div`
     height: 700px;
     max-width: ${props => props.$width}px;
     display:flex;
+    @media (max-width: 1000px) {
+        flex-wrap: wrap;
+    }
 `
 export const Tech1 = styled.div`
     position: relative;
@@ -68,16 +71,21 @@ export const Tech1 = styled.div`
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    &:hover{
-        width: calc(${props => props.$width}px * 1.5);
-        transition: 0.3s;
-        img {
-            opacity: 1;
-            transition: 0.3s;
-        }
-    }
     transition: opacity 0.3s, width 0.3s;
     cursor: pointer;
+    @media (min-width: 1001px) {
+        &:hover {
+            width: calc(${props => props.$width}px * 1.5);
+            transition: 0.3s;
+            img {
+                opacity: 1;
+                transition: 0.3s;
+            }
+        }
+    }
+    @media (max-width: 1000px) {
+        width: calc(${props => props.$width}px * 2 - 10px);
+    }
 `
 
 export const Tech2 = styled.div`
@@ -88,16 +96,21 @@ export const Tech2 = styled.div`
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    &:hover{
-        width: calc(${props => props.$width}px * 1.5);
-        transition: 0.3s;
-        img {
-            opacity: 1;
-            transition: 0.3s;
-        }
-    }
     transition: opacity 0.3s, width 0.3s;
     cursor: pointer;
+    @media (min-width: 1001px) {
+        &:hover {
+            width: calc(${props => props.$width}px * 1.5);
+            transition: 0.3s;
+            img {
+                opacity: 1;
+                transition: 0.3s;
+            }
+        }
+    }
+    @media (max-width: 1000px) {
+        width: calc(${props => props.$width}px * 2 - 10px);
+    }
 `
 
 export const Tech3 = styled.div`
@@ -107,17 +120,22 @@ export const Tech3 = styled.div`
     width: ${props => props.$width}px;
     background-size: cover;
     background-repeat: no-repeat;
-     background-position: center center;
-    &:hover{
-        width: calc(${props => props.$width}px * 1.5);
-        transition: 0.3s;
-        img {
-            opacity: 1;
-            transition: 0.3s;
-        }
-    }
+    background-position: center center;
     transition: opacity 0.3s, width 0.3s;
     cursor: pointer;
+    @media (min-width: 1001px) {
+        &:hover {
+            width: calc(${props => props.$width}px * 1.5);
+            transition: 0.3s;
+            img {
+                opacity: 1;
+                transition: 0.3s;
+            }
+        }
+    }
+    @media (max-width: 1000px) {
+        width: calc(${props => props.$width}px * 2 - 10px);
+    }
 `
 
 export const Tech4 = styled.div`
@@ -128,16 +146,21 @@ export const Tech4 = styled.div`
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    &:hover{
-        width: calc(${props => props.$width}px * 1.5);
-        transition: 0.3s;
-        img {
-            opacity: 1;
-            transition: 0.3s;
-        }
-    }
     transition: opacity 0.3s, width 0.3s;
     cursor: pointer;
+    @media (min-width: 1001px) {
+        &:hover {
+            width: calc(${props => props.$width}px * 1.5);
+            transition: 0.3s;
+            img {
+                opacity: 1;
+                transition: 0.3s;
+            }
+        }
+    }
+    @media (max-width: 1000px) {
+        width: calc(${props => props.$width}px * 2 - 10px);
+    }
 `
 
 export const TechTextContainer = styled.div`
