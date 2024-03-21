@@ -43,11 +43,7 @@ const MainContainer = styled.div`
     justify-content: flex-start;
     margin: 0 30px 0 60px;
     padding-top: 50px;
-    @media (max-width: 880px){
-        justify-content: center;
-        margin: 0 6%;
-    }
-    @media (max-width: 600px){
+    @media (max-width: 1000px){
         flex-direction: column;
         align-items: flex-start;
         flex-wrap: nowrap;
@@ -61,7 +57,7 @@ const MenuBox = styled.div`
     flex-direction: column;
     align-items: flex-start;
     color: white;
-    @media (max-width: 880px){
+    @media (max-width: 1000px){
         margin: 10px 30px;
     }
 `
@@ -74,7 +70,7 @@ const MenuTitleContainer = styled.div`
 const MenuTitle = styled.div`
     font-size: 24px;
     font-family: var(--font-sansMedium);
-    @media (max-width: 600px){
+    @media (max-width: 1000px){
         font-size: 20px;
     }
 `
@@ -88,9 +84,7 @@ const PlusButton = styled.div`
     background-size: contain;
     transition: transform 0.3s ease;
     transform: ${props => props.$isactive ? 'rotate(45deg)' : 'rotate(0)'};
-    @media (min-width: 601px) {
-        display: none;
-    }
+
 `;
 
 
@@ -101,7 +95,7 @@ const MenuUl = styled.ul`
     align-items: center;
     list-style-type: none;
     padding: 0px;
-    @media (max-width: 600px){
+    @media (max-width: 1000px){
          align-items: flex-start;
         overflow: hidden; 
         transition: max-height 0.5s ease-out, opacity 0.5s ease, visibility 0.5s;
@@ -119,7 +113,7 @@ const MenuLi = styled.li`
     font-size: 16px;
     font-family: var(--font-sansMedium);
     cursor: pointer;
-    @media (max-width: 600px){
+    @media (max-width: 1000px){
         font-size: 16px;
     }
 `

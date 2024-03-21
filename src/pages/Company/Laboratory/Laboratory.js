@@ -12,16 +12,18 @@ import {
     TitleTextBox,
     TitleMainText,
     MainContainer,
-    SubColumnContainer,
-    SubLargeTitle,
-    SubTitle,
-    SubCenterTitle,
-    FullSubContent,
     SubjectBox,
     Subject,
     LabImgBox,
     LabImg
 } from './style'
+
+import {
+    SubLargeTitle,
+    FullSubContent,
+    SubColumnContainer,
+    SubCenterTitle,
+} from '../../../components/Body/bodyStyle';
 
 const Laboratory = () => {
     return (
@@ -35,15 +37,13 @@ const Laboratory = () => {
                 </TitleTextBox>
             </TitleBar>
             <MainContainer>
-                <SubColumnContainer>
-                    <SubLargeTitle>
-                        기업부설연구소
-                    </SubLargeTitle>
                     <FullSubContent>
+                        <SubLargeTitle>
+                            기업부설연구소
+                        </SubLargeTitle>
                         BlueBS 연구소는 나노촉매 소재, 친환경 고효율 공정, 측정장비 고효율화 및 탄소 중립 자원화 분야에 집중 투자하고 있습니다.<br />
                         아울러 그간 처리하기 어려운 농축수 및 질소를 저비용 친환경적으로 처리할 수 있는 기술을 개발 중에 있고, 최근 정수장 내 남조류 이취미 물질을 효과적으로 처리할 수 있는 기술을 개발하여 제품화하였습니다.
                     </FullSubContent>
-                </SubColumnContainer>
                 <SubColumnContainer>
                     <SubCenterTitle>
                         연구개발 집중 투자 분야

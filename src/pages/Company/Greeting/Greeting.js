@@ -7,6 +7,7 @@ import {
     TitleMainText,
     MainContainer,
     BodyTitle,
+    EmptyHeight,
     RedText,
     GreenText,
     Body,
@@ -30,9 +31,8 @@ const Greeting = () => {
             </TitleBar>
             <MainContainer>
                 <BodyTitle>
-                    <RedText>신개념의 초격차 기술</RedText>을 확보한 블루비에스는<br/>
-                    <GreenText> 환경분야의 최고 기업</GreenText>으로 발돋움하기 위해<br />
-                    최선을 다할 것입니다.
+                    블루비에스는 수처리분야 <RedText>신개념 초격차 기술</RedText>을 확보한 환경 분야 최고 기업입니다.<br /><EmptyHeight/>
+                    저희는 <GreenText>미래 환경을 위한</GreenText> 기술개발에 전력을 다하고 있습니다.
                 </BodyTitle>
                 <Body>
                     저희 블루비에스에 대한 따뜻한 관심에 깊은 감사의 말씀을 드립니다.<br /><br />
@@ -45,12 +45,12 @@ const Greeting = () => {
 
                     많은 관심과 성원 부탁 드립니다.
                     <PictureBox>
-                        <Picture/>
+                        <Picture />
                         <NameBox>
                             (주) 블루비에스 대표이사
                             <SignBox>
                                 홍&nbsp;&nbsp;민
-                                <SingImg/>
+                                <SingImg />
                             </SignBox>
                         </NameBox>
                     </PictureBox>

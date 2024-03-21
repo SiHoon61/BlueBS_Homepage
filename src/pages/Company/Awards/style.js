@@ -13,6 +13,12 @@ export const TitleBar = styled.div`
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    @media (max-width: 1000px) {
+        height: 450px;
+    }
+    @media (max-width: 600px) {
+        height: 350px;
+    }
 `
 export const TitleTextBox = styled.div`
     padding-top: 230px;
@@ -23,11 +29,20 @@ export const TitleTextBox = styled.div`
     color: white;
     font-size: 14px;
     font-family: var(--font-sansRegular);
+    @media (max-width: 600px) {
+        padding-top: 200px;
+    }
 `
 
 export const TitleMainText = styled.div`
     font-size: 96px;
     font-family: var(--font-sansBold);
+    @media (max-width: 1000px) {
+        font-size: 72px;
+    }
+    @media (max-width: 600px) {
+        font-size: 48px;
+    }
 `
 
 export const MainContainer = styled.div`
@@ -37,6 +52,9 @@ export const MainContainer = styled.div`
     align-items: center;
     flex-direction: column;
     margin-top: 100px;
+    @media (max-width: 600px) {
+        margin-top: 40px;
+    }
 `
 
 export const ButtonBox = styled.div`
@@ -91,15 +109,78 @@ export const EmptyColumn = styled.div`
             return '2980'
         }
     }}px;
+    @media (max-width: 1460px) {
+        height: ${props => {
+        if (props.$isSelect === '0') {
+            return '2250'
+        }
+        else if (props.$isSelect === '1') {
+            return '1052'
+        }
+        else {
+            return '4150'
+        }
+    }}px;
+    }
+    @media (max-width: 1100px) {
+        height: ${props => {
+        if (props.$isSelect === '0') {
+            return '1950'
+        }
+        else if (props.$isSelect === '1') {
+            return '852'
+        }
+        else {
+            return '3650'
+        }
+    }}px;
+    }
+    @media (max-width: 950px) {
+        height: ${props => {
+        if (props.$isSelect === '0') {
+            return '1410'
+        }
+        else if (props.$isSelect === '1') {
+            return '590'
+        }
+        else {
+            return '2800'
+        }
+    }}px;
+    }
+    @media (max-width: 650px) {
+        height: ${props => {
+        if (props.$isSelect === '0') {
+            return '1100'
+        }
+        else if (props.$isSelect === '1') {
+            return '530'
+        }
+        else {
+            return '2290'
+        }
+    }}px;
+    }
 `
 
 export const CertificationPart = styled.div`
     position: absolute;
     width: 1444px;
     top: 80px;
-    align-items: center;
     flex-wrap: wrap;
     display: ${props => props.$isSelect === '0' ? 'flex' : 'none'};
+    @media (max-width: 1460px) {
+        width: 1080px;
+    }
+    @media (max-width: 1100px) {
+        width: 930px;
+    }
+    @media (max-width: 950px) {
+        width: 630px;
+    }
+    @media (max-width: 650px) {
+        width: 390px;
+    }
 `
 
 export const AwardsPart = styled.div`
@@ -109,6 +190,18 @@ export const AwardsPart = styled.div`
     align-items: center;
     flex-wrap: wrap;
     display: ${props => props.$isSelect === '1' ? 'flex' : 'none'};
+    @media (max-width: 1460px) {
+        width: 1080px;
+    }
+    @media (max-width: 1100px) {
+        width: 930px;
+    }
+    @media (max-width: 950px) {
+        width: 630px;
+    }
+    @media (max-width: 650px) {
+        width: 390px;
+    }
 `
 
 export const PatentPart = styled.div`
@@ -117,11 +210,19 @@ export const PatentPart = styled.div`
     top: 80px;
     flex-wrap: wrap;
     display: ${props => props.$isSelect === '2' ? 'flex' : 'none'};
-`
-
-export const RowContainer = styled.div`
-    display: flex; 
-    margin-bottom: 50px;
+    @media (max-width: 1460px) {
+        width: 1086px;
+    }
+    @media (max-width: 1100px) {
+        width: 936px;
+    }
+    @media (max-width: 950px) {
+        width: 636px;
+    }
+    @media (max-width: 650px) {
+        width: 396px;
+    }
+    
 `
 
 export const AwardBox = styled.div`
@@ -129,22 +230,45 @@ export const AwardBox = styled.div`
     flex-direction: column;
     align-items: center;
     margin: 0 30px 70px 30px;
+    @media (max-width: 650px) {
+        margin: 0 15px 50px 15px;
+    }
 `
-export const EmptyBox = styled.div`
-    margin: 0 30px;
-    width: 300px;
-    height: 425px;
-`
+
 
 export const AwardImg = styled.img`
     width: 300px;
     height: 425px;
     border: 1px solid grey;
+    @media (max-width: 1100px) {
+        width: 250px;
+        height: 350px;
+    }
+    @media (max-width: 950px) {
+        width: 150px;
+        height: 212px;
+    }
+    @media (max-width: 650px) {
+        width: 100px;
+        height: 140px;
+    }
 `
 
 export const NoBorderAwardImg = styled.img`
     width: 300px;
     height: 425px;
+    @media (max-width: 1100px) {
+        width: 250px;
+        height: 350px;
+    }
+    @media (max-width: 950px) {
+        width: 150px;
+        height: 212px;
+    }
+    @media (max-width: 650px) {
+        width: 100px;
+        height: 140px;
+    }
 `
 
 export const AwardDescription = styled.div`
@@ -154,6 +278,14 @@ export const AwardDescription = styled.div`
     align-items: center;
     color: #0B75EF;
     margin-top: 5px;
+    @media (max-width: 950px) {
+        width: 150px;
+        font-size: 14px;
+    }
+    @media (max-width: 650px) {
+        width: 100px;
+        font-size: 12px;
+    }
 `
 
 export const AwardName = styled.div`
@@ -161,11 +293,10 @@ export const AwardName = styled.div`
     color: black;
     font-size: 18px;
     font-family: var(--font-sansMedium);
-`
-
-
-export const PatentName = styled.div`
-    color: black;
-    font-size: 16px;
-    font-family: var(--font-sansMedium);
+    @media (max-width: 950px) {
+        font-size: 16px;
+    }
+    @media (max-width: 650px) {
+        font-size: 14px;
+    }
 `

@@ -15,6 +15,12 @@ export const TitleBar = styled.div`
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    @media (max-width: 1000px) {
+        height: 450px;
+    }
+    @media (max-width: 600px) {
+        height: 350px;
+    }
 `
 
 export const TitleTextBox = styled.div`
@@ -26,11 +32,20 @@ export const TitleTextBox = styled.div`
     color: white;
     font-size: 14px;
     font-family: var(--font-sansRegular);
+    @media (max-width: 600px) {
+        padding-top: 200px;
+    }
 `
 
 export const TitleMainText = styled.div`
     font-size: 96px;
     font-family: var(--font-sansBold);
+    @media (max-width: 1000px) {
+        font-size: 72px;
+    }
+    @media (max-width: 600px) {
+        font-size: 48px;
+    }
 `
 
 export const MainContainer = styled.div`
@@ -39,14 +54,27 @@ export const MainContainer = styled.div`
     margin-top: 100px;
     color: #313131;
     width: 100%;
+    @media (max-width: 600px) {
+        margin-top: 50px;
+    }
 `
 
 export const BodyTitle = styled.div`
-    max-width: 1400px;
+    max-width: 80%;
     width: 985px;
-    font-size: 48px;
+    font-size: 36px;
     margin: 0 auto;
     font-family: var(--font-sansBold);
+    @media (max-width: 1000px) {
+        font-size: 28px;
+    }
+    @media (max-width: 600px) {
+        font-size: 26px;
+        max-width: 90%;
+    }
+`
+export const EmptyHeight = styled.div`
+    height: 10px;
 `
 
 export const RedText = styled.span`
@@ -60,11 +88,17 @@ export const GreenText = styled.span`
 export const Body = styled.div`
     display: flex;
     flex-direction: row;
-    max-width: 1400px;
+    max-width: 80%;
     width: 985px;
     margin: 50px auto;
     font-size: 18px;
     line-height: 30px;
+    @media (max-width: 600px) {
+        margin: 30px auto;
+        flex-direction: column;
+        max-width: 90%;
+        font-size: 16px;
+    }
 `
 
 export const PictureBox = styled.div`
@@ -78,6 +112,12 @@ export const Picture = styled.img.attrs({
 })`
     width: 300px;
     margin-left: 50px;
+    @media (max-width: 1000px) {
+        width: 200px;
+    }
+    @media (max-width: 600px) {
+        display: none;
+    }
 `
 
 export const NameBox = styled.div`
@@ -88,6 +128,15 @@ export const NameBox = styled.div`
     margin-left: 50px;  
     font-size: 22px;
     font-family: var(--font-sansBold);
+    @media (max-width: 1000px) {
+        font-size: 18px;
+        margin-left: 30px;
+    }
+    @media (max-width: 600px) {
+        margin-top: 30px;
+        margin-left: 0px;
+        align-items: flex-start;
+    }
 `
 
 export const SignBox = styled.div`
@@ -95,7 +144,10 @@ export const SignBox = styled.div`
     display: flex;
     font-size: 28px;
     font-family: var(--font-sansBold);
-    align-items: center
+    align-items: center;
+    @media (max-width: 1000px) {
+        font-size: 22px;
+    }
 `
 
 export const SingImg = styled.img.attrs({
@@ -105,4 +157,7 @@ export const SingImg = styled.img.attrs({
     margin-left: 20px;
     margin-top: 3px;
     width: 170px;
+    @media (max-width: 1000px) {
+        width: 110px;
+    }
 `

@@ -53,14 +53,11 @@ import {
     CertificationPart,
     AwardsPart,
     PatentPart,
-    RowContainer,
     AwardBox,
-    EmptyBox,
     AwardDescription,
     AwardName,
     AwardImg,
     NoBorderAwardImg,
-    PatentName,
 } from './style'
 
 const Awards = () => {
@@ -195,7 +192,7 @@ const Awards = () => {
             src: patent20,
             alt: 'applyImg',
             no: '제 10-1913754 호',
-            name: '침전조 및 부상분리조를 포함하는 일체형 고액 분리장치 및 이를 이용한 분리방법',
+            name: '일체형 고액 분리장치 및 이를 이용한 분리방법',
         },
         {
             src: patent19,
@@ -219,7 +216,7 @@ const Awards = () => {
             src: patent16,
             alt: 'applyImg',
             no: '제 10-1675574 호',
-            name: '초고속 고액분리 시스템을 구비하는 하수처리장 방류수를 재이용수로 전환하는 장치',
+            name: '하수처리장 방류수를 재이용수로 전환하는 장치',
         },
         {
             src: patent15,
@@ -231,7 +228,7 @@ const Awards = () => {
             src: patent14,
             alt: 'applyImg',
             no: '제 10-1617369 호',
-            name: '다중 멀티사이클론을 활용한 부유물질 및 COD 저감용 수처리 공정',
+            name: '다중 멀티사이클론을 활용한 부유물질/COD 저감용 수처리 공정',
         },
         {
             src: patent13,
@@ -242,8 +239,8 @@ const Awards = () => {
         {
             src: patent12,
             alt: 'applyImg',
-            no: '제 10-1612440호 호',
-            name: '초고속 고액분리 시스템을 구비하는 기수 담수화 장치',
+            no: '제 10-1612440 호',
+            name: '초고속 고액분리 시스템을 구비한 기수담수화 장치',
         },
         {
             src: patent11,
@@ -255,13 +252,13 @@ const Awards = () => {
             src: patent10,
             alt: 'applyImg',
             no: '제 10-1206476 호',
-            name: '하천 및 하수처리장의 방류수를 재이용한 농업용수 공급장치',
+            name: '하천/하수처리장의 방류수를 재이용한 농업용수 공급장치',
         },
         {
             src: patent9,
             alt: 'applyImg',
             no: '제 10-1206477 호',
-            name: '농업용수 공급장치를 이용한 하천 및 하수처리장 방류수의 농업용수 재이용 방법',
+            name: '하천 및 하수처리장 방류수의 농업용수 재이용 방법',
         },
         {
             src: patent8,

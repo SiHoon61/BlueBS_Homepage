@@ -185,6 +185,7 @@ export const TechTextContainer = styled.div`
     @media (max-width: 600px) {
         font-size: 18px;
         visibility: hidden;
+        bottom: 10%;
     }
 `
 
@@ -203,7 +204,7 @@ export const TechTextBox = styled.div`
     }
     @media (max-width: 600px) {
         visibility: visible;
-        font-size: 26px;
+        font-size: 23px;
     }
 `
 
@@ -292,7 +293,7 @@ export const NewsText = styled.div`
 export const NewsBox = styled.div`
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
+    width: 80%;
     justify-content: space-between;
     height: 440px;
     overflow: hidden;
