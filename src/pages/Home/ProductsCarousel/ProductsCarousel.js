@@ -182,19 +182,9 @@ function SwipeToSlide() {
                     <ProductsImg src={products7} alt="products7" onClick={goAIWaterSystemPD}>
                     </ProductsImg>
                 </ProductsBox>
-
-                <ProductsBox>
-                    <ProductsEmptyBox>
-
-                    </ProductsEmptyBox>
-                </ProductsBox>
-
-                <ProductsBox>
-                    <ProductsEmptyBox>
-
-                    </ProductsEmptyBox>
-                </ProductsBox>
-
+                <ProductsEmptyBox />
+                <ProductsEmptyBox />
+                <ProductsEmptyBox />
             </Slider>
         </SliderContainer>
     );

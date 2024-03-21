@@ -87,7 +87,7 @@ const Home = () => {
     return (
         <>
             <VideoContainer $height={size.height}>
-                <Video muted autoPlay loop>
+                <Video muted autoPlay loop playsInline>
                     <source src={mainVideo} type="video/mp4" />
                 </Video>
                 <ScrollDown>

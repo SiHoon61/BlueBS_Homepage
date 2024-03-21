@@ -19,6 +19,9 @@ export const Container = styled.div`
     transition: top 0.3s, background-color 0.3s, height 0.3s;
     object-fit: cover;
     box-shadow: ${props => props.$state === 'top' ? 'none' : '0px 2px 6px 0px rgba(0, 0, 0, 0.25)'};
+    @media (max-width: 1000px) {
+        /* height: ${props => props.$state === 'top' ? 120 : 100}px; */
+    }
 `;
 
 export const WhiteLogo = styled.img.attrs({

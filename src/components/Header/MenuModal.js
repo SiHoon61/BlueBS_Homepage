@@ -1,10 +1,13 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { useNavigate } from "react-router-dom";
 
 //img
 import close from '../../assets/Business/whiteClose.svg'
+import whitePlus from '../../assets/Home/whitePlus.svg'
 import backgroundIMG from '../../assets/Home/menuBackground.png'
+
+
 const MenuContainer = styled.div`
     background-image: url(${backgroundIMG});
     background-blend-mode: multiply;
@@ -22,7 +25,7 @@ const MenuContainer = styled.div`
     bottom: 0;
     opacity: ${props => props.$isOpen ? 1 : 0};
     visibility: ${props => props.$isOpen ? 'visible' : 'hidden'};
-  transition: opacity 0.3s, visibility 0.3s;
+    transition: opacity 0.3s, visibility 0.3s;
 `
 
 const CloseButton = styled.img`
@@ -38,21 +41,58 @@ const MainContainer = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    margin: 0 30px 0 60px;;
+    margin: 0 30px 0 60px;
+    padding-top: 50px;
+    @media (max-width: 880px){
+        justify-content: center;
+        margin: 0 6%;
+    }
+    @media (max-width: 600px){
+        flex-direction: column;
+        align-items: flex-start;
+        flex-wrap: nowrap;
+        margin: 0 6%;
+    }
 `
 
 const MenuBox = styled.div`
     margin: 30px 60px 10px 60px;
     display: flex;
     flex-direction: column;
-    align-items: center; 
+    align-items: flex-start;
     color: white;
+    @media (max-width: 880px){
+        margin: 10px 30px;
+    }
 `
+const MenuTitleContainer = styled.div`
+    display: flex;
+    align-items: center;
+    width: 100%;
+`;
 
 const MenuTitle = styled.div`
     font-size: 24px;
     font-family: var(--font-sansMedium);
+    @media (max-width: 600px){
+        font-size: 20px;
+    }
 `
+
+const PlusButton = styled.div`
+    width: 25px;
+    height: 25px;
+    margin-left: 15px;
+    margin-top: 5px;
+    background: url(${whitePlus}) no-repeat center; 
+    background-size: contain;
+    transition: transform 0.3s ease;
+    transform: ${props => props.$isactive ? 'rotate(45deg)' : 'rotate(0)'};
+    @media (min-width: 601px) {
+        display: none;
+    }
+`;
+
 
 const MenuUl = styled.ul`
     display: flex;
@@ -61,6 +101,14 @@ const MenuUl = styled.ul`
     align-items: center;
     list-style-type: none;
     padding: 0px;
+    @media (max-width: 600px){
+         align-items: flex-start;
+        overflow: hidden; 
+        transition: max-height 0.5s ease-out, opacity 0.5s ease, visibility 0.5s;
+        max-height: ${props => props.$activeMenu ? "400px" : "0px"}; 
+        opacity: ${props => props.$activeMenu ? 1 : 0};
+        visibility: ${props => props.$activeMenu ? "visible" : "hidden"};
+    }
 `
 
 const MenuLi = styled.li`
@@ -71,9 +119,24 @@ const MenuLi = styled.li`
     font-size: 16px;
     font-family: var(--font-sansMedium);
     cursor: pointer;
+    @media (max-width: 600px){
+        font-size: 16px;
+    }
 `
 
+
 const MenuModal = ({ isOpen, onClose }) => {
+    const [activeMenu, setActiveMenu] = useState(null); // 활성화된 메뉴의 ID 상태
+    const toggleMenu = (menuId) => {
+        if (activeMenu === menuId) {
+            // 이미 활성화된 메뉴를 다시 클릭하면 모든 메뉴를 닫음
+            setActiveMenu(null);
+        } else {
+            // 다른 메뉴 클릭 시 해당 메뉴를 활성화
+            setActiveMenu(menuId);
+        }
+    };
+
     //navigation
     const navigate = useNavigate();
     const goHome = () => {
@@ -165,14 +228,15 @@ const MenuModal = ({ isOpen, onClose }) => {
             />
             <MainContainer>
                 <MenuBox>
-                    <MenuTitle>
-                        Company
-                    </MenuTitle>
-                    <MenuUl>
+                    <MenuTitleContainer onClick={() => toggleMenu('Company')}>
+                        <MenuTitle>Company</MenuTitle>
+                        <PlusButton $isactive={activeMenu === "Company"} />
+                    </MenuTitleContainer>
+                    <MenuUl $activeMenu={activeMenu === "Company"}>
                         <MenuLi onClick={() => {
                             onClose();
                             goCeoGreeting();
-                        } 
+                        }
                         }>
                             CEO인사말
                         </MenuLi>
@@ -200,10 +264,11 @@ const MenuModal = ({ isOpen, onClose }) => {
                     </MenuUl>
                 </MenuBox>
                 <MenuBox>
-                    <MenuTitle>
-                        Technology
-                    </MenuTitle>
-                    <MenuUl>
+                    <MenuTitleContainer onClick={() => toggleMenu('Technology')}>
+                        <MenuTitle>Technology</MenuTitle>
+                        <PlusButton $isactive={activeMenu === "Technology"} />
+                    </MenuTitleContainer>
+                    <MenuUl $activeMenu={activeMenu === "Technology"}>
                         <MenuLi onClick={() => {
                             onClose();
                             goElectroCatalyst();
@@ -235,10 +300,11 @@ const MenuModal = ({ isOpen, onClose }) => {
                     </MenuUl>
                 </MenuBox>
                 <MenuBox>
-                    <MenuTitle>
-                        Communication
-                    </MenuTitle>
-                    <MenuUl>
+                    <MenuTitleContainer onClick={() => toggleMenu('Communication')}>
+                        <MenuTitle>Communication</MenuTitle>
+                        <PlusButton $isactive={activeMenu === "Communication"} />
+                    </MenuTitleContainer>
+                    <MenuUl $activeMenu={activeMenu === "Communication"}>
                         <MenuLi onClick={() => {
                             onClose();
                             goNewsRoom();
@@ -256,10 +322,11 @@ const MenuModal = ({ isOpen, onClose }) => {
                     </MenuUl>
                 </MenuBox>
                 <MenuBox>
-                    <MenuTitle>
-                        Business
-                    </MenuTitle>
-                    <MenuUl>
+                    <MenuTitleContainer onClick={() => toggleMenu('Business')}>
+                        <MenuTitle>Business</MenuTitle>
+                        <PlusButton $isactive={activeMenu === "Business"} />
+                    </MenuTitleContainer>
+                    <MenuUl $activeMenu={activeMenu === "Business"}>
                         <MenuLi onClick={() => {
                             onClose();
                             goPurify();
@@ -312,10 +379,11 @@ const MenuModal = ({ isOpen, onClose }) => {
                     </MenuUl>
                 </MenuBox>
                 <MenuBox>
-                    <MenuTitle>
-                        Products
-                    </MenuTitle>
-                    <MenuUl>
+                    <MenuTitleContainer onClick={() => toggleMenu('Products')}>
+                        <MenuTitle>Products</MenuTitle>
+                        <PlusButton $isactive={activeMenu === "Products"} />
+                    </MenuTitleContainer>
+                    <MenuUl $activeMenu={activeMenu === "Products"}>
                         <MenuLi onClick={() => {
                             onClose();
                             goDrinkingPD();
@@ -367,7 +435,7 @@ const MenuModal = ({ isOpen, onClose }) => {
                         </MenuLi>
                     </MenuUl>
                 </MenuBox>
-                
+
             </MainContainer>
         </MenuContainer>
     );

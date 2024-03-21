@@ -54,6 +54,9 @@ export const TechText = styled.div`
     margin: 100px 0px 35px 10%;
     font-size: 96px;
     font-family: var(--font-sansBold);
+    @media (max-width: 600px) {
+        font-size: 48px;
+    }
 `
 export const TechSubIndexContainer = styled.div`
     height: 700px;
@@ -61,6 +64,7 @@ export const TechSubIndexContainer = styled.div`
     display:flex;
     @media (max-width: 1000px) {
         flex-wrap: wrap;
+        height: 500px;
     }
 `
 export const Tech1 = styled.div`
@@ -84,7 +88,7 @@ export const Tech1 = styled.div`
         }
     }
     @media (max-width: 1000px) {
-        width: calc(${props => props.$width}px * 2 - 10px);
+        width: calc(${props => props.$width}px * 2 );
     }
 `
 
@@ -109,7 +113,7 @@ export const Tech2 = styled.div`
         }
     }
     @media (max-width: 1000px) {
-        width: calc(${props => props.$width}px * 2 - 10px);
+        width: calc(${props => props.$width}px * 2 );
     }
 `
 
@@ -134,7 +138,7 @@ export const Tech3 = styled.div`
         }
     }
     @media (max-width: 1000px) {
-        width: calc(${props => props.$width}px * 2 - 10px);
+        width: calc(${props => props.$width}px * 2);
     }
 `
 
@@ -159,7 +163,7 @@ export const Tech4 = styled.div`
         }
     }
     @media (max-width: 1000px) {
-        width: calc(${props => props.$width}px * 2 - 10px);
+        width: calc(${props => props.$width}px * 2);
     }
 `
 
@@ -178,6 +182,10 @@ export const TechTextContainer = styled.div`
     @media (max-width: 1220px) {
         font-size: 20px;
     }
+    @media (max-width: 600px) {
+        font-size: 18px;
+        visibility: hidden;
+    }
 `
 
 export const TechTextBox = styled.div`
@@ -192,6 +200,10 @@ export const TechTextBox = styled.div`
     }
     @media (max-width: 1220px) {
         font-size: 30px;
+    }
+    @media (max-width: 600px) {
+        visibility: visible;
+        font-size: 26px;
     }
 `
 
@@ -225,6 +237,10 @@ export const BusinessText = styled.div`
     margin: 100px 10% 35px 0px;
     font-size: 96px;
     font-family: var(--font-sansBold);
+    @media (max-width: 600px) {
+        font-size: 48px;
+        margin: 50px 10% 15px 0px;
+    }
 `
 
 export const ProductsContainer = styled.div`
@@ -235,7 +251,7 @@ export const ProductsContainer = styled.div`
     align-items: flex-start;
     width: 100%;
     overflow: hidden;
-     background-image: url(${productsBackground});
+    background-image: url(${productsBackground});
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center; 
@@ -246,6 +262,10 @@ export const ProductsText = styled.div`
     color: white;
     font-size: 96px;
     font-family: var(--font-sansBold);
+    @media (max-width: 600px) {
+        font-size: 48px;
+        margin: 30px 0 20px 10%;
+    }
 `
 
 export const NewsContainer = styled.div`
@@ -255,23 +275,32 @@ export const NewsContainer = styled.div`
     align-items: center;
     width: 100%;
     overflow: hidden;
+    @media (max-width: 600px) {
+        display: none;
+    }
 `
 
 export const NewsText = styled.div`
     margin: 100px 0px 35px 0px;
     font-size: 96px;
     font-family: var(--font-sansBold);
+    @media (max-width: 600px) {
+        font-size: 48px;
+    }
 `
 
 export const NewsBox = styled.div`
     display: flex;
     flex-wrap: wrap;
-    width: 1500px;
+    width: 100%;
     justify-content: space-between;
     height: 440px;
     overflow: hidden;
     @media (max-width: 1550px) {
         width: 950px;
+    }
+    @media (max-width: 1000px) {
+        width: 450px;
     }
 `
 

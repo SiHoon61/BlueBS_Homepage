@@ -12,6 +12,11 @@ export const Container = styled.div`
     overflow: hidden;
     @media (max-width: 1000px) {
         justify-content: flex-start;
+        height: 230px;
+    }
+    @media (max-width: 600px) {
+        margin-top: 30px;
+        height: 230px;
     }
 `
 
@@ -44,6 +49,9 @@ export const CompanyName = styled.div`
     @media (max-width: 1000px) {
         margin: 0 0 0 20px;
     }
+    @media (max-width: 600px) {
+        font-size: 18px;
+    }
  `
 
 export const CompanyInformation = styled.ul`
@@ -59,6 +67,11 @@ export const CompanyInformation = styled.ul`
     @media (max-width: 1000px) {
         width: auto;
         font-size: 15px;
+        flex-direction: column;
+    }
+    @media (max-width: 1000px) {
+        width: auto;
+        font-size: 13px;
         flex-direction: column;
     }
  `

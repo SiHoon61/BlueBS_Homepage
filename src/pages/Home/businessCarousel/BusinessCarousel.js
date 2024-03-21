@@ -81,6 +81,7 @@ function CenterMode() {
         <span {...props}>{children}</span>
     );
     const settings = {
+        dots: true,
         className: "center1",
         centerMode: true,
         infinite: true,
