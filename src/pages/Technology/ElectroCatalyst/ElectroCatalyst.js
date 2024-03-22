@@ -52,7 +52,7 @@ const ElectroCatalyst = () => {
                             전기촉매 필터(Electrocatalyst Filter)
                         </ImgSubTitle>
                         티타늄(Ti) 모재에 나노탄소와 혼합금속물질을
-                        최적비율로 혼합하여 만든 전기촉매(Electrocatalyst Filter)입니다.<br />
+                        최적비율로 혼합하여 만든 전기촉매(Electrocatalyst Filter)입니다.
                         높은 비표면적, 강력한 촉매반응과 안정성과
                         무엇보다 전력소모량과 고속 반응 속도를 자랑합니다.
                     </ImgSubContent>

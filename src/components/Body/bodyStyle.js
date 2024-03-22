@@ -3,9 +3,12 @@ import styled from "styled-components";
 export const SubColumnContainer = styled.div`
     margin: 0 auto 150px auto;
     display: flex;
-    max-width: 80%;
+    width: 1500px;
     flex-direction: column;
     align-items: flex-start;
+    @media (max-width: 1600px) {
+        max-width: 80%;
+    }
     @media (max-width: 600px) {
         margin: 0 auto 50px auto;
         max-width: 90%;
@@ -26,7 +29,6 @@ export const SubLargeTitle = styled.div`
 `
 
 export const SubTitle = styled.div`
-    margin-top: 10px;
     max-width: 100%;
     font-size: 40px;
     font-family: var(--font-sansBold);
@@ -56,7 +58,7 @@ export const FullSubContent = styled.div`
 
 export const ImgSubTitle = styled.div`
     margin-bottom: 15px;
-    font-size: 48px;
+    font-size: 40px;
     font-family: var(--font-sansBold);
     @media (max-width: 1520px) {
          font-size: 34px;
