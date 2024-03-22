@@ -14,15 +14,18 @@ import {
     TitleMainText,
     MainContainer,
     SubRowContainer,
-    SubColumnContainer,
-    ImgSubTitle,
-    SubTitle,
-    ImgSubContent,
-    FullSubContent,
     ElecImg1,
     EFImgBox,
     EfImg,
 } from './style';
+
+import {
+    SubColumnContainer,
+    FullSubContent,
+    SubTitle,
+    ImgSubTitle,
+    ImgSubContent,
+} from '../../../components/Body/bodyStyle'
 
 //table
 import GenerationTable from './GenerationTable';
@@ -44,19 +47,18 @@ const ElectroCatalyst = () => {
             </TitleBar>
             <MainContainer>
                 <SubRowContainer>
-                    <SubColumnContainer>
+                    <ImgSubContent>
                         <ImgSubTitle>
                             전기촉매 필터(Electrocatalyst Filter)
                         </ImgSubTitle>
-                        <ImgSubContent>
-                            티타늄(Ti) 모재에 나노탄소와 혼합금속물질을
-                            최적비율로 혼합하여 만든 전기촉매(Electrocatalyst Filter)입니다.<br />
-                            높은 비표면적, 강력한 촉매반응과 안정성과
-                            무엇보다 전력소모량과 고속 반응 속도를 자랑합니다.
-                        </ImgSubContent>
-                    </SubColumnContainer>
+                        티타늄(Ti) 모재에 나노탄소와 혼합금속물질을
+                        최적비율로 혼합하여 만든 전기촉매(Electrocatalyst Filter)입니다.<br />
+                        높은 비표면적, 강력한 촉매반응과 안정성과
+                        무엇보다 전력소모량과 고속 반응 속도를 자랑합니다.
+                    </ImgSubContent>
                     <ElecImg1 />
                 </SubRowContainer>
+
                 <SubColumnContainer>
                     <SubTitle>
                         전기촉매 기술 발전사
@@ -66,6 +68,7 @@ const ElectroCatalyst = () => {
                     </FullSubContent>
                     <GenerationTable />
                 </SubColumnContainer>
+
                 <SubColumnContainer>
                     <SubTitle>
                         차별성 및 우수성
@@ -75,6 +78,7 @@ const ElectroCatalyst = () => {
                     </FullSubContent>
                     <AdvantageTable />
                 </SubColumnContainer>
+                
                 <SubColumnContainer>
                     <SubTitle>
                         세계최초 초격차 고속 선택적 질소/TOC/DOC 처리 전기촉매(EF) 기술 확보
@@ -90,7 +94,7 @@ const ElectroCatalyst = () => {
                         <EfImg src={ef3} alt='ef' />
                         <EfImg src={ef4} alt='ef' />
                     </EFImgBox>
-                    
+
                 </SubColumnContainer>
                 <SubColumnContainer>
                     <SubTitle>
@@ -101,7 +105,7 @@ const ElectroCatalyst = () => {
                     </FullSubContent>
                     <ComparisonTable />
                 </SubColumnContainer>
-               
+
             </MainContainer>
         </>
     );

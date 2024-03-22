@@ -12,6 +12,12 @@ const StyledTable = styled.table`
   font-size: 20px;
   border-collapse: collapse;
   font-family: var(--font-sansMedium);
+  @media (max-width: 1000px) {
+        font-size: 18px;
+    }
+    @media (max-width: 600px) {
+        font-size: 12px;
+    }
 `;
 
 const TR = styled.tr``;
@@ -20,6 +26,9 @@ const TD = styled.td`
   border: 1px solid #E2E2E2;
   text-align: center;
   padding: 18px;
+  @media (max-width: 600px) {
+      padding: 12px;
+    }
 `;
 
 const R1TD = styled.td`
@@ -29,6 +38,9 @@ const R1TD = styled.td`
   text-align: center;
   padding: 18px;
   font-family: var(--font-sansBold);
+  @media (max-width: 600px) {
+      padding: 12px;
+    }
 `;
 
 const R2Td = styled.td`
@@ -38,7 +50,7 @@ const R2Td = styled.td`
 `
 
 const Timg = styled.img`
-    width: 300px;
+    width: 100%;
 `
 
 

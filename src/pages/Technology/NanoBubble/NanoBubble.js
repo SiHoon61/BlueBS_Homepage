@@ -22,25 +22,17 @@ import {
     TitleSubText,
     TitleMainText,
     MainContainer,
-    SubColumnContainer,
     SubRowContainer,
-    SubLargeTitle,
     ExampleSubTitle,
-    SubTitle,
-    FullSubContent,
     ImgDescription,
     NanoImgBox,
     NanoImg1,
     NanoVideo2,
     NanoVideo3,
     NanoFeatureImg,
-    ImgSubTitle,
-    ImgSubContent,
     NanoBirdImg,
     NanoExampleBox,
     NanoExampleImg,
-    MonitoringImgSubTitle,
-    MonitoringImgSubContent,
     NanoMonitoring,
     NanoDevelopImg,
     NanoSoftWareBox,
@@ -48,6 +40,14 @@ import {
     GreyDescription,
     GreyStyle,
 } from './style'
+import {
+    SubLargeTitle,
+    SubColumnContainer,
+    FullSubContent,
+    SubTitle,
+    ImgSubTitle,
+    ImgSubContent,
+} from '../../../components/Body/bodyStyle'
 
 const Nanobubble = () => {
     return (
@@ -69,8 +69,8 @@ const Nanobubble = () => {
                         울트라 나노버블 (Ultra Nano Bubble)
                     </SubLargeTitle>
                     <FullSubContent>
-                        123nm 크기의 나노버블은 활발한 브라운 운동을 보이며, 평소에는 무색이지만 강제로 충돌시키면 밀크색 마이크로버블로 변환됩니다.<br />
-                        나노버블은 물과 잘 섞이지 않는 소수성을 가지며, 안정적인 구조로 오랜 시간 지속되고, 중성 부력으로 물속에서 떠오르거나 가라앉지 않습니다.<br />
+                        123nm 크기의 나노버블은 활발한 브라운 운동을 보이며, 평소에는 무색이지만 강제로 충돌시키면 밀크색 마이크로버블로 변환됩니다.
+                        나노버블은 물과 잘 섞이지 않는 소수성을 가지며, 안정적인 구조로 오랜 시간 지속되고, 중성 부력으로 물속에서 떠오르거나 가라앉지 않습니다.
                         이러한 특징을 활용해, 저희는 바이러스부터 녹조에 이르기까지 다양한 물 속 부유물질을 효과적으로 제거합니다.
                     </FullSubContent>
                     <NanoImgBox>
@@ -80,13 +80,13 @@ const Nanobubble = () => {
                             초순수/나노수
                         </ImgDescription>
                         <ImgDescription>
-                            <NanoVideo2 muted autoPlay loop>
+                            <NanoVideo2 muted autoPlay loop playsInline>
                                 <source src={nanoVideo2} type="video/mp4" />
                             </NanoVideo2>
                             울트라 나노버블의 브라운 운동영상
                         </ImgDescription>
                         <ImgDescription>
-                            <NanoVideo3 muted autoPlay loop>
+                            <NanoVideo3 muted autoPlay loop playsInline>
                                 <source src={nanoVideo3} type="video/mp4" />
                             </NanoVideo3>
                             나노버블 대량 생산 영상
@@ -98,21 +98,19 @@ const Nanobubble = () => {
                         나노버블의 정의 및 특징
                     </SubTitle>
                     <FullSubContent>
-                        나노버블은 극미세한 기포로서 전기적으로 충전된 표면을 통해 다른 물질과의 상호작용을 가능하게 합니다.<br />
+                        나노버블은 극미세한 기포로서 전기적으로 충전된 표면을 통해 다른 물질과의 상호작용을 가능하게 합니다.
                         이러한 나노버블은 물리적, 화학적, 생물학적 과정을 향상시킬 수 있는 특별한 성질을 지니고 있습니다.
                     </FullSubContent>
                     <NanoFeatureImg />
                 </SubColumnContainer>
                 <SubRowContainer>
-                    <SubColumnContainer>
+                    <ImgSubContent>
                         <ImgSubTitle>
                             나노버블의 우수성
                         </ImgSubTitle>
-                        <ImgSubContent>
-                            기존의 나노버블 발생장치는 주로 청정한 물에서 사용되는 기술로, 이물질이 많거나 유체의 속도가 빠른 환경에서의 적용이 어려웠습니다.<br />
-                            그러나, 본 기술은 이물질 유입이나 난류의 방해를 받지 않으면서도 고품질의 나노버블을 안정적으로 생산할 수 있습니다.
-                        </ImgSubContent>
-                    </SubColumnContainer>
+                        기존의 나노버블 발생장치는 주로 청정한 물에서 사용되는 기술로, 이물질이 많거나 유체의 속도가 빠른 환경에서의 적용이 어려웠습니다.<br />
+                        그러나, 본 기술은 이물질 유입이나 난류의 방해를 받지 않으면서도 고품질의 나노버블을 안정적으로 생산할 수 있습니다.
+                    </ImgSubContent>
                     <NanoBirdImg />
                 </SubRowContainer>
                 <SubColumnContainer>
@@ -125,16 +123,14 @@ const Nanobubble = () => {
                     <NanoTable />
                 </SubColumnContainer>
                 <SubRowContainer>
-                    <SubColumnContainer>
-                        <MonitoringImgSubTitle>
+                    <ImgSubContent>
+                        <ImgSubTitle>
                             나노버블 생성 모니터링 시스템
-                        </MonitoringImgSubTitle>
-                        <MonitoringImgSubContent>
-                            산란 레이저 원리를 기반으로 한 나노 버블 모니터링 시스템입니다.<br />
-                            이 시스템은 중력이나 센서용 샘플 펌프를 통해 샘플 물을 지속적으로 공급받으며, 0에서 1000 사이의 레이저 신호 값을 통해 기포 농도를 대략 추정할 수 있습니다.
-                            이를 통해 제조 공정에서 나노버블의 지속적 생성 여부를 확인하고, 실험실 및 연구실에서 나노버블의 농도 수준을 측정합니다.<br />기포 농도가 과도하게 높거나 낮은 경우 경고를 발생시켜 버블 발생기의 작동 및 정지를 조절할 수 있습니다.
-                        </MonitoringImgSubContent>
-                    </SubColumnContainer>
+                        </ImgSubTitle>
+                        산란 레이저 원리를 기반으로 한 나노 버블 모니터링 시스템입니다.<br />
+                        이 시스템은 중력이나 센서용 샘플 펌프를 통해 샘플 물을 지속적으로 공급받으며, 0에서 1000 사이의 레이저 신호 값을 통해 기포 농도를 대략 추정할 수 있습니다.
+                        이를 통해 제조 공정에서 나노버블의 지속적 생성 여부를 확인하고, 실험실 및 연구실에서 나노버블의 농도 수준을 측정합니다.<br />기포 농도가 과도하게 높거나 낮은 경우 경고를 발생시켜 버블 발생기의 작동 및 정지를 조절할 수 있습니다.
+                    </ImgSubContent>
                     <NanoMonitoring />
                 </SubRowContainer>
                 <SubColumnContainer>
@@ -173,9 +169,9 @@ const Nanobubble = () => {
                     </NanoSoftWareBox>
                 </SubColumnContainer>
                 <SubColumnContainer>
-                    <ExampleSubTitle>
+                    <SubTitle>
                         나노버블 발생장치 적용사례
-                    </ExampleSubTitle>
+                    </SubTitle>
                     <NanoExampleBox>
                         <ImgDescription>
                             <NanoExampleImg src={nanoExample1} alt="nano example" />

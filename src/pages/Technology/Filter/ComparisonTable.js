@@ -10,6 +10,12 @@ const StyledTable = styled.table`
   font-size: 20px;
   border-collapse: collapse;
   font-family: var(--font-sansMedium);
+  @media (max-width: 1000px) {
+        font-size: 18px;
+    }
+    @media (max-width: 600px) {
+        font-size: 12px;
+    }
 `;
 
 const TR = styled.tr``;
@@ -18,6 +24,9 @@ const TD = styled.td`
   border: 1px solid #E2E2E2;
   text-align: center;
   padding: 18px;
+  @media (max-width: 600px) {
+      padding: 10px;
+    }
 `;
 
 const R1TD = styled.td`
@@ -27,6 +36,9 @@ const R1TD = styled.td`
   text-align: center;
   padding: 18px;
   font-family: var(--font-sansBold);
+  @media (max-width: 600px) {
+      padding: 10px;
+    }
 `;
 
 const R2Td = styled.td`
@@ -41,10 +53,16 @@ const RedTd = styled.td`
   text-align: center;
   padding: 18px;
   color: #C00000;
+  @media (max-width: 600px) {
+      padding: 10px;
+    }
 `
 
 const Timg = styled.img`
     width: 300px;
+    @media (max-width: 1250px) {
+      width: 70%;
+    }
 `
 
 const ComparisonTable = () => {
@@ -99,7 +117,7 @@ const ComparisonTable = () => {
                         <RedTd>화약염소 세정<br />약품보관 관리 주의</RedTd>
                     </TR>
                     <TR>
-                        <TD>약품세정 농축폐수</TD>
+                        <TD>농축폐수</TD>
 
                         <RedTd>발생하지 않음</RedTd>
                         <RedTd>다량 발생</RedTd>

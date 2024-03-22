@@ -12,17 +12,18 @@ import {
     TitleTextBox,
     TitleMainText,
     MainContainer,
+    FullSubContent,
+    SubCenterTitle,
+    SubLabContainer,
     SubjectBox,
     Subject,
     LabImgBox,
-    LabImg
+    LabImg,
 } from './style'
 
 import {
     SubLargeTitle,
-    FullSubContent,
-    SubColumnContainer,
-    SubCenterTitle,
+    
 } from '../../../components/Body/bodyStyle';
 
 const Laboratory = () => {
@@ -44,7 +45,7 @@ const Laboratory = () => {
                         BlueBS 연구소는 나노촉매 소재, 친환경 고효율 공정, 측정장비 고효율화 및 탄소 중립 자원화 분야에 집중 투자하고 있습니다.<br />
                         아울러 그간 처리하기 어려운 농축수 및 질소를 저비용 친환경적으로 처리할 수 있는 기술을 개발 중에 있고, 최근 정수장 내 남조류 이취미 물질을 효과적으로 처리할 수 있는 기술을 개발하여 제품화하였습니다.
                     </FullSubContent>
-                <SubColumnContainer>
+                <SubLabContainer>
                     <SubCenterTitle>
                         연구개발 집중 투자 분야
                     </SubCenterTitle>
@@ -66,8 +67,8 @@ const Laboratory = () => {
                         <LabImg src={labImg1} alt="lab1" />
                         <LabImg src={labImg2} alt="lab2" />
                     </LabImgBox>
-                </SubColumnContainer>
-                <SubColumnContainer>
+                </SubLabContainer>
+                <SubLabContainer>
                     <SubCenterTitle>
                         미래 기술 개발 진행중
                     </SubCenterTitle>
@@ -89,7 +90,7 @@ const Laboratory = () => {
                         <LabImg src={labImg3} alt="lab3" />
                         <LabImg src={labImg4} alt="lab4" />
                     </LabImgBox>
-                </SubColumnContainer>
+                </SubLabContainer>
             </MainContainer>
         </>
     );

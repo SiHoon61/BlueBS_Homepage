@@ -12,15 +12,19 @@ import {
     TitleSubText,
     TitleMainText,
     MainContainer,
-    SubColumnContainer,
     SubRowContainer,
-    SubLargeTitle,
-    SubTitle,
-    FullSubContent,
     TowerVideo,
     SeparationVideoBox,
     SeparationVideo,
 } from './style'
+
+import {
+    SubLargeTitle,
+    SubColumnContainer,
+    FullSubContent,
+    SubTitle,
+} from '../../../components/Body/bodyStyle'
+
 
 //table
 import ComparisonTable from './ComparisonTable';
@@ -47,7 +51,7 @@ const Tower = () => {
                     <FullSubContent>
                         전기촉매(Electrocatalyst)를 이용한 전기촉매타워(Electrocatalyst Tower)는 종래 용존공기부상(DAF), 디스크 섬유형여과와 달리 저약품비, 저동력, 부지집약적 등을 자랑합니다.
                     </FullSubContent>
-                    <TowerVideo muted autoPlay loop>
+                    <TowerVideo muted autoPlay loop playsInline> 
                         <source src={towerVideo} type="video/mp4" />
                     </TowerVideo>
                 </SubColumnContainer>
@@ -57,20 +61,18 @@ const Tower = () => {
                     </SubTitle>
                     <SubRowContainer>
                         <SeparationVideoBox>
-                            <SeparationVideo muted autoPlay loop>
+                            <SeparationVideo muted autoPlay loop playsInline>
                                 <source src={tower1} type="video/mp4" />
                             </SeparationVideo>
                             ET 고액분리 저농도 제거
                         </SeparationVideoBox>
                         <SeparationVideoBox>
-                            <SeparationVideo muted autoPlay loop>
+                            <SeparationVideo muted autoPlay loop playsInline>
                                 <source src={tower2} type="video/mp4" />
                             </SeparationVideo>
                             ET 고액분리 고농도 제거
                         </SeparationVideoBox>
                     </SubRowContainer>
-
-
                 </SubColumnContainer>
                 <SubColumnContainer>
                     <SubTitle>

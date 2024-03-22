@@ -11,6 +11,12 @@ export const TitleBar = styled.div`
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    @media (max-width: 1000px) {
+        height: 450px;
+    }
+    @media (max-width: 600px) {
+        height: 350px;
+    }
 `
 
 export const TitleTextBox = styled.div`
@@ -22,17 +28,33 @@ export const TitleTextBox = styled.div`
     color: white;
     font-size: 14px;
     font-family: var(--font-sansRegular);
+    @media (max-width: 600px) {
+        padding-top: 170px;
+    }
 `
 export const TitleSubText = styled.div`
     font-size: 48px;
     font-family: var(--font-sansBold);
     color: #FEE824;
     margin-bottom: -15px;
+    @media (max-width: 1000px) {
+        font-size: 36px;
+    }
+    @media (max-width: 600px) {
+        margin-bottom: -5px;
+        font-size: 24px;
+    }
 `
 
 export const TitleMainText = styled.div`
     font-size: 96px;
     font-family: var(--font-sansBold);
+    @media (max-width: 1000px) {
+        font-size: 72px;
+    }
+    @media (max-width: 600px) {
+        font-size: 40px;
+    }
 `
 
 export const MainContainer = styled.div`
@@ -40,13 +62,9 @@ export const MainContainer = styled.div`
     flex-direction: column;
     margin-top: 100px;
     width: 100%;
-`
-
-export const SubColumnContainer = styled.div`
-    margin: 0 auto 150px auto;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    @media (max-width: 600px) {
+        margin-top: 40px;
+    }
 `
 
 export const SubRowContainer = styled.div`
@@ -54,34 +72,28 @@ export const SubRowContainer = styled.div`
     margin: 0 auto;
     display: flex;
     flex-direction: row;
-`
-export const SubLargeTitle = styled.div`
-    margin-top: 10px;
-    width: 1500px;
-    font-size: 48px;
-    font-family: var(--font-sansBold);
-`
-
-export const SubTitle = styled.div`
-    margin-top: 10px;
-    width: 1500px;
-    font-size: 40px;
-    font-family: var(--font-sansBold);
-`
-
-export const FullSubContent = styled.div`
-    width: 1500px;
-    display: flex;
-    align-items: center;
-    font-size: 20px;
-    font-family: var(--font-sansRegular);
-    color: #313131;
-    line-height: 45px; 
-    margin-bottom: 35px;
+    width: 1100px;
+    justify-content: space-between;
+    margin-top: 35px;
+    @media (max-width: 1300px) {
+        width: 800px;
+    }
+    @media (max-width: 1000px) {
+        width: 600px;
+    }
+    @media (max-width: 750px) {
+        width: 500px;
+    }
+    @media (max-width: 600px) {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
 `
 
 export const TowerVideo = styled.video`
-    width: 1500px;
+    width: 100%;
 `
 
 export const SeparationVideoBox = styled.div`
@@ -90,13 +102,35 @@ export const SeparationVideoBox = styled.div`
     align-items: center;
     font-size: 20px;
     font-family: var(--font-sansMedium);
+    @media (max-width: 1000px) {
+        font-size: 18px;
+    }
+    @media (max-width: 600px) {
+        margin-bottom: 20px;
+    }
 `
 
 export const SeparationVideo = styled.video`
-    margin: 35px 70px 10px 70px;
-    width: 600px;
-    height: 600px;
+    width: 500px;
+    height: 500px;
     border-radius: 5px;
     object-fit: cover;
     object-position: center top;
+    margin-bottom: 5px;
+    @media (max-width: 1300px) {
+        width: 350px;
+        height: 350px;
+    }
+    @media (max-width: 1000px) {
+        width: 250px;
+        height: 250px;
+    }
+    @media (max-width: 750px) {
+        width: 200px;
+        height: 200px;
+    }
+    @media (max-width: 600px) {
+        width: 340px;
+        height: 340px;
+    }
 `

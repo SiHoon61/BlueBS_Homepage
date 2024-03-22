@@ -6,6 +6,12 @@ const StyledTable = styled.table`
   font-size: 20px;
   border-collapse: collapse;
   font-family: var(--font-sansMedium);
+    @media (max-width: 1000px) {
+        font-size: 18px;
+    }
+    @media (max-width: 600px) {
+        font-size: 12px;
+    }
 `;
 
 const TR = styled.tr``;
@@ -15,6 +21,9 @@ const TD = styled.td`
   border: 1px solid #E2E2E2;
   text-align: center;
   padding: 18px;
+  @media (max-width: 600px) {
+      padding: 10px;
+    }
 `;
 
 const R1TD = styled.td`
@@ -24,6 +33,9 @@ const R1TD = styled.td`
   text-align: center;
   padding: 18px;
   font-family: var(--font-sansBold);
+  @media (max-width: 600px) {
+      padding: 10px;
+    }
 `;
 
 const R2TDLeft = styled.td`
@@ -32,6 +44,9 @@ const R2TDLeft = styled.td`
   border: 1px solid #E2E2E2;
   text-align: center;
   padding: 18px;
+  @media (max-width: 600px) {
+      padding: 10px;
+    }
 `
 const R2TDRight = styled.td`
   font-family: var(--font-sansBold);
@@ -39,6 +54,9 @@ const R2TDRight = styled.td`
   border: 1px solid #E2E2E2;
   text-align: center;
   padding: 18px;
+  @media (max-width: 600px) {
+      padding: 10px;
+    }
 `
 
 const R4TD = styled.td`
@@ -47,6 +65,9 @@ const R4TD = styled.td`
   border: 1px solid #E2E2E2;
   text-align: center;
   padding: 18px;
+  @media (max-width: 600px) {
+      padding: 10px;
+    }
 `
 const GenerationTable = () => {
   return (
@@ -65,7 +86,6 @@ const GenerationTable = () => {
 
             <R2TDRight colSpan="3">Electrocatalyst Filter(ET/VZ): Smart Control</R2TDRight>
           </TR>
-          {/* 나머지 행 추가 */}
           <TR>
             <TD>살균/소독용</TD>
             <TD>입자분리 복합처리</TD>

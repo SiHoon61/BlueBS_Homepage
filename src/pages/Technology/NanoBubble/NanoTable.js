@@ -5,12 +5,18 @@ import styled from 'styled-components';
 import nanoTable1 from '../../../assets/Technology/nanoTable1.svg'
 import nanoTable2 from '../../../assets/Technology/nanoTable2.svg'
 import nanoTable3 from '../../../assets/Technology/nanoTable3.svg'
-import nanoTable4 from '../../../assets/Technology/nanoTable4.png'
+import nanoTable4 from '../../../assets/Technology/nanoTable4.svg'
 const StyledTable = styled.table`
   width: 100%;
   font-size: 20px;
   border-collapse: collapse;
   font-family: var(--font-sansMedium);
+  @media (max-width: 1000px) {
+        font-size: 18px;
+    }
+    @media (max-width: 600px) {
+        font-size: 12px;
+    }
 `;
 
 const TR = styled.tr``;
@@ -19,6 +25,9 @@ const TD = styled.td`
   border: 1px solid #E2E2E2;
   text-align: center;
   padding: 18px;
+  @media (max-width: 600px) {
+      padding: 12px;
+    }
 `;
 
 const R1TD = styled.td`
@@ -28,6 +37,9 @@ const R1TD = styled.td`
   text-align: center;
   padding: 18px;
   font-family: var(--font-sansBold);
+  @media (max-width: 600px) {
+      padding: 12px;
+    }
 `;
 
 const R2Td = styled.td`
@@ -42,13 +54,15 @@ const RedTd = styled.td`
   text-align: center;
   padding: 18px;
   color: #C00000;
-  width: 350px;
   font-family: var(--font-sansBold);
+  @media (max-width: 600px) {
+      padding: 12px;
+    }
 `
 
 
 const Timg = styled.img`
-    width: 300px;
+    width: 100%;
 `
 
 
@@ -76,7 +90,7 @@ const NanoTable = () => {
                         <RedTd>100nm ~ 10μm</RedTd>
                     </TR>
                     <TR>
-                        <TD>부유물질(SS)<br/>청수에 적합</TD>
+                        <TD>부유물질(SS)<br />청수에 적합</TD>
                         <TD>부유물질 적은 청수에 적합</TD>
                         <TD>부유물질 상관없음</TD>
                         <RedTd>부유물질 상관없음</RedTd>

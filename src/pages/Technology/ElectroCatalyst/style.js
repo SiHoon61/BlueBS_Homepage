@@ -15,6 +15,12 @@ export const TitleBar = styled.div`
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    @media (max-width: 1000px) {
+        height: 450px;
+    }
+    @media (max-width: 600px) {
+        height: 350px;
+    }
 `
 
 export const TitleTextBox = styled.div`
@@ -26,17 +32,34 @@ export const TitleTextBox = styled.div`
     color: white;
     font-size: 14px;
     font-family: var(--font-sansRegular);
+    @media (max-width: 600px) {
+        padding-top: 170px;
+    }
 `
+
 export const TitleSubText = styled.div`
     font-size: 48px;
     font-family: var(--font-sansBold);
     color: #FEE824;
     margin-bottom: -15px;
+    @media (max-width: 1000px) {
+        font-size: 36px;
+    }
+    @media (max-width: 600px) {
+        margin-bottom: -5px;
+        font-size: 24px;
+    }
 `
 
 export const TitleMainText = styled.div`
     font-size: 96px;
     font-family: var(--font-sansBold);
+    @media (max-width: 1000px) {
+        font-size: 72px;
+    }
+    @media (max-width: 600px) {
+        font-size: 40px;
+    }
 `
 
 export const MainContainer = styled.div`
@@ -44,58 +67,27 @@ export const MainContainer = styled.div`
     flex-direction: column;
     margin-top: 100px;
     width: 100%;
+    @media (max-width: 600px) {
+        margin-top: 40px;
+    }
 `
 
 export const SubRowContainer = styled.div`
-    align-items: flex-start;
+    align-items: center;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
+    max-width: 80%;
+    margin-bottom: 150px;
+    @media (max-width: 925px) {
+        flex-direction: column;
+    }
+    @media (max-width: 600px) {
+        margin-bottom: 50px;
+        max-width: 90%;
+    }
 `
 
-export const SubColumnContainer = styled.div`
-    margin: 0 auto 150px auto;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-`
-
-export const ImgSubTitle = styled.div`
-    margin-top: 10px;
-    width: 1000px;
-    font-size: 48px;
-    font-family: var(--font-sansBold);
-`
-
-export const SubTitle = styled.div`
-    margin-top: 10px;
-    width: 1500px;
-    font-size: 40px;
-    font-family: var(--font-sansBold);
-`
-
-
-export const ImgSubContent = styled.div`
-    display: flex;
-    width: 1000px;
-    align-items: center;
-    font-size: 20px;
-    font-family: var(--font-sansRegular);
-    color: #313131;
-    line-height: 45px; 
-    margin-top: 30px;
-`
-
-export const FullSubContent = styled.div`
-    width: 1500px;
-    display: flex;
-    align-items: center;
-    font-size: 20px;
-    font-family: var(--font-sansRegular);
-    color: #313131;
-    line-height: 45px; 
-    margin-bottom: 35px;
-`
 
 export const ElecImg1 = styled.img.attrs({
     src: elecImg1,
@@ -103,13 +95,32 @@ export const ElecImg1 = styled.img.attrs({
 })`
     width: 450px;
     margin-left: 50px;
+    @media (max-width: 1520px) {
+        width: 300px;
+        margin-left: 30px;
+    }
+    @media (max-width: 925px) {
+        margin-top: 20px;
+        width: 80%;
+        margin-left: 0px;
+    }
 `
+
 export const EFImgBox = styled.div`
-    width: 1500px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 `
 
 export const EfImg = styled.img`
     width: 300px;
+    margin-bottom: 35px;
+    margin-right: 15px;
+    @media (max-width: 805px) {
+        width: 200px;
+    }
+    @media (max-width: 500px) {
+        width: 150px;
+    }
 `

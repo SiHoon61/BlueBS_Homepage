@@ -6,6 +6,12 @@ const StyledTable = styled.table`
   font-size: 20px;
   border-collapse: collapse;
   font-family: var(--font-sansMedium);
+  @media (max-width: 1000px) {
+        font-size: 18px;
+    }
+    @media (max-width: 600px) {
+        font-size: 12px;
+    }
 `;
 
 const TR = styled.tr``;
@@ -15,6 +21,9 @@ const TD = styled.td`
   border: 1px solid #E2E2E2;
   text-align: center;
   padding: 18px;
+  @media (max-width: 600px) {
+      padding: 12px;
+    }
 `;
 
 const SmallTD = styled.span`
@@ -22,6 +31,12 @@ const SmallTD = styled.span`
   font-family: var(--font-sansRegular);
   text-align: center;
   color: #313131;
+  @media (max-width: 1000px) {
+        font-size: 14px;
+    }
+    @media (max-width: 600px) {
+        font-size: 13px;
+    }
 `;
 
 const R1TD = styled.td`
@@ -31,6 +46,9 @@ const R1TD = styled.td`
   text-align: center;
   padding: 18px;
   font-family: var(--font-sansBold);
+  @media (max-width: 600px) {
+      padding: 12px;
+    }
 `;
 
 const R1C1TD = styled.td`
@@ -41,6 +59,12 @@ const R1C1TD = styled.td`
   text-align: center;
   padding: 18px;
   font-family: var(--font-sansBold);
+  @media (max-width: 1200px) {
+      width: auto;
+    }
+    @media (max-width: 600px) {
+      padding: 12px;
+    }
 `;
 
 
