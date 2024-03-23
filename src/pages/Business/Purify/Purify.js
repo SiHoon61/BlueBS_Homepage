@@ -9,28 +9,33 @@ import techImg3 from '../../../assets/Business/Purify/techImg3.png'
 //style
 import {
     TitleBar,
+    BodyImg,
+    PerformanceVideo,
+} from './style'
+
+import {
+    SubLargeTitle,
+    SubColumnContainer,
+    ImgSubContent,
+    SubTitle,
+} from '../../../components/Body/bodyStyle';
+
+import {
     TitleTextBox,
     TitleMainText,
     MainContainer,
-    SubColumnContainer,
-    SubImgContainer,
-    SubLargeTitle,
-    SubLargeContainer,
-    SubTitle,
-    FullSubContent,
-    BodyImg,
     PerformanceContent,
     PerformanceImgBox,
-    PerformanceVideo,
     DescriptionBox,
     Description,
     DescriptionStyle,
     More,
     Arrow,
-    TechImg,
+    SubImgContainer_3,
+    ImgDescription_3,
+    TechImg_3,
     EmptyBox,
-    ImgDescription,
-} from './style'
+} from '../../../components/Body/businessStyle';
 
 //Modal
 import ModalPortal from '../../../modal/ModalPortal';
@@ -56,15 +61,15 @@ const Purify = () => {
                 </TitleTextBox>
             </TitleBar>
             <MainContainer>
-                <SubLargeContainer>
+                <SubColumnContainer>
                     <SubLargeTitle>
                         정수 분야
                     </SubLargeTitle>
-                    <FullSubContent>
+                    <ImgSubContent>
                         BlueBS의 혁신적인 정수 기술을 통해 우리가 마시는 물을 안전하게 공급합니다.<br />
                         정수장 유입원수 내 맛냄새 유발물질인 2-MIB를 제거하는 시스템을 활용하여 안전한 먹는 물을 공급합니다.
-                    </FullSubContent>
-                </SubLargeContainer>
+                    </ImgSubContent>
+                </SubColumnContainer>
                 <BodyImg />
                 <SubColumnContainer>
                     <SubTitle>
@@ -74,7 +79,7 @@ const Purify = () => {
                         생활용수 공급 시스템
                     </PerformanceContent>
                     <PerformanceImgBox>
-                        <PerformanceVideo muted autoPlay loop>
+                        <PerformanceVideo muted autoPlay loop playsInline>
                             <source src={performanceVideo} type="video/mp4" />
                         </PerformanceVideo>
                         <DescriptionBox>
@@ -115,22 +120,21 @@ const Purify = () => {
                     <SubTitle>
                         주요 기술
                     </SubTitle>
-                    <SubImgContainer>
-                        <ImgDescription>
-                            <TechImg src={techImg1} alt="TechImg" />
+                    <SubImgContainer_3>
+                        <ImgDescription_3>
+                            <TechImg_3 src={techImg1} alt="TechImg" />
                             차량용 이동식 담수화 시스템
-                        </ImgDescription>
-                        <ImgDescription>
-                            <TechImg src={techImg2} alt="TechImg" />
+                        </ImgDescription_3>
+                        <ImgDescription_3>
+                            <TechImg_3 src={techImg2} alt="TechImg" />
                             정수장 전처리 ZT 정수 시스템
-                        </ImgDescription>
-                        <ImgDescription>
-                            <TechImg src={techImg3} alt="TechImg" />
+                        </ImgDescription_3>
+                        <ImgDescription_3>
+                            <TechImg_3 src={techImg3} alt="TechImg" />
                             이동식 담수화 시스템
-                        </ImgDescription>
+                        </ImgDescription_3>
                         <EmptyBox />
-
-                    </SubImgContainer>
+                    </SubImgContainer_3>
                 </SubColumnContainer>
                 {modalState && (
                     <ModalPortal>

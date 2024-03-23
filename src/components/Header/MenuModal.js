@@ -294,28 +294,6 @@ const MenuModal = ({ isOpen, onClose }) => {
                     </MenuUl>
                 </MenuBox>
                 <MenuBox>
-                    <MenuTitleContainer onClick={() => toggleMenu('Communication')}>
-                        <MenuTitle>Communication</MenuTitle>
-                        <PlusButton $isactive={activeMenu === "Communication"} />
-                    </MenuTitleContainer>
-                    <MenuUl $activeMenu={activeMenu === "Communication"}>
-                        <MenuLi onClick={() => {
-                            onClose();
-                            goNewsRoom();
-                        }
-                        }>
-                            뉴스룸
-                        </MenuLi>
-                        <MenuLi onClick={() => {
-                            onClose();
-                            goMap();
-                        }
-                        }>
-                            오시는길
-                        </MenuLi>
-                    </MenuUl>
-                </MenuBox>
-                <MenuBox>
                     <MenuTitleContainer onClick={() => toggleMenu('Business')}>
                         <MenuTitle>Business</MenuTitle>
                         <PlusButton $isactive={activeMenu === "Business"} />
@@ -429,7 +407,28 @@ const MenuModal = ({ isOpen, onClose }) => {
                         </MenuLi>
                     </MenuUl>
                 </MenuBox>
-
+                <MenuBox>
+                    <MenuTitleContainer onClick={() => toggleMenu('Communication')}>
+                        <MenuTitle>Communication</MenuTitle>
+                        <PlusButton $isactive={activeMenu === "Communication"} />
+                    </MenuTitleContainer>
+                    <MenuUl $activeMenu={activeMenu === "Communication"}>
+                        <MenuLi onClick={() => {
+                            onClose();
+                            goNewsRoom();
+                        }
+                        }>
+                            뉴스룸
+                        </MenuLi>
+                        <MenuLi onClick={() => {
+                            onClose();
+                            goMap();
+                        }
+                        }>
+                            오시는길
+                        </MenuLi>
+                    </MenuUl>
+                </MenuBox>
             </MainContainer>
         </MenuContainer>
     );

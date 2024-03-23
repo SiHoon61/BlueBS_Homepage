@@ -10,28 +10,33 @@ import techImg3 from '../../../assets/Business/Leachate/techImg3.png'
 //style
 import {
     TitleBar,
+    BodyImg,
+    PerformanceImg,
+} from './style'
+
+import {
+    SubLargeTitle,
+    SubColumnContainer,
+    ImgSubContent,
+    SubTitle,
+} from '../../../components/Body/bodyStyle';
+
+import {
     TitleTextBox,
     TitleMainText,
     MainContainer,
-    SubColumnContainer,
-    SubImgContainer,
-    SubLargeTitle,
-    SubLargeContainer,
-    SubTitle,
-    FullSubContent,
-    BodyImg,
     PerformanceContent,
     PerformanceImgBox,
-    PerformanceImg,
     DescriptionBox,
     Description,
     DescriptionStyle,
     More,
     Arrow,
-    TechImg,
+    SubImgContainer_3,
+    ImgDescription_3,
+    TechImg_3,
     EmptyBox,
-    ImgDescription,
-} from './style'
+} from '../../../components/Body/businessStyle';
 
 //Modal
 import ModalPortal from '../../../modal/ModalPortal';
@@ -57,15 +62,15 @@ const Leachate = () => {
                 </TitleTextBox>
             </TitleBar>
             <MainContainer>
-                <SubLargeContainer>
+                <SubColumnContainer>
                     <SubLargeTitle>
                         침출수 분야
                     </SubLargeTitle>
-                    <FullSubContent>
+                    <ImgSubContent>
                         전기 촉매(OH 라디칼)를 이용한 산화, 흡착, 응집으로 폐수를 처리합니다.<br />
                         산업폐수, 침출수, 음식물 폐수 등을 대상으로 질소, 인, 색도, 냄새(악취) 등을 효과적으로 제거하는 맞춤형 처리 방식의 전용 시스템입니다.
-                    </FullSubContent>
-                </SubLargeContainer>
+                    </ImgSubContent>
+                </SubColumnContainer>
                 <BodyImg />
                 <SubColumnContainer>
                     <SubTitle>
@@ -115,21 +120,21 @@ const Leachate = () => {
                     <SubTitle>
                         주요 기술
                     </SubTitle>
-                    <SubImgContainer>
-                        <ImgDescription>
-                            <TechImg src={techImg1} alt="TechImg" />
+                    <SubImgContainer_3>
+                        <ImgDescription_3>
+                            <TechImg_3 src={techImg1} alt="TechImg" />
                             전기촉매 전처리 고액분리 장치
-                        </ImgDescription>
-                        <ImgDescription>
-                            <TechImg src={techImg2} alt="TechImg" />
+                        </ImgDescription_3>
+                        <ImgDescription_3>
+                            <TechImg_3 src={techImg2} alt="TechImg" />
                             RO 분리막 시스템
-                        </ImgDescription>
-                        <ImgDescription>
-                            <TechImg src={techImg3} alt="TechImg" />
+                        </ImgDescription_3>
+                        <ImgDescription_3>
+                            <TechImg_3 src={techImg3} alt="TechImg" />
                             각종 유틸리티 및 처리 수조
-                        </ImgDescription>
+                        </ImgDescription_3>
                         <EmptyBox />
-                    </SubImgContainer>
+                    </SubImgContainer_3>
                 </SubColumnContainer>
                 {modalState && (
                     <ModalPortal>

@@ -54,12 +54,12 @@ const Nanobubble = () => {
         <>
             <TitleBar>
                 <TitleTextBox>
-                    Home · Technology · 울트라 나노버블(UNB)
+                    Home · Technology · 울트라 나노버블
                     <TitleSubText>
                         막힘 없는
                     </TitleSubText>
                     <TitleMainText>
-                        울트라 나노버블(UNB)
+                        울트라 나노버블
                     </TitleMainText>
                 </TitleTextBox>
             </TitleBar>

@@ -10,20 +10,26 @@ import techImg3 from '../../../assets/Business/Monitoring/techImg3.png'
 //style
 import {
     TitleBar,
-    TitleTextBox,
-    TitleMainText,
-    MainContainer,
-    SubColumnContainer,
-    SubLargeTitle,
-    SubLargeContainer,
-    SubTitle,
-    FullSubContent,
     BodyImg,
     FullImg,
     SubImgContainer,
     TechImg,
     ImgDescription,
 } from './style'
+
+import {
+    SubLargeTitle,
+    SubColumnContainer,
+    ImgSubContent,
+    SubTitle,
+} from '../../../components/Body/bodyStyle';
+
+
+import {
+    TitleTextBox,
+    TitleMainText,
+    MainContainer,
+} from '../../../components/Body/businessStyle';
 
 const Monitoring = () => {
 
@@ -38,15 +44,15 @@ const Monitoring = () => {
                 </TitleTextBox>
             </TitleBar>
             <MainContainer>
-                <SubLargeContainer>
+                <SubColumnContainer>
                     <SubLargeTitle>
                         운영관리 분야
                     </SubLargeTitle>
-                    <FullSubContent>
+                    <ImgSubContent>
                         EF 전기촉매-FDA/MSF 여과기에 대한 설계, 제작, 시공, 시운전에 이르는 전체 솔루션을 제공합니다.<br />
                         휴대폰 및 태블릿 PC를 통한 원격 모니터링 관리가 가능합니다.
-                    </FullSubContent>
-                </SubLargeContainer>
+                    </ImgSubContent>
+                </SubColumnContainer>
                 <BodyImg $imageUrl={monitoringBody} />
                 <SubColumnContainer>
                     <SubTitle>

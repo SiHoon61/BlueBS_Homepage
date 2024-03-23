@@ -8,6 +8,7 @@ export const SubColumnContainer = styled.div`
     align-items: flex-start;
     @media (max-width: 1600px) {
         max-width: 80%;
+        margin: 0 auto 100px auto;
     }
     @media (max-width: 600px) {
         margin: 0 auto 50px auto;
@@ -77,9 +78,9 @@ export const ImgSubContent = styled.div`
     font-family: var(--font-sansRegular);
     color: #313131;
     line-height: 45px; 
-    @media (max-width: 1520px) {
+    /* @media (max-width: 1520px) {
         font-size: 20px;
-    }
+    } */
     @media (max-width: 600px) {
         line-height: 35px;
         font-size: 16px;

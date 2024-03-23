@@ -34,12 +34,12 @@ const Tower = () => {
         <>
             <TitleBar>
                 <TitleTextBox>
-                    Home · Technology · 전기 촉매 타워(ET)
+                    Home · Technology · 전기 촉매 타워
                     <TitleSubText>
                         초고속
                     </TitleSubText>
                     <TitleMainText>
-                        전기 촉매 타워(ET)
+                        전기 촉매 타워
                     </TitleMainText>
                 </TitleTextBox>
             </TitleBar>

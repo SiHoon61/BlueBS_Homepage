@@ -34,12 +34,12 @@ const Filter = () => {
         <>
             <TitleBar>
                 <TitleTextBox>
-                    Home · Technology · 마이크로 여과필터(MSF)
+                    Home · Technology · 마이크로 여과필터
                     <TitleSubText>
                         무약품 세정
                     </TitleSubText>
                     <TitleMainText>
-                        마이크로 여과필터(MSF)
+                        마이크로 여과필터
                     </TitleMainText>
                 </TitleTextBox>
             </TitleBar>

@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import styled, { css, keyframes } from "styled-components";
 
 //
@@ -43,6 +43,13 @@ const Content = styled.div`
     flex-direction: column;
     align-items: center;
     animation: ${props => props.show ? fadeIn : fadeOut} 0.2s forwards;
+    @media (max-width: 1230px) {
+        width: 70%;
+    }
+    @media (max-width: 600px) {
+        width: 80%;
+        padding: 40px 30px 50px 30px;
+    }
 `
 
 const CloseButton = styled.img`
@@ -57,6 +64,9 @@ const CloseButton = styled.img`
 const Title = styled.div`
     font-size: 30px;
     font-family: var(--font-sansBold);
+    @media (max-width: 600px){
+        font-size: 24px;
+    }
 `
 const PurifyModal = ({ show, onClose }) => {
     const contentRef = useRef(null);
@@ -89,6 +99,15 @@ const StyledTable = styled.table`
     font-size: 18px;
     border-collapse: collapse;
     font-family: var(--font-sansMedium);
+    @media (max-width: 1400px) {
+        font-size: 16px;
+    }
+    @media (max-width: 1000px) {
+        font-size: 14px;
+    }
+    @media (max-width: 600px) {
+       font-size: 12px;
+    }
 `;
 
 const TR = styled.tr``;
@@ -100,6 +119,9 @@ const baseCellStyle = css`
     padding: 18px 30px;
     font-family: var(--font-sansMedium);
     height: 40px;
+    @media (max-width: 1230px) {
+        padding: 14px 20px;
+    }
 `;
 
 const TD = styled.td`
@@ -110,6 +132,9 @@ const TD = styled.td`
     }
     &:last-child {
         border-right: none;
+    }
+    @media (max-width: 600px) {
+        display: none;
     }
 `;
 
@@ -123,6 +148,9 @@ const RSTD = styled.td`
     &:last-child {
         border-right: none;
     }
+    @media (max-width: 600px) {
+        display: none;
+    }
 `;
 
 const RFTD = styled.td`
@@ -135,22 +163,70 @@ const RFTD = styled.td`
     &:last-child {
         border-right: none;
     }
+    @media (max-width: 600px) {
+        display: none;
+    }
 `;
 
 export const DescriptionStyle = styled.span`
     margin-right: 10px;
-    font-size: 18px;
     font-family: var(--font-sansBold);
+    @media (max-width: 1400px) {
+        display: block;
+    }
+    @media (max-width: 600px) {
+        display: inline;
+    }
+`
+
+export const MobileTD = styled.td`
+    display: none;
+    line-height: 20px;
+    ${baseCellStyle}
+    border-top: ${props => props.$border};
+    &:first-child {
+        border-left: none;
+    }
+    &:last-child {
+        border-right: none;
+    }
+    @media (max-width: 600px) {
+        display: table-cell;
+    }
 `
 
 
 const Table = () => {
+    const [returnValue, setReturnValue] = useState('');
+
+    useEffect(() => {
+        // 화면 크기 변경 시 실행될 함수에서 조건에 따른 값을 설정
+        const updateValue = () => {
+            if (window.innerWidth > 1600) {
+                setReturnValue('20px'); // 1600 초과인 경우는 예시에 따라 별도의 리턴 값이 없음
+            } else if (window.innerWidth > 1000) {
+                setReturnValue('18px');
+            } else if (window.innerWidth > 600) {
+                setReturnValue('16px');
+            } else {
+                setReturnValue('14px');
+            }
+        };
+
+        // 초기 렌더링 및 리사이즈 시 값을 업데이트
+        updateValue();
+        window.addEventListener('resize', updateValue);
+
+        return () => {
+            window.removeEventListener('resize', updateValue);
+        };
+    }, []);
     return (
         <>
             <StyledTable>
                 <tbody>
                     <TR>
-                        <RSTD $size={"20px"}>한국농어촌공사
+                        <RSTD $size={returnValue}>한국농어촌공사
                             차량 이동식 담수화 시스템</RSTD>
                         <RSTD>
                             <DescriptionStyle>
@@ -164,9 +240,23 @@ const Table = () => {
                             </DescriptionStyle>
                             전기촉매 + 분리막
                         </RSTD>
+                        <MobileTD
+                            style={{ borderTop: '2px solid black' }}>
+                            한국농어촌공사
+                            차량 이동식 담수화 시스템<br />
+                            <DescriptionStyle>
+                                용량
+                            </DescriptionStyle>
+                            100m3/d
+                            <br />
+                            <DescriptionStyle>
+                                공정
+                            </DescriptionStyle>
+                            전기촉매 + 분리막
+                        </MobileTD>
                     </TR>
                     <TR>
-                        <TD $size={"20px"}>농림축산식품
+                        <TD $size={returnValue}>농림축산식품
                             광양군 담수화 시스템</TD>
                         <TD >
                             <DescriptionStyle>
@@ -180,9 +270,22 @@ const Table = () => {
                             </DescriptionStyle>
                             전기촉매 + 분리막
                         </TD>
+                        <MobileTD >
+                            농림축산식품
+                            광양군 담수화 시스템<br />
+                            <DescriptionStyle>
+                                용량
+                            </DescriptionStyle>
+                            100m3/d
+                            <br />
+                            <DescriptionStyle>
+                                공정
+                            </DescriptionStyle>
+                            전기촉매 + 분리막
+                        </MobileTD>
                     </TR>
                     <TR>
-                        <TD $size={"20px"}>농림축산식품
+                        <TD $size={returnValue}>농림축산식품
                             고흥군 담수화 시스템</TD>
                         <TD >
                             <DescriptionStyle>
@@ -196,9 +299,22 @@ const Table = () => {
                             </DescriptionStyle>
                             전기촉매 + 분리막
                         </TD>
+                        <MobileTD >
+                            농림축산식품
+                            고흥군 담수화 시스템<br />
+                            <DescriptionStyle>
+                                용량
+                            </DescriptionStyle>
+                            50m3/d
+                            <br />
+                            <DescriptionStyle>
+                                공정
+                            </DescriptionStyle>
+                            전기촉매 + 분리막
+                        </MobileTD>
                     </TR>
                     <TR>
-                        <RFTD $size={"20px"}>한국건설기술연구원
+                        <RFTD $size={returnValue}>한국건설기술연구원
                             칠서 정수장 전처리 고액분리 시스템 </RFTD>
                         <RFTD>
                             <DescriptionStyle>
@@ -212,6 +328,19 @@ const Table = () => {
                             </DescriptionStyle>
                             전기촉매
                         </RFTD>
+                        <MobileTD style={{ borderBottom: '2px solid black' }}>
+                            한국건설기술연구원
+                            칠서 정수장 전처리 고액분리 시스템<br />
+                            <DescriptionStyle>
+                                용량
+                            </DescriptionStyle>
+                            100m3/d
+                            <br />
+                            <DescriptionStyle>
+                                공정
+                            </DescriptionStyle>
+                            전기촉매
+                        </MobileTD>
                     </TR>
                 </tbody>
             </StyledTable>

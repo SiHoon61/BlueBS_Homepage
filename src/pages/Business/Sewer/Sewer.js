@@ -7,33 +7,38 @@ import techImg1 from '../../../assets/Business/Sewer/techImg1.png'
 import techImg2 from '../../../assets/Business/Sewer/techImg2.png'
 import techImg3 from '../../../assets/Business/Sewer/techImg3.png'
 import techImg4 from '../../../assets/Business/Sewer/techImg4.png'
+
 //style
 import {
     TitleBar,
-    TitleTextBox,
-    TitleMainText,
-    MainContainer,
-    SubColumnContainer,
-    SubImgContainer,
-    SubLargeTitle,
-    SubLargeContainer,
-    SubTitle,
-    FullSubContent,
     BodyImg,
     ProcessImg,
-    PerformanceContent,
     PerformanceImgBox,
     PerformanceImgContainer,
     PerformanceImg,
+} from './style'
+
+import {
+    SubLargeTitle,
+    SubColumnContainer,
+    ImgSubContent,
+    SubTitle,
+} from '../../../components/Body/bodyStyle';
+
+import {
+    TitleTextBox,
+    TitleMainText,
+    MainContainer,
+    PerformanceContent,
     DescriptionBox,
     Description,
     DescriptionStyle,
+    ImgDescription,
     More,
     Arrow,
-    TechImg,
-    EmptyBox,
-    ImgDescription,
-} from './style'
+    SubImgContainer_4,
+    TechImg_4,
+} from '../../../components/Body/businessStyle';
 
 //Modal
 import ModalPortal from '../../../modal/ModalPortal';
@@ -59,15 +64,15 @@ const Sewer = () => {
                 </TitleTextBox>
             </TitleBar>
             <MainContainer>
-                <SubLargeContainer>
+                <SubColumnContainer>
                     <SubLargeTitle>
                         하·폐수 분야
                     </SubLargeTitle>
-                    <FullSubContent>
+                    <ImgSubContent>
                         하수 및 폐수를 초고도로 재이용하여 친환경 수자원으로 다시 활용됩니다.<br />
                         최종 처리수는 친수용수, 농업용수, 공업용수, 조경용수, 세척용수, 그리고 하천 유지용수로 사용됩니다.
-                    </FullSubContent>
-                </SubLargeContainer>
+                    </ImgSubContent>
+                </SubColumnContainer>
                 <BodyImg />
                 <SubColumnContainer>
                     <SubTitle>
@@ -125,24 +130,24 @@ const Sewer = () => {
                     <SubTitle>
                         주요 기술
                     </SubTitle>
-                    <SubImgContainer>
+                    <SubImgContainer_4>
                         <ImgDescription>
-                            <TechImg src={techImg1} alt="TechImg" />
+                            <TechImg_4 src={techImg1} alt="TechImg" />
                             전기촉매 기반의 분리막 재이용 고도처리
                         </ImgDescription>
                         <ImgDescription>
-                            <TechImg src={techImg2} alt="TechImg" />
+                            <TechImg_4 src={techImg2} alt="TechImg" />
                             전기촉매 고액분리 기반의 RO 분리막
                         </ImgDescription>
                         <ImgDescription>
-                            <TechImg src={techImg3} alt="TechImg" />
+                            <TechImg_4 src={techImg3} alt="TechImg" />
                             전처리 사이클론 시스템
                         </ImgDescription>
                         <ImgDescription>
-                            <TechImg src={techImg4} alt="TechImg" />
+                            <TechImg_4 src={techImg4} alt="TechImg" />
                             전기촉매 고액분리 기반의 RO 분리막
                         </ImgDescription>
-                    </SubImgContainer>
+                    </SubImgContainer_4>
                 </SubColumnContainer>
                 {modalState && (
                     <ModalPortal>

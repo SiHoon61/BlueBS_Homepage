@@ -11,28 +11,32 @@ import techImg4 from '../../../assets/Business/GreenAlgae/techImg4.png'
 //style
 import {
     TitleBar,
+    BodyImg,
+    PerformanceImg,
+} from './style'
+
+import {
+    SubLargeTitle,
+    SubColumnContainer,
+    ImgSubContent,
+    SubTitle,
+} from '../../../components/Body/bodyStyle';
+
+import {
     TitleTextBox,
     TitleMainText,
     MainContainer,
-    SubColumnContainer,
-    SubImgContainer,
-    SubLargeTitle,
-    SubLargeContainer,
-    SubTitle,
-    FullSubContent,
-    BodyImg,
     PerformanceContent,
     PerformanceImgBox,
-    PerformanceImg,
     DescriptionBox,
     Description,
     DescriptionStyle,
+    ImgDescription,
     More,
     Arrow,
-    TechImg,
-    EmptyBox,
-    ImgDescription,
-} from './style'
+    SubImgContainer_4,
+    TechImg_4,
+} from '../../../components/Body/businessStyle';
 
 //Modal
 import ModalPortal from '../../../modal/ModalPortal';
@@ -58,15 +62,15 @@ const GreenAlgae = () => {
                 </TitleTextBox>
             </TitleBar>
             <MainContainer>
-                <SubLargeContainer>
+                <SubColumnContainer>
                     <SubLargeTitle>
                         녹조 분야
                     </SubLargeTitle>
-                    <FullSubContent>
+                    <ImgSubContent>
                         BlueBS는 오염물질(녹조,부유물질,T-N, T-P, BOD, COD) 의 저감을 위한 최적화된 기술을 보유하고 있습니다.<br />
                         기존 시스템 공정에 비해 에너지 소비 효율을 크게 향상시킨 하이브리드 공정을 적용했습니며, 짧은 시간 내(약 10초)에 녹조를 제거하는 처리 능력을 극대화했습니다.
-                    </FullSubContent>
-                </SubLargeContainer>
+                    </ImgSubContent>
+                </SubColumnContainer>
                 <BodyImg />
                 <SubColumnContainer>
                     <SubTitle>
@@ -116,24 +120,24 @@ const GreenAlgae = () => {
                     <SubTitle>
                         주요 기술
                     </SubTitle>
-                    <SubImgContainer>
+                    <SubImgContainer_4>
                         <ImgDescription>
-                            <TechImg src={techImg1} alt="TechImg" />
+                            <TechImg_4 src={techImg1} alt="TechImg" />
                             차량 이동형 녹조 제거 시스템
                         </ImgDescription>
                         <ImgDescription>
-                            <TechImg src={techImg2} alt="TechImg" />
+                            <TechImg_4 src={techImg2} alt="TechImg" />
                             컨테이너 형 녹조 제거 시스템
                         </ImgDescription>
                         <ImgDescription>
-                            <TechImg src={techImg3} alt="TechImg" />
+                            <TechImg_4 src={techImg3} alt="TechImg" />
                             녹조선 시스템
                         </ImgDescription>
                         <ImgDescription>
-                            <TechImg src={techImg4} alt="TechImg" />
+                            <TechImg_4 src={techImg4} alt="TechImg" />
                             천연응집제
                         </ImgDescription>
-                    </SubImgContainer>
+                    </SubImgContainer_4>
                 </SubColumnContainer>
                 {modalState && (
                     <ModalPortal>

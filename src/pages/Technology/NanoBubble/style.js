@@ -98,17 +98,6 @@ export const ExampleSubTitle = styled.div`
     font-family: var(--font-sansBold);
 `
 
-export const FullSubContent = styled.div`
-    width: 1500px;
-    display: flex;
-    align-items: center;
-    font-size: 20px;
-    font-family: var(--font-sansRegular);
-    color: #313131;
-    line-height: 45px; 
-    margin-bottom: 35px;
-`
-
 export const NanoImgBox = styled.div`
     width: 100%;
     display: flex;
