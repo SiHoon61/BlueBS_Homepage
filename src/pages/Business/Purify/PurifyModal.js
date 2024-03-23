@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import styled, { css, keyframes } from "styled-components";
 
-//
+//img
 import close from '../../../assets/Business/close.svg'
 
 const fadeIn = keyframes`
@@ -35,6 +35,15 @@ const Modal = styled.div`
     animation: ${props => props.show ? fadeIn : fadeOut} 0.3s forwards;
 `
 const Content = styled.div`
+    overflow-y: scroll;
+    overflow-x: hidden;
+    &::-webkit-scrollbar {
+    width: 6px;
+    }
+    &::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: #A4A4A4;
+    }
     position: relative;
     background: white;
     padding: 60px 70px 70px 70px;
@@ -49,6 +58,9 @@ const Content = styled.div`
     @media (max-width: 600px) {
         width: 80%;
         padding: 40px 30px 50px 30px;
+        max-height: 65%;
+        margin-top: 50px;
+        overflow: scroll;
     }
 `
 
@@ -95,6 +107,7 @@ const PurifyModal = ({ show, onClose }) => {
 };
 
 const StyledTable = styled.table`
+    width: 90%;
     margin-top: 25px;
     font-size: 18px;
     border-collapse: collapse;
@@ -200,10 +213,9 @@ const Table = () => {
     const [returnValue, setReturnValue] = useState('');
 
     useEffect(() => {
-        // 화면 크기 변경 시 실행될 함수에서 조건에 따른 값을 설정
         const updateValue = () => {
             if (window.innerWidth > 1600) {
-                setReturnValue('20px'); // 1600 초과인 경우는 예시에 따라 별도의 리턴 값이 없음
+                setReturnValue('20px'); 
             } else if (window.innerWidth > 1000) {
                 setReturnValue('18px');
             } else if (window.innerWidth > 600) {
@@ -212,8 +224,6 @@ const Table = () => {
                 setReturnValue('14px');
             }
         };
-
-        // 초기 렌더링 및 리사이즈 시 값을 업데이트
         updateValue();
         window.addEventListener('resize', updateValue);
 
