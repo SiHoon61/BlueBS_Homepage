@@ -111,16 +111,16 @@ export const EFImgBox = styled.div`
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    @media (max-width: 1180px) {
+        justify-content: center;
+    }
 `
 
 export const EfImg = styled.img`
     width: 300px;
     margin-bottom: 35px;
     margin-right: 15px;
-    @media (max-width: 805px) {
-        width: 200px;
-    }
-    @media (max-width: 500px) {
-        width: 150px;
+    @media (max-width: 1180px) {
+        width: 45%;
     }
 `
