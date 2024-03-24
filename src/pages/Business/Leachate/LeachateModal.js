@@ -48,6 +48,7 @@ const Content = styled.div`
     background: white;
     padding: 60px 70px 70px 70px;
     height: auto;
+    width: 60%;
     display: flex;
     flex-direction: column;
     align-items: center;

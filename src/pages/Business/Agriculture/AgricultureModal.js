@@ -47,6 +47,7 @@ const Content = styled.div`
     position: relative;
     background: white;
     padding: 60px 70px 70px 70px;
+    width: 60%;
     height: auto;
     display: flex;
     flex-direction: column;
