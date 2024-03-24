@@ -13,78 +13,25 @@ export const TitleBar = styled.div`
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-`
-
-export const TitleTextBox = styled.div`
-    padding-top: 200px;
-    vertical-align: baseline;
-    width: 90%;
-    max-width: 1400px;
-    margin: 0 auto;
-    color: white;
-    font-size: 14px;
-    font-family: var(--font-sansRegular);
-`
-export const TitleMainText = styled.div`
-    font-size: 96px;
-    font-family: var(--font-sansBold);
-`
-
-
-export const MainContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    margin-top: 100px;
-    width: 100%;
-`
-export const SubRowContainer = styled.div`
-    margin: 0 auto 150px auto;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-`
-
-export const SubColumnContainer = styled.div`
-    margin: 0 auto 150px auto;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-`
-
-export const SubLargeTitle = styled.div`
-    margin-top: 10px;
-    width: 1500px;
-    font-size: 48px;
-    font-family: var(--font-sansBold);
-`
-
-export const SubTitle = styled.div`
-    margin-top: 10px;
-    width: 1500px;
-    font-size: 40px;
-    font-family: var(--font-sansBold);
-`
-
-export const FullSubContent = styled.div`
-    width: 1500px;
-    display: flex;
-    align-items: center;
-    font-size: 20px;
-    font-family: var(--font-sansRegular);
-    color: #313131;
-    line-height: 45px; 
+    @media (max-width: 1000px) {
+        height: 450px;
+    }
+    @media (max-width: 600px) {
+        height: 350px;
+    }
 `
 
 export const ProcessImg = styled.img`
     margin-top: 35px;
+     width: 100%;
 `
 
 export const ImgBox = styled.div`
-    width: 1500px;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 35px;
+    flex-wrap: wrap;
 `
 
 export const ImgDescription = styled.div`
@@ -93,20 +40,41 @@ export const ImgDescription = styled.div`
     font-family: var(--font-sansMedium);
     font-size: 20px;
     align-items: center;
+    margin-bottom: 20px;
+    @media (max-width: 1600px) {
+        width: 32%;
+        font-size: 18px;
+    }
+    @media (max-width: 1000px) {
+        font-size: 16px;
+    }
+    @media (max-width: 760px) {
+        width: 45%;
+    }
+    @media (max-width: 600px) {
+        font-size: 14px;
+    }
 `
 
 export const GreyDescription = styled.span`
     font-size: 18px;
     color: #313131;
     font-family: var(--font-sansRegular);
+    @media (max-width: 1600px) {
+        font-size: 16px;
+    }
+    @media (max-width: 1000px) {
+        font-size: 14px;
+    }
+    @media (max-width: 600px) {
+        font-size: 12px;
+    }
 `
 
 export const Imgs = styled.img`
     width: 450px;
     margin-bottom: 5px;
-`
-
-export const DifferentImgs = styled.img`
-    height: 355px;
-    margin-bottom: 5px;
+    @media (max-width: 1600px) {
+        width: 100%;
+    }
 `

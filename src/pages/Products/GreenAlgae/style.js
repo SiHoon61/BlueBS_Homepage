@@ -15,128 +15,119 @@ export const TitleBar = styled.div`
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    @media (max-width: 1000px) {
+        height: 450px;
+    }
+    @media (max-width: 600px) {
+        height: 350px;
+    }
 `
 
-export const TitleTextBox = styled.div`
-    padding-top: 200px;
-    vertical-align: baseline;
-    width: 90%;
-    max-width: 1400px;
-    margin: 0 auto;
-    color: white;
-    font-size: 14px;
-    font-family: var(--font-sansRegular);
-`
-export const TitleMainText = styled.div`
-    font-size: 96px;
-    font-family: var(--font-sansBold);
-`
-
-
-export const MainContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    margin-top: 100px;
-    width: 100%;
-`
-export const SubRowContainer = styled.div`
-    margin: 0 auto 150px auto;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-`
-
-export const SubColumnContainer = styled.div`
-    margin: 0 auto 150px auto;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-`
-
-export const SubLargeContainer = styled.div`
-    margin: 0 auto 50px auto;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-`
-
-export const SubLargeTitle = styled.div`
-    margin-top: 10px;
-    width: 1500px;
-    font-size: 48px;
-    font-family: var(--font-sansBold);
-`
-
-export const SubTitle = styled.div`
-    margin-top: 10px;
-    width: 1500px;
-    font-size: 40px;
-    font-family: var(--font-sansBold);
-`
-
-export const FullSubContent = styled.div`
-    width: 1500px;
-    display: flex;
-    align-items: center;
-    font-size: 20px;
-    font-family: var(--font-sansRegular);
-    color: #313131;
-    line-height: 45px; 
-`
-
-
-export const ImgBox = styled.div`
-    width: ${props => props.$width};
+export const CompareImgBox = styled.div`
+    width: 1000px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 35px auto 0;
+    margin: 0 auto;
     align-items: center;
+    @media (max-width: 1600px) {
+        width: 90%;
+    }
+    @media (max-width: 1000px) {
+        width: 100%;
+    }
 `
 
-export const Imgs = styled.img`
-    width: ${props => props.$width};
-    height: ${props => props.$height};
-    margin-bottom: 5px;
+export const CompareDescription = styled.div`
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-sansMedium);
+    font-size: 20px;
+    align-items: center;
+    @media (max-width: 1600px) {
+        width: 50%;
+        font-size: 18px;
+    }
+    @media (max-width: 1050px) {
+        font-size: 16px;
+    }
+    @media (max-width: 930px) {
+        font-size: 14px;
+    }
+    @media (max-width: 820px) {
+        font-size: 12px;
+    }
+    @media (max-width: 700px) {
+        font-size: 10px;
+    }
+    @media (max-width: 600px) {
+        width: 45%;
+        font-size: 12px;
+    }
 `
-
 export const ProcessVideo = styled.video`
     width: 410px;
     height: 304px;
     margin-bottom: 5px;
     object-fit: cover;
     object-position: center center;
+    @media (max-width: 1600px) {
+        width: 100%;
+        height: auto;
+    }
 `
-
-
-export const ImgDescription = styled.div`
-    display: flex;
-    flex-direction: column;
-    font-family: var(--font-sansMedium);
-    font-size: 20px;
-    align-items: center;
-`
-
-export const GreyDescription = styled.span`
-    font-size: 18px;
-    color: #313131;
-    font-family: var(--font-sansRegular);
-`
-
-export const EmptyDescription = styled.div`
-    height: 26px;
-    width: 26px;
-`
-
-export const ProcessArrow = styled.img.attrs({
+export const CompareArrow = styled.img.attrs({
     src: processArrow,
     alt: 'processArrow'
 })`
     width: 70px;
     height: 70px;
-    margin-bottom: 40px;
+    margin: 0 20px 40px;
+    @media (max-width: 1600px) {
+        width: 5%;
+        height: 5%;
+    }
+    @media (max-width: 1000px) {
+        width: 3%;
+        height: 3%;
+    }
+    @media (max-width: 600px) {
+        width: 6%;
+        height: 6%;
+        margin: 0 5px 40px;
+    }
 `
 
+export const CompareImgs = styled.img`
+    width: 400px;
+    margin-bottom: 5px;
+    @media (max-width: 1600px) {
+        width: 100%;
+    }
+`
+
+export const ImgBox = styled.div`
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    align-items: center;
+    @media (max-width: 1600px) {
+        width: 90%;
+    }
+    @media (max-width: 1000px) {
+        width: 100%;
+    }
+`
+
+export const Imgs = styled.img`
+    width: 650px;
+    margin-bottom: 5px;
+    @media (max-width: 1600px) {
+        width: 100%;
+    }
+`
 
 export const PlusImg = styled.img.attrs({
     src: plus,
@@ -144,5 +135,5 @@ export const PlusImg = styled.img.attrs({
 })`
     width: 30px;
     height: 30px;
-    margin-bottom: 40px;
+    margin: 0 20px 40px;
 `

@@ -15,7 +15,7 @@ export const Container = styled.div`
         height: 230px;
     }
     @media (max-width: 600px) {
-        margin-top: 30px;
+        margin-top: 20px;
         height: 230px;
     }
 `

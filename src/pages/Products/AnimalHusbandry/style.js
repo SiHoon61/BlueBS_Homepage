@@ -14,6 +14,12 @@ export const TitleBar = styled.div`
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    @media (max-width: 1000px) {
+        height: 450px;
+    }
+    @media (max-width: 600px) {
+        height: 350px;
+    }
 `
 
 export const TitleTextBox = styled.div`

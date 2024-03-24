@@ -7,7 +7,7 @@ import sewer3 from '../../../assets/Products/Sewer/sewer3.png'
 import sewer4 from '../../../assets/Products/Sewer/sewer4.png'
 import sewer5 from '../../../assets/Products/Sewer/sewer5.png'
 import sewer6 from '../../../assets/Products/Sewer/sewer6.png'
-import sewerProcess from '../../../assets/Products/Sewer/sewerProcess.svg'
+import sewerProcess from '../../../assets/Products/Sewer/sewerProcess.png'
 import applyImg1 from '../../../assets/Products/Sewer/apply1.png'
 import applyImg2 from '../../../assets/Products/Sewer/apply2.png'
 import applyImg3 from '../../../assets/Products/Sewer/apply3.png'
@@ -23,22 +23,25 @@ import applyImg11 from '../../../assets/Products/Sewer/apply11.png'
 //style
 import {
     TitleBar,
-    TitleTextBox,
-    TitleMainText,
-    MainContainer,
-    SubColumnContainer,
-    SubImgContainer,
-    SubLargeTitle,
-    SubLargeContainer,
-    SubTitle,
-    FullSubContent,
     ProcessImg,
     ImgBox,
     ImgDescription,
     GreyDescription,
     Imgs,
-    DifferentImgs,
 } from './style'
+
+import {
+    SubColumnContainer,
+    SubLargeTitle,
+    SubTitle,
+    FullSubContent,
+} from '../../../components/Body/bodyStyle';
+
+import {
+    TitleTextBox,
+    TitleMainText,
+    MainContainer,
+} from '../../../components/Body/productsStyle';
 
 //carousel
 import Carousel from '../ApplyCarousel/ApplyCarousel';
@@ -137,8 +140,6 @@ const Sewer = () => {
                                 (석유 탄화수소, 페놀, 암모니아)
                             </GreyDescription>
                         </ImgDescription>
-                    </ImgBox>
-                    <ImgBox>
                         <ImgDescription>
                             <Imgs src={sewer4} alt="sewer" />
                             육류 및 식품 가공 폐수

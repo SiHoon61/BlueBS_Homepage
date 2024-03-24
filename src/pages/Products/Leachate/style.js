@@ -13,96 +13,61 @@ export const TitleBar = styled.div`
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-`
-
-export const TitleTextBox = styled.div`
-    padding-top: 200px;
-    vertical-align: baseline;
-    width: 90%;
-    max-width: 1400px;
-    margin: 0 auto;
-    color: white;
-    font-size: 14px;
-    font-family: var(--font-sansRegular);
-`
-export const TitleMainText = styled.div`
-    font-size: 96px;
-    font-family: var(--font-sansBold);
-`
-
-
-export const MainContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    margin-top: 100px;
-    width: 100%;
-`
-export const SubRowContainer = styled.div`
-    margin: 0 auto 150px auto;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-`
-
-export const SubColumnContainer = styled.div`
-    margin: 0 auto 150px auto;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-`
-
-export const SubLargeContainer = styled.div`
-    margin: 0 auto 50px auto;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-`
-
-export const SubLargeTitle = styled.div`
-    margin-top: 10px;
-    width: 1500px;
-    font-size: 48px;
-    font-family: var(--font-sansBold);
-`
-
-export const SubTitle = styled.div`
-    margin-top: 10px;
-    width: 1500px;
-    font-size: 40px;
-    font-family: var(--font-sansBold);
-`
-
-export const FullSubContent = styled.div`
-    width: 1500px;
-    display: flex;
-    align-items: center;
-    font-size: 20px;
-    font-family: var(--font-sansRegular);
-    color: #313131;
-    line-height: 45px; 
+    @media (max-width: 1000px) {
+        height: 450px;
+    }
+    @media (max-width: 600px) {
+        height: 350px;
+    }
 `
 
 export const ImgBox = styled.div`
-    width: ${props => props.$width};
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin: 35px auto 0;
     align-items: center;
+    @media (max-width: 600px) {
+        flex-wrap: wrap;
+    }
 `
 
 export const Imgs = styled.img`
-    width: ${props => props.$width};
-    height: ${props => props.$height};
+    width: 450px;
     margin-bottom: 5px;
+    @media (max-width: 1600px) {
+        width: 100%;
+    }
 `
 
-export const ImgDescription = styled.div`
+export const SolutionDescription = styled.div`
     display: flex;
     flex-direction: column;
     font-family: var(--font-sansMedium);
     font-size: 20px;
     align-items: center;
+    @media (max-width: 1600px) {
+        width: 30%;
+        font-size: 18px;
+    }
+    @media (max-width: 1050px) {
+        font-size: 16px;
+    }
+    @media (max-width: 930px) {
+        font-size: 14px;
+    }
+    @media (max-width: 820px) {
+        font-size: 12px;
+    }
+    @media (max-width: 700px) {
+        font-size: 10px;
+    }
+    @media (max-width: 600px) {
+        width: 100%;
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
 `
 
 export const GreyDescription = styled.span`

@@ -276,9 +276,6 @@ export const NewsContainer = styled.div`
     align-items: center;
     width: 100%;
     overflow: hidden;
-    @media (max-width: 600px) {
-        display: none;
-    }
 `
 
 export const NewsText = styled.div`
@@ -293,15 +290,13 @@ export const NewsText = styled.div`
 export const NewsBox = styled.div`
     display: flex;
     flex-wrap: wrap;
-    width: 80%;
+    width: 1500px;
     justify-content: space-between;
-    height: 440px;
-    overflow: hidden;
-    @media (max-width: 1550px) {
-        width: 950px;
+    @media (max-width: 1600px) {
+        width: 80%;
     }
-    @media (max-width: 1000px) {
-        width: 450px;
+    @media (max-width: 1600px) {
+        width: 90%;
     }
 `
 

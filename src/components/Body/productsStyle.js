@@ -1,73 +1,40 @@
 import styled from "styled-components";
+import processArrow from '../../assets/Products/Agriculture/processArrow.png'
 
-//img
-import AgriculturePD from '../../../assets/Products/Agriculture/AgriculturePD.png'
-import processArrow from '../../../assets/Products/Agriculture/processArrow.png'
-
-export const TitleBar = styled.div`
-    display: flex;
-    height: 500px;
-    width: 100%;
-    background-blend-mode: multiply;
-    background-image: url(${AgriculturePD});
-    background-color: rgba(36, 36, 36, 0.40);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    @media (max-width: 1000px) {
-        height: 450px;
-    }
-    @media (max-width: 600px) {
-        height: 350px;
-    }
-`
-
-export const SubRowContainer = styled.div`
-    align-items: center;
+export const TitleTextBox = styled.div`
+    padding-top: 200px;
+    vertical-align: baseline;
+    width: 90%;
+    max-width: 1400px;
     margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    max-width: 80%;
-    margin-bottom: 150px;
+    color: white;
+    font-size: 14px;
+    font-family: var(--font-sansRegular);
+    @media (max-width: 600px) {
+        padding-top: 200px;
+    }
+`
+export const TitleMainText = styled.div`
+    font-size: 96px;
+    font-family: var(--font-sansBold);
+    @media (max-width: 1400px) {
+        font-size: 78px;
+    }
     @media (max-width: 1000px) {
-        flex-direction: column !important;
+        font-size: 64px;
     }
     @media (max-width: 600px) {
-        max-width: 90%;
-        margin-bottom: 50px;
+        font-size: 32px;
     }
 `
 
-export const SubImgContainer = styled.div`
-    margin: 50px auto 50px auto;
+export const MainContainer = styled.div`
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-`
-
-export const SubImgTitle = styled.div`
-    margin: ${props => props.$margin};
-    width: ${props => props.$width};
-    font-size: 40px;
-    font-family: var(--font-sansBold);
-`
-
-export const SubImgContent = styled.div`
-    width: ${props => props.$width};
-    display: flex;
-    align-items: center;
-    font-size: 20px;
-    font-family: var(--font-sansRegular);
-    color: #313131;
-    line-height: 45px;
-`
-
-export const SubImg = styled.img`
-    width: 45%;
-    margin: ${props => props.$margin};
-    @media (max-width: 1000px) {
-        margin: 30px 0 0;
-        width: 100%;
+    margin-top: 100px;
+    width: 100%;
+    @media (max-width: 600px) {
+        margin-top: 40px;
     }
 `
 
@@ -131,15 +98,21 @@ export const ImgDescription = styled.div`
         width: 30%;
         font-size: 18px;
     }
-    @media (max-width: 1000px) {
+    @media (max-width: 1050px) {
         font-size: 16px;
     }
-    @media (max-width: 780px) {
+    @media (max-width: 930px) {
         font-size: 14px;
+    }
+    @media (max-width: 820px) {
+        font-size: 12px;
+    }
+    @media (max-width: 700px) {
+        font-size: 10px;
     }
     @media (max-width: 600px) {
         width: 45%;
-        font-size: 12px;
+        font-size: 14px;
     }
 `
 
@@ -150,14 +123,20 @@ export const GreyDescription = styled.span`
     @media (max-width: 1600px) {
         font-size: 16px;
     }
-    @media (max-width: 1000px) {
+    @media (max-width: 1050px) {
         font-size: 14px;
     }
-    @media (max-width: 780px) {
+    @media (max-width: 930px) {
         font-size: 12px;
     }
-    @media (max-width: 600px) {
+    @media (max-width: 820px) {
         font-size: 10px;
+    }
+    @media (max-width: 700px) {
+        font-size: 8px;
+    }
+    @media (max-width: 600px) {
+        font-size: 12px;
     }
 
 `

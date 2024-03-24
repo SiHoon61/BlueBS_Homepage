@@ -13,22 +13,28 @@ import applyImg5 from '../../../assets/Products/AnimalHusbandry/apply5.png'
 //style
 import {
     TitleBar,
+} from './style'
+
+import {
+    SubColumnContainer,
+    SubLargeTitle,
+    SubTitle,
+    FullSubContent,
+} from '../../../components/Body/bodyStyle';
+
+import {
     TitleTextBox,
     TitleMainText,
     MainContainer,
-    SubColumnContainer,
-    SubImgContainer,
-    SubLargeTitle,
-    SubLargeContainer,
-    SubTitle,
-    FullSubContent,
     ProcessBox,
+    EmptyBox,
     ProcessImgs,
+    ProcessArrow,
     ImgDescription,
     GreyDescription,
-    ProcessArrow,
     EmptyDescription,
-} from './style'
+} from '../../../components/Body/productsStyle';
+
 
 //carousel
 import Carousel from '../ApplyCarousel/ApplyCarousel';
@@ -75,6 +81,7 @@ const AnimalHusbandry = () => {
                         BlueBS의 맞춤형 촉매 전극은 축산분뇨 처리에 있어 효과적이며, 유지보수 및 에너지 절감을 지원하는 동시에 환경오염 감소에 기여하는 친환경적인 솔루션을 제공합니다.
                     </FullSubContent>
                     <ProcessBox>
+                        <EmptyBox/>
                         <ImgDescription>
                             <ProcessImgs src={processImg1} alt="processImg" />
                             축산분뇨로 인한 악취와 병균 발생
@@ -85,7 +92,7 @@ const AnimalHusbandry = () => {
                             <ProcessImgs src={processImg2} alt="processImg" />
                             전기촉매 산화 + 고액분리 + 여과
                             <GreyDescription>
-                                (유기물질 및 색도, 바이러스, 악취 저감)
+                                (유기물질, 색도, 바이러스, 악취 저감)
                             </GreyDescription>
                         </ImgDescription>
                         <ProcessArrow />

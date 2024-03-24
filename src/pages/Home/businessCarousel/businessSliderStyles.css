@@ -1,3 +1,4 @@
+/* styled component 오버라이딩 기능으로 대체 */
 .slider-container1 .slick-list{ 
   width: 2600px;
   height: 534px;
@@ -24,9 +25,9 @@
 {
 	display: none;				
 }
-
 @media (max-width: 600px) {
   .slider-container1 .slick-list {
+    width: 1200px;
     height: 234px;
   }
   .slider-container1 .slick-prev {

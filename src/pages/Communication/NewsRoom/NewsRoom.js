@@ -6,11 +6,15 @@ import {
     TitleTextBox,
     TitleMainText,
     MainContainer,
-    SubColumnContainer,
-    SubTitle,
     NewsContainer,
-
 } from './style';
+
+import {
+    SubColumnContainer,
+    SubLargeTitle,
+    SubTitle,
+    FullSubContent,
+} from '../../../components/Body/bodyStyle';
 
 //NewsBox
 import NewsBox from '../../../components/News/News';

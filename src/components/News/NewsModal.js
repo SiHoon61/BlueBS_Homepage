@@ -35,7 +35,6 @@ const Modal = styled.div`
     animation: ${props => props.$show ? fadeIn : fadeOut} 0.3s forwards;
 `
 const Content = styled.div`
-    margin-top: 70px;
     overflow-y: scroll;
     overflow-x: hidden;
     &::-webkit-scrollbar {
@@ -54,6 +53,20 @@ const Content = styled.div`
     flex-direction: column;
     align-items: center;
     animation: ${props => props.$show ? fadeIn : fadeOut} 0.2s forwards;
+    max-height: 70%;
+    margin-top: 3%;
+    @media (max-width: 1230px) {
+        padding: 60px 70px 70px 70px;
+        width: 70%;
+        max-height: 60%;
+        margin-top: 6%;
+    }
+    @media (max-width: 600px) {
+        width: 80%;
+        padding: 60px 30px 50px 30px;
+        max-height: 65%;
+        margin-top: 50px;
+    }
 `
 
 const CloseButton = styled.img`
@@ -66,30 +79,40 @@ const CloseButton = styled.img`
 `
 
 const Title = styled.div`
-    width: 900px;
+    width: 100%;
     margin-top: 30px;
     font-size: 38px;
     font-family: var(--font-sansBold);
+    @media (max-width: 600px) {
+        font-size: 24px;
+        margin-top: 15px;
+    }
 `
 
 const Date = styled.div`
     font-size: 16px;
     color: #717171;
-    width: 900px;
+    width: 100%;
     margin-top: 15px;
 `
 
 const NewsImg = styled.img`
     margin-top: 35px;
-    width: 700px;
+    width: 85%;
+    height: auto;
 `
 
 const NewsBody = styled.div`
-    width: 900px;
+    width: 100%;
     margin-top: 35px;
     font-size: 18px;
     margin-bottom: 30px;
     line-height: 40px;
+    @media (max-width: 600px) {
+        font-size: 16px;
+        line-height: 35px;
+        margin-bottom: 15px;
+    }
 `
 
 const HR = styled.hr`

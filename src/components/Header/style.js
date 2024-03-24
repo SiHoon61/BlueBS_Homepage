@@ -120,6 +120,10 @@ export const WhiteMenu = styled.img.attrs({
     @media (max-width: 1000px) {
         display: flex;
     }
+    @media (max-width: 600px) {
+        width: 30px;
+        margin-right: 20px;
+    }
 `
 
 export const BlackMenu = styled.img.attrs({
@@ -130,5 +134,9 @@ export const BlackMenu = styled.img.attrs({
     display: none;
     @media (max-width: 1000px) {
         display: flex;
+    }
+    @media (max-width: 600px) {
+        width: 30px;
+        margin-right: 20px;
     }
 `

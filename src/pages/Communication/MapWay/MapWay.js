@@ -9,6 +9,7 @@ import {
     MapContainer,
     MapDescriptionBox,
     TextBox,
+    EmptyBox,
     RegularText,
     Hr,
 } from './style';
@@ -26,15 +27,10 @@ const MapWay = () => {
             </TitleBar>
 
             <MainContainer>
-                <Hr/>
+                <Hr />
                 <MapContainer>
                     <Map
                         center={{ lat: 37.268120, lng: 126.987044 }}   // 지도의 중심 좌표
-                        style={{
-                            width: '800px',
-                            height: '400px',
-
-                        }} // 지도 크기
                         level={3}
                     >
                         <MapMarker position={{ lat: 37.268120, lng: 126.987044 }}></MapMarker>
@@ -47,6 +43,7 @@ const MapWay = () => {
                                 서울대 농생명과학센터 2동 202호
                             </RegularText>
                         </TextBox>
+                        <EmptyBox/>
                         <TextBox>
                             연락처
                             <RegularText>

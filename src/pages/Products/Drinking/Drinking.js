@@ -1,8 +1,8 @@
 import React from 'react';
 
 //img
-import drinkingImg1 from '../../../assets/Products/Drinking/drinkingImg1.svg'
-import drinkingImg2 from '../../../assets/Products/Drinking/drinkingImg2.svg'
+import drinkingImg1 from '../../../assets/Products/Drinking/drinkingImg1.png'
+import drinkingImg2 from '../../../assets/Products/Drinking/drinkingImg2.png'
 import applyImg1 from '../../../assets/Products/Drinking/apply1.png'
 import applyImg2 from '../../../assets/Products/Drinking/apply2.png'
 import applyImg3 from '../../../assets/Products/Drinking/apply3.png'
@@ -12,15 +12,21 @@ import applyImg6 from '../../../assets/Products/Drinking/apply6.png'
 //style
 import {
     TitleBar,
-    TitleTextBox,
-    TitleMainText,
-    MainContainer,
+    FullImg,
+} from './style'
+
+import {
     SubColumnContainer,
     SubLargeTitle,
     SubTitle,
     FullSubContent,
-    FullImg,
-} from './style'
+} from '../../../components/Body/bodyStyle';
+
+import {
+    TitleTextBox,
+    TitleMainText,
+    MainContainer,
+} from '../../../components/Body/productsStyle';
 
 //carousel
 import Carousel from '../ApplyCarousel/ApplyCarousel';
@@ -78,7 +84,7 @@ const Drinking = () => {
                         음용수·생활용수·담수화
                     </SubTitle>
                     <FullSubContent>
-                        최근 남조류의 급속한 증가로 인해 곰팡이 냄새의 원인 물질인 2-MIB가 검출되고 있습니다.<br/>
+                        최근 남조류의 급속한 증가로 인해 곰팡이 냄새의 원인 물질인 2-MIB가 검출되고 있습니다.<br />
                         전기촉매 기술을 활용하면 이를 10분 이내에 99%까지, 10ppt 이하로 효과적으로 처리할 수 있습니다.
                     </FullSubContent>
                     <FullImg src={drinkingImg2} alt="dringkingImg" />
@@ -87,7 +93,7 @@ const Drinking = () => {
                     <SubTitle>
                         실제 적용 사례: 정수 시스템
                     </SubTitle>
-                    <Carousel imgJson={imgJson}/>
+                    <Carousel imgJson={imgJson} />
                 </SubColumnContainer>
             </MainContainer>
         </>

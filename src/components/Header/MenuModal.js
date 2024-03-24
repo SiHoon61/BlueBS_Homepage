@@ -32,9 +32,15 @@ const CloseButton = styled.img`
     width: 60px;
     height: 60px;
     position: absolute;
-    top: 10px;
-    right: 20px;
+    top: 15px;
+    right: 15px;
     cursor: pointer;
+    @media (max-width: 600px){
+        width: 50px;
+        height: 50px;
+        top: 17px;
+        right: 10px;
+    }
 `
 
 const MainContainer = styled.div`
@@ -403,7 +409,7 @@ const MenuModal = ({ isOpen, onClose }) => {
                             goAIWaterSystemPD();
                         }
                         }>
-                            인공지능 스마트 물 관리 시스템
+                            AI 스마트 물 관리 시스템
                         </MenuLi>
                     </MenuUl>
                 </MenuBox>

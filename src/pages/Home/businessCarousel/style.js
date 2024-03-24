@@ -3,7 +3,16 @@ import rightArrow from '../../../assets/Home/rightArrow.svg'
 import rightArrow2 from '../../../assets/arrow.png'
 
 export const SliderContainer = styled.div`
-
+    .slick-list{ //라이브러리 css 오버라이딩
+        width: 2700px;
+        height: 534px;
+    }   
+    @media (max-width: 600px) {
+        .slick-list {
+            width: 1200px;
+            height: 234px;
+        }
+}
 `
 
 export const NextTo = styled.div`

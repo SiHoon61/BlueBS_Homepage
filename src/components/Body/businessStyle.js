@@ -22,10 +22,10 @@ export const TitleMainText = styled.div`
         font-size: 78px;
     }
     @media (max-width: 1000px) {
-        font-size: 64px;
+        font-size: 60px;
     }
     @media (max-width: 600px) {
-        font-size: 40px;
+        font-size: 32px;
     }
 `
 

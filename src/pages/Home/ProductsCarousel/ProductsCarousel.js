@@ -175,7 +175,7 @@ function SwipeToSlide() {
                 <ProductsBox>
                     <ProductsOddText onClick={goAIWaterSystemPD}>
                         <ProductsTitleText>
-                            인공지능 스마트 물 관리 시스템
+                            AI 스마트 물 관리 시스템
                         </ProductsTitleText>
                         IoT, AMI 및 데이터 기반 솔루션과 같은 첨단 기술을 통합하여 처리, 생산 및 공급 상황 전반에 걸쳐 실시간 모니터링 및 최적화를 제공합니다.
                     </ProductsOddText>

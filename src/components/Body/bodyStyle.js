@@ -17,7 +17,6 @@ export const SubColumnContainer = styled.div`
 `
 
 export const SubLargeTitle = styled.div`
-    margin-bottom: 15px;
     width: 100%;
     font-size: 48px;
     font-family: var(--font-sansBold);

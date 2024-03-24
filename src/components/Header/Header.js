@@ -185,7 +185,7 @@ const Header = () => {
                                 <TextTextBox onClick={goAnimalHusbandryPD}>축산분뇨/악취 저감</TextTextBox>
                                 <TextTextBox onClick={goGreenAlgaePD}>녹조/저수지 복원 및 유지</TextTextBox>
                                 <TextTextBox onClick={goLeachatePD}>고농도 침출수 처리</TextTextBox>
-                                <TextTextBox onClick={goAIWaterSystemPD}> 인공지능 스마트 물 관리 시스템</TextTextBox>
+                                <TextTextBox onClick={goAIWaterSystemPD}>AI 스마트 물 관리 시스템</TextTextBox>
                             </HoverBox>
                         </IndexLI>
                         <IndexLI onMouseEnter={() => setCommunicationHovered(true)}

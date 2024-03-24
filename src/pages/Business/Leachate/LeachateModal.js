@@ -253,7 +253,10 @@ const Table = () => {
                             전기촉매 + 분리막
                         </RSTD>
                         <MobileTD
-                            style={{ borderTop: '2px solid black' }}>
+                            style={{
+                                borderTop: '2px solid black',
+                                borderBottom: '2px solid black'
+                            }}>
                             제주시 침출수 고도처리 시스템<br />
                             <DescriptionStyle>
                                 용량

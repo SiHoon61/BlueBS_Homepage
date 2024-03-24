@@ -13,6 +13,12 @@ export const TitleBar = styled.div`
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    @media (max-width: 1000px) {
+        height: 450px;
+    }
+    @media (max-width: 600px) {
+        height: 350px;
+    }
 `
 
 export const TitleTextBox = styled.div`
@@ -24,11 +30,20 @@ export const TitleTextBox = styled.div`
     color: white;
     font-size: 14px;
     font-family: var(--font-sansRegular);
+    @media (max-width: 600px) {
+        padding-top: 200px;
+    }
 `
 
 export const TitleMainText = styled.div`
     font-size: 96px;
     font-family: var(--font-sansBold);
+    @media (max-width: 1000px) {
+        font-size: 72px;
+    }
+    @media (max-width: 600px) {
+        font-size: 48px;
+    }
 `
 
 export const MainContainer = styled.div`
@@ -36,15 +51,10 @@ export const MainContainer = styled.div`
     flex-direction: column;
     margin-top: 100px;
     width: 100%;
+    @media (max-width: 600px) {
+        margin-top: 50px;
+    }
 `
-
-export const SubColumnContainer = styled.div`
-    margin: 0 auto 150px auto;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-`
-
 
 export const SubTitle = styled.div`
     margin-top: 10px;
@@ -55,8 +65,9 @@ export const SubTitle = styled.div`
 `
 
 export const NewsContainer = styled.div`
+    margin-top: 30px;
     display: flex;
     flex-wrap: wrap;
-    width: 1500px;
+    width: 100%;
     justify-content: space-between;
 `

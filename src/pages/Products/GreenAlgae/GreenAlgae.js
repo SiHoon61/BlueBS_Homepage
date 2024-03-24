@@ -16,25 +16,35 @@ import applyImg5 from '../../../assets/Products/GreenAlgae/apply5.png'
 //style
 import {
     TitleBar,
+    CompareImgBox,
+    CompareImgs,
+    ProcessVideo,
+    CompareArrow,
+    CompareDescription,
+    ImgBox,
+    Imgs,
+    PlusImg,
+} from './style'
+
+import {
+    SubColumnContainer,
+    SubLargeTitle,
+    SubTitle,
+    FullSubContent,
+} from '../../../components/Body/bodyStyle';
+
+import {
     TitleTextBox,
     TitleMainText,
     MainContainer,
-    SubColumnContainer,
-    SubImgContainer,
-    SubLargeTitle,
-    SubLargeContainer,
-    SubTitle,
-    FullSubContent,
-    ImgBox,
-    Imgs,
-    ProcessVideo,
+    ProcessBox,
+    EmptyBox,
+    ProcessImgs,
+    ProcessArrow,
     ImgDescription,
     GreyDescription,
-    ProcessArrow,
     EmptyDescription,
-    ComparisonBox,
-    PlusImg,
-} from './style'
+} from '../../../components/Body/productsStyle';
 
 //carousel
 import Carousel from '../ApplyCarousel/ApplyCarousel';
@@ -80,15 +90,16 @@ const GreenAlgae = () => {
                     <FullSubContent>
                         BlueBS의 맞춤형 촉매 전극은 축산분뇨 처리에 있어 효과적이며, 유지보수 및 에너지 절감을 지원하는 동시에 환경오염 감소에 기여하는 친환경적인 솔루션을 제공합니다.
                     </FullSubContent>
-                    <ImgBox $width={'1500px'}>
+                    <ProcessBox>
+                        <EmptyBox/>
                         <ImgDescription>
-                            <Imgs src={processImg1} alt="processImg" $width={"410px"} />
+                            <ProcessImgs src={processImg1} alt="processImg" $width={"410px"} />
                             하천/강 녹조 발생
                             <EmptyDescription />
                         </ImgDescription>
                         <ProcessArrow />
                         <ImgDescription>
-                            <Imgs src={processImg2} alt="processImg" $width={"410px"} />
+                            <ProcessImgs src={processImg2} alt="processImg" $width={"410px"} />
                             응집 플럭 반응
                             <GreyDescription>
                                 (천연응집제 사용)
@@ -96,7 +107,7 @@ const GreenAlgae = () => {
                         </ImgDescription>
                         <ProcessArrow />
                         <ImgDescription>
-                            <ProcessVideo muted autoPlay loop>
+                            <ProcessVideo muted autoPlay loop playsInline>
                                 <source src={processVideo3} type="video/mp4" />
                             </ProcessVideo>
                             고속 조류 부상분리
@@ -104,7 +115,7 @@ const GreenAlgae = () => {
                                 (고속 전기 촉매 모듈 )
                             </GreyDescription>
                         </ImgDescription>
-                    </ImgBox>
+                    </ProcessBox>
                 </SubColumnContainer>
                 <SubColumnContainer>
                     <SubTitle>
@@ -113,17 +124,17 @@ const GreenAlgae = () => {
                     <FullSubContent>
                         에너지 소비 효율을 극대화하는 하이브리드 공정을 적용하여, 급격히 오염된 지역에서도 실시간 처리가 가능한 공정 시스템을 제공합니다.
                     </FullSubContent>
-                    <ImgBox $width={'1000px'}>
-                        <ImgDescription>
-                            <Imgs src={beforeImg} alt="beforeImg" $width={'400px'} />
+                    <CompareImgBox>
+                        <CompareDescription>
+                            <CompareImgs src={beforeImg} alt="beforeImg"/>
                             Before
-                        </ImgDescription>
-                        <ProcessArrow />
-                        <ImgDescription>
-                            <Imgs src={afterImg} alt="afterImg" $width={'400px'} />
+                        </CompareDescription>
+                        <CompareArrow />
+                        <CompareDescription>
+                            <CompareImgs src={afterImg} alt="afterImg" />
                             After
-                        </ImgDescription>
-                    </ImgBox>
+                        </CompareDescription>
+                    </CompareImgBox>
                 </SubColumnContainer>
                 <SubColumnContainer>
                     <SubTitle>
@@ -134,16 +145,16 @@ const GreenAlgae = () => {
                         호소 부유 설치에 따른 시공간적 제약을 극복하기 위해, 이동식 스테이션을 설치하고 운영합니다.<br />
                         전기촉매와 나노버블 생성 기술을 결합하여 부영양화를 유발하는 원인과 전구물질을 파괴하고, 용존산소를 공급합니다.
                     </FullSubContent>
-                    <ImgBox $width={'1500px'}>
-                        <ImgDescription>
-                            <Imgs src={tech1} alt="beforeImg" $width={'650px'} />
-                            전기촉매 + 산소 나노버블
-                        </ImgDescription>
+                    <ImgBox>
+                        <CompareDescription>
+                            <Imgs src={tech1} alt="Img" />
+                            전기촉매 + 나노버블
+                        </CompareDescription>
                         <PlusImg />
-                        <ImgDescription>
-                            <Imgs src={tech2} alt="afterImg" $width={'650px'} />
-                            스마트 센싱 연중 저수지 수질개선
-                        </ImgDescription>
+                        <CompareDescription>
+                            <Imgs src={tech2} alt="Img"  />
+                            스마트 센싱 수질개선
+                        </CompareDescription>
                     </ImgBox>
                 </SubColumnContainer>
                 <SubColumnContainer>
