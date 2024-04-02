@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 //img
-import whiteLogo from '../../assets/whiteLogo.svg'
-import blueLogo from '../../assets/blueLogo.svg'
+import whiteLogo from '../../assets/whiteLogo.png'
+import blueLogo from '../../assets/blueLogo.png'
 import whiteMenu from '../../assets/Home/whiteMenu.svg'
 import blackMenu from '../../assets/Home/blackMenu.svg'
 

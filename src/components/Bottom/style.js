@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 //img
-import whiteLogo from '../../assets/whiteLogo.svg'
+import whiteLogo from '../../assets/whiteLogo.png'
 
 export const Container = styled.div`
     margin-top: 100px;

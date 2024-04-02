@@ -45,9 +45,13 @@ export const SubRowContainer = styled.div`
     align-items: center;
     margin: 0 auto;
     display: flex;
+    width: 1500px;
     flex-direction: row;
-    max-width: 80%;
     margin-bottom: 150px;
+    @media (max-width: 1600px) {
+        max-width: 80%;
+        margin: 0 auto 100px auto;
+    }
     @media (max-width: 1000px) {
         flex-direction: column !important;
     }

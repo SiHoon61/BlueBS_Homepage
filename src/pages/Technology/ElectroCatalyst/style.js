@@ -77,8 +77,12 @@ export const SubRowContainer = styled.div`
     margin: 0 auto;
     display: flex;
     flex-direction: row;
-    max-width: 80%;
+    width: 1500px;
     margin-bottom: 150px;
+    @media (max-width: 1600px) {
+        max-width: 80%;
+        margin: 0 auto 100px auto;
+    }
     @media (max-width: 925px) {
         flex-direction: column;
     }
