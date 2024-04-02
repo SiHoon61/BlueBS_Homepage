@@ -1,5 +1,5 @@
 # BlueBS 홈페이지 제작
-https://okbbs.co.kr/
+<a href="https://okbbs.co.kr/" target="_blank">okbbs.co.kr</a>
 
 ## :date: 제작 기간
 디자인: 24.01.22 ~ 24.03.17
