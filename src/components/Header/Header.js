@@ -103,7 +103,10 @@ const Header = () => {
     const goMap = () => {
         navigate("/map");
     }
-
+    const goInquiry = () => {
+        navigate("/inquiry");
+    }
+    
     //마우스 호버
     const [companyHovered, setCompanyHovered] = useState(false);
     const [technologyHovered, setTechnologyHovered] = useState(false);
@@ -192,7 +195,8 @@ const Header = () => {
                             onMouseLeave={() => setCommunicationHovered(false)}>Communication
                             <HoverBox
                                 $isHovered={communicationHovered}
-                                $width={90}>
+                                $width={140}>
+                                <TextTextBox onClick={goInquiry}>1:1 문의하기</TextTextBox>
                                 <TextTextBox onClick={goNewsRoom}>뉴스룸</TextTextBox>
                                 <TextTextBox onClick={goMap}>오시는길</TextTextBox>
                             </HoverBox>

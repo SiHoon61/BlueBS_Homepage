@@ -139,9 +139,6 @@ const MenuModal = ({ isOpen, onClose }) => {
 
     //navigation
     const navigate = useNavigate();
-    const goHome = () => {
-        navigate("/");
-    }
     const goCeoGreeting = () => {
         navigate("/greeting");
     }
@@ -214,6 +211,9 @@ const MenuModal = ({ isOpen, onClose }) => {
 
     const goMap = () => {
         navigate("/map");
+    }
+    const goInquiry = () => {
+        navigate("/inquiry");
     }
     useEffect(() => {
         document.body.style.overflow = isOpen ? 'hidden' : 'auto';
@@ -419,6 +419,13 @@ const MenuModal = ({ isOpen, onClose }) => {
                         <PlusButton $isactive={activeMenu === "Communication"} />
                     </MenuTitleContainer>
                     <MenuUl $activeMenu={activeMenu === "Communication"}>
+                        <MenuLi onClick={() => {
+                            onClose();
+                            goInquiry();
+                        }
+                        }>
+                            1:1 문의하기
+                        </MenuLi>
                         <MenuLi onClick={() => {
                             onClose();
                             goNewsRoom();

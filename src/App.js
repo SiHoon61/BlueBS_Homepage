@@ -29,6 +29,7 @@ import LeachatePD from './pages/Products/Leachate/Leachate';
 import AIWaterSystemPD from './pages/Products/AIWaterSystem/AIWaterSystem';
 import NewsRoom from './pages/Communication/NewsRoom/NewsRoom';
 import MapWay from './pages/Communication/MapWay/MapWay';
+import Inquiry from './pages/Communication/Inquiry/Inquiry';
 import ScrollToTop from './Util/ScrollToTop'
 function App() {
   return (
@@ -62,6 +63,7 @@ function App() {
           <Route path="/aIWaterSystemPD" element={<AIWaterSystemPD />}></Route>
           <Route path="/map" element={<MapWay />}></Route>
           <Route path="/newsRoom" element={<NewsRoom />}></Route>
+          <Route path="/inquiry" element={<Inquiry />}></Route>
         </Routes>
         <Bottom></Bottom>
       </Router>
