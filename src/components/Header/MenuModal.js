@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { useNavigate } from "react-router-dom";
 
 //img
-import close from '../../assets/Business/whiteClose.svg'
+import close from '../../assets/Business/whiteClose.png'
 import whitePlus from '../../assets/Home/whitePlus.svg'
 import backgroundIMG from '../../assets/Home/menuBackground.png'
 

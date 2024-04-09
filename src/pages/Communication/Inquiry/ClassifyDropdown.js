@@ -7,7 +7,7 @@ import {
     ClassifyOption,
 } from './style'
 
-const ClassifyDropdown = () => {
+const ClassifyDropdown = ({ updateClassifyData }) => {
     const [visibleClassify, setVisibleClassify] = useState(false);
     const dropdownRef = useRef(null);
     const [isSelectClassify, setIsSelectClassify] = useState(0);
@@ -41,7 +41,12 @@ const ClassifyDropdown = () => {
                 <Triangle $isClick={visibleClassify} />
                 <ClassifyBox $isClick={visibleClassify}>
                     {classifys.map((list, index) => (
-                        <ClassifyOption onClick={() => { setIsSelectClassify(index) }}>
+                        <ClassifyOption
+                            key={index}
+                            onClick={() => {
+                                setIsSelectClassify(index);
+                                updateClassifyData(classifys[index]);
+                            }}>
                             {list}
                         </ClassifyOption>
                     ))}
