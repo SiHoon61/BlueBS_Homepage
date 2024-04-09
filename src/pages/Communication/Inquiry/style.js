@@ -155,6 +155,11 @@ export const Classify = styled.div`
     position: relative;
     @media (max-width: 1150px) {
        width: 180px;
+       height: 58px;
+    }
+    @media (max-width: 1150px) {
+       width: 180px;
+       height: 45px;
     }
     @media (max-width: 650px) {
        width: 100%;
@@ -215,6 +220,7 @@ export const InputBox = styled.input`
     font-size: 16px;
     @media (max-width: 1150px) {
        width: 180px;
+       height: 40px;
     }
     @media (max-width: 650px) {
        width: 100%;
@@ -267,9 +273,10 @@ export const InputDomain = styled.input`
     font-size: 16px;
     @media (max-width: 1150px) {
        width: 120px;
+       height: 40px;
     }
     @media (max-width: 550px) {
-        width: 140px;
+        width: 120px;
         font-size: 14px;
         margin-left: 5px;
     }
@@ -289,11 +296,11 @@ export const SelectDomain = styled.div`
     position: relative;
     @media (max-width: 1150px) {
        width: 140px;
+       height: 45px;
     }
     @media (max-width: 550px) {
-        width: 140px;
+        width: 120px;
         font-size: 14px;
-        height: 55px;
     }
 `
 export const DomainBox = styled.div`
@@ -321,7 +328,7 @@ export const DomainBox = styled.div`
        width: 155px;
     }
     @media (max-width: 550px) {
-       width: 155px;
+       width: 135px;
        font-size: 14px;
     }
 `
@@ -346,6 +353,7 @@ export const PhoneNum = styled.input`
     }
     @media (max-width: 1150px) {
        width: 80px;
+       height: 40px;
     }
     @media (max-width: 650px) {
        width: 22%;

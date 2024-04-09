@@ -10,7 +10,6 @@ import {
     BodyText,
     SmallText,
     RedText,
-    Hr,
     InquiryContainer,
     InquiryForm,
     KeyText,
@@ -101,7 +100,7 @@ const Inquiry = () => {
 
     const sendEmail_1 = () => {
         const templateParams = {
-            to_Email: 'cihyoung73@hanmail.net',
+            to_Email: 'okbbs2000@naver.com',
             user_classify: classifyData,
             user_name: nameValue,
             user_email: emailValue,
@@ -127,27 +126,6 @@ const Inquiry = () => {
             error => {
                 console.log(error.text);
                 alert("문의 접수에 실패했습니다.전화 주시면 감사드리겠습니다.");
-            },
-        );
-    };
-    const sendEmail_2 = () => {
-        const templateParams = {
-            to_Email: 'bluent84@daum.net',
-            user_classify: classifyData,
-            user_name: nameValue,
-            user_email: emailValue,
-            user_domain: domain,
-            user_firstNum: firstNum,
-            user_middleNum: middleNum,
-            user_lastNum: lastNum,
-            user_bodyText: bodyText,
-        };
-        emailjs.send(`${process.env.REACT_APP_EMAILJS_SERVICE_ID}`, `${process.env.REACT_APP_EMAILJS_TEMPLATE_ID}`, templateParams, `${process.env.REACT_APP_EMAILJS_PUBLIC_KEY}`).then(
-            result => {
-
-            },
-            error => {
-                console.log(error.text);
             },
         );
     };
@@ -278,7 +256,6 @@ const Inquiry = () => {
                     </InquiryForm>
                     <Submit onClick={() => {
                         sendEmail_1()
-                        sendEmail_2()
                     }}
                         $isFilled={isFilled}>
                         문의 접수
