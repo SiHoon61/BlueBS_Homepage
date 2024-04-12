@@ -13,7 +13,7 @@
   <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=CSS3&logoColor=black"> <img src="https://img.shields.io/badge/styledcomponents-DB7093?style=for-the-badge&logo=styledcomponents&logoColor=white"> <img src="https://img.shields.io/badge/figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white">
 
 * API<br/>
-  Kakao Maps
+  Kakao Maps, emailjs
   
 * Library<br/>
-  react-slick, react-kakao-maps-sdk
+  react-slick, react-kakao-maps-sdk, emailjs
