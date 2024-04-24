@@ -197,7 +197,7 @@ const Header = () => {
                                 $isHovered={communicationHovered}
                                 $width={140}>
                                 <TextTextBox onClick={goInquiry}>1:1 문의하기</TextTextBox>
-                                <TextTextBox onClick={goNewsRoom}>뉴스룸</TextTextBox>
+                                <TextTextBox onClick={goNewsRoom}>홍보자료실</TextTextBox>
                                 <TextTextBox onClick={goMap}>오시는길</TextTextBox>
                             </HoverBox>
                         </IndexLI>

@@ -51,6 +51,7 @@ export const MainContainer = styled.div`
     flex-direction: column;
     margin-top: 100px;
     width: 100%;
+    overflow-x: hidden;
     @media (max-width: 600px) {
         margin-top: 50px;
     }
@@ -70,4 +71,14 @@ export const NewsContainer = styled.div`
     flex-wrap: wrap;
     width: 100%;
     justify-content: space-between;
+`
+
+export const MedianLine = styled.hr`
+    margin-top: 0;
+    margin-bottom: 100px;
+    width: 100%;
+    border: 5px solid #EFEFEF;
+    @media (max-width: 600px) {
+        margin-bottom: 50px;
+    }
 `

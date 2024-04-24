@@ -30,42 +30,59 @@ import AIWaterSystemPD from './pages/Products/AIWaterSystem/AIWaterSystem';
 import NewsRoom from './pages/Communication/NewsRoom/NewsRoom';
 import MapWay from './pages/Communication/MapWay/MapWay';
 import Inquiry from './pages/Communication/Inquiry/Inquiry';
+import ReferenceRoom from './pages/Communication/ReferenceRoom/ReferenceRoom';
+import AdminPage from './pages/AdminPage/AdminPage';
 import ScrollToTop from './Util/ScrollToTop'
+
+const DefaultLayout = ({ children }) => (
+  <>
+    <Header />
+    <div>{children}</div>
+    <Bottom />
+  </>
+);
+
+const AdminLayout = ({ children }) => (
+  <>
+    <div>{children}</div>
+  </>
+);
+
 function App() {
   return (
     <>
       <Router>
         <ScrollToTop />
-        <Header></Header>
         <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/greeting" element={<Greeting />}></Route>
-          <Route path="/history" element={<History />}></Route>
-          <Route path="/awards" element={<Awards />}></Route>
-          <Route path="/laboratory" element={<Laboratory />}></Route>
-          <Route path="/electroCatalyst" element={<ElectroCatalyst />}></Route>
-          <Route path="/tower" element={<Tower />}></Route>
-          <Route path="/filter" element={<Filter />}></Route>
-          <Route path="/nanoBubble" element={<NanoBubble />}></Route>
-          <Route path="/purify" element={<Purify />}></Route>
-          <Route path="/sewer" element={<Sewer />}></Route>
-          <Route path="/agriculture" element={<Agriculture />}></Route>
-          <Route path="/animalHusbandry" element={<AnimalHusbandry />}></Route>
-          <Route path="/greenAlgae" element={<GreenAlgae />}></Route>
-          <Route path="/leachate" element={<Leachate />}></Route>
-          <Route path="/monitoring" element={<Monitoring />}></Route>
-          <Route path="/drinkingPD" element={<DrinkingPD />}></Route>
-          <Route path="/sewerPD" element={<SewerPD />}></Route>
-          <Route path="/agriculturePD" element={<AgriculturePD />}></Route>
-          <Route path="/animalHusbandryPD" element={<AnimalHusbandryPD />}></Route>
-          <Route path="/greenAlgaePD" element={<GreenAlgaePD />}></Route>
-          <Route path="/leachatePD" element={<LeachatePD />}></Route>
-          <Route path="/aIWaterSystemPD" element={<AIWaterSystemPD />}></Route>
-          <Route path="/map" element={<MapWay />}></Route>
-          <Route path="/newsRoom" element={<NewsRoom />}></Route>
-          <Route path="/inquiry" element={<Inquiry />}></Route>
+          <Route path="/" element={<DefaultLayout><Home /></DefaultLayout>}></Route>
+          <Route path="/greeting" element={<DefaultLayout><Greeting /></DefaultLayout>}></Route>
+          <Route path="/history" element={<DefaultLayout><History /></DefaultLayout>}></Route>
+          <Route path="/awards" element={<DefaultLayout><Awards /></DefaultLayout>}></Route>
+          <Route path="/laboratory" element={<DefaultLayout><Laboratory /></DefaultLayout>}></Route>
+          <Route path="/electroCatalyst" element={<DefaultLayout><ElectroCatalyst /></DefaultLayout>}></Route>
+          <Route path="/tower" element={<DefaultLayout><Tower /></DefaultLayout>}></Route>
+          <Route path="/filter" element={<DefaultLayout><Filter /></DefaultLayout>}></Route>
+          <Route path="/nanoBubble" element={<DefaultLayout><NanoBubble /></DefaultLayout>}></Route>
+          <Route path="/purify" element={<DefaultLayout><Purify /></DefaultLayout>}></Route>
+          <Route path="/sewer" element={<DefaultLayout><Sewer /></DefaultLayout>}></Route>
+          <Route path="/agriculture" element={<DefaultLayout><Agriculture /></DefaultLayout>}></Route>
+          <Route path="/animalHusbandry" element={<DefaultLayout><AnimalHusbandry /></DefaultLayout>}></Route>
+          <Route path="/greenAlgae" element={<DefaultLayout><GreenAlgae /></DefaultLayout>}></Route>
+          <Route path="/leachate" element={<DefaultLayout><Leachate /></DefaultLayout>}></Route>
+          <Route path="/monitoring" element={<DefaultLayout><Monitoring /></DefaultLayout>}></Route>
+          <Route path="/drinkingPD" element={<DefaultLayout><DrinkingPD /></DefaultLayout>}></Route>
+          <Route path="/sewerPD" element={<DefaultLayout><SewerPD /></DefaultLayout>}></Route>
+          <Route path="/agriculturePD" element={<DefaultLayout><AgriculturePD /></DefaultLayout>}></Route>
+          <Route path="/animalHusbandryPD" element={<DefaultLayout><AnimalHusbandryPD /></DefaultLayout>}></Route>
+          <Route path="/greenAlgaePD" element={<DefaultLayout><GreenAlgaePD /></DefaultLayout>}></Route>
+          <Route path="/leachatePD" element={<DefaultLayout><LeachatePD /></DefaultLayout>}></Route>
+          <Route path="/aIWaterSystemPD" element={<DefaultLayout><AIWaterSystemPD /></DefaultLayout>}></Route>
+          <Route path="/map" element={<DefaultLayout><MapWay /></DefaultLayout>}></Route>
+          <Route path="/newsRoom" element={<DefaultLayout><NewsRoom /></DefaultLayout>}></Route>
+          <Route path="/inquiry" element={<DefaultLayout><Inquiry /></DefaultLayout>}></Route>
+          <Route path="/referenceRoom" element={<DefaultLayout><ReferenceRoom /></DefaultLayout>}></Route>
+          <Route path="/adminPage" element={<AdminLayout><AdminPage /></AdminLayout>}></Route>
         </Routes>
-        <Bottom></Bottom>
       </Router>
     </>
   );

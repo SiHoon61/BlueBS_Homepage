@@ -431,7 +431,7 @@ const MenuModal = ({ isOpen, onClose }) => {
                             goNewsRoom();
                         }
                         }>
-                            뉴스룸
+                            홍보자료실
                         </MenuLi>
                         <MenuLi onClick={() => {
                             onClose();
