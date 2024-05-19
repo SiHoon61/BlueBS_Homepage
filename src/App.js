@@ -31,8 +31,11 @@ import NewsRoom from './pages/Communication/NewsRoom/NewsRoom';
 import MapWay from './pages/Communication/MapWay/MapWay';
 import Inquiry from './pages/Communication/Inquiry/Inquiry';
 import ReferenceRoom from './pages/Communication/ReferenceRoom/ReferenceRoom';
-import AdminPage from './pages/AdminPage/AdminPage';
-import ScrollToTop from './Util/ScrollToTop'
+import AdminHeader from './pages/AdminPage/AdminHeader/AdminHeader';
+import AdminLogin from './pages/AdminPage/AdminLogin';
+import AdminPost from './pages/AdminPage/AdminPost/AdminPost';
+import ScrollToTop from './Util/ScrollToTop';
+
 
 const DefaultLayout = ({ children }) => (
   <>
@@ -44,9 +47,11 @@ const DefaultLayout = ({ children }) => (
 
 const AdminLayout = ({ children }) => (
   <>
+    <AdminHeader/>
     <div>{children}</div>
   </>
 );
+
 
 function App() {
   return (
@@ -81,7 +86,8 @@ function App() {
           <Route path="/newsRoom" element={<DefaultLayout><NewsRoom /></DefaultLayout>}></Route>
           <Route path="/inquiry" element={<DefaultLayout><Inquiry /></DefaultLayout>}></Route>
           <Route path="/referenceRoom" element={<DefaultLayout><ReferenceRoom /></DefaultLayout>}></Route>
-          <Route path="/adminPage" element={<AdminLayout><AdminPage /></AdminLayout>}></Route>
+          <Route path="/AdminLogin" element={<AdminLogin />}></Route>
+          <Route path="/AdminPage/AdminPost" element={<AdminLayout><AdminPost /></AdminLayout>}></Route>
         </Routes>
       </Router>
     </>
