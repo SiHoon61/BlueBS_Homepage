@@ -16,10 +16,11 @@ import {
 
 const AdminPost = () => {
     const navigate = useNavigate();
-    const [postTitle, SetPostTitle] = useState('');
-    const [postWriter, SetPostWriter] = useState('');
-    const [postcontent, SetPostcontent] = useState('');
-
+    const [postTitle, setPostTitle] = useState('');
+    const [postWriter, setPostWriter] = useState('');
+    const [postContent, setPostContent] = useState('');
+    const [postPDF, setPostPDF] = useState(null);
+    const [postJPG, setPostJPG] = useState(null);
     useEffect(() => {
         const verifyToken = async () => {
             try {
@@ -35,6 +36,42 @@ const AdminPost = () => {
 
         verifyToken();
     }, []);
+
+
+    //blob으로 변경
+    const handleFileChange = (e) => {
+        const file = e.target.files[0];
+        const name = e.target.name;
+
+        if (name === 'pdf') {
+            setPostPDF(file);
+        } else if (name === 'jpg') {
+            setPostJPG(file);
+        }
+    };
+
+    //서버로 전송 
+    const handleFileUpload = async () => {
+        const formData = new FormData();
+        formData.append('title', postTitle);
+        formData.append('writer', postWriter);
+        formData.append('content', postContent);
+        formData.append('jpg', postJPG);
+        formData.append('pdf', postPDF);
+
+        try {
+            const response = await axios.post('http://localhost:5000/upload', formData, {
+                headers: {
+                    'Content-Type': 'multipart/form-data',
+                },
+            });
+            console.log(response.data);
+        } catch (error) {
+            console.error('Error uploading file:', error);
+        }
+    };
+
+
     return (
         <>
             <PostContainer>
@@ -48,8 +85,8 @@ const AdminPost = () => {
                     <InputBox
                         type="text"
                         name="user_name"
-                    // value={nameValue}
-                    // onChange={(e) => setNameValue(e.target.value)}
+                        value={postTitle}
+                        onChange={(e) => setPostTitle(e.target.value)}
                     />
                 </InquiryForm>
                 <InquiryForm>
@@ -59,8 +96,8 @@ const AdminPost = () => {
                     <InputBox
                         type="text"
                         name="user_name"
-                    // value={nameValue}
-                    // onChange={(e) => setNameValue(e.target.value)}
+                        value={postWriter}
+                        onChange={(e) => setPostWriter(e.target.value)}
                     />
                 </InquiryForm>
                 <InquiryForm>
@@ -68,8 +105,8 @@ const AdminPost = () => {
                         본문
                     </KeyText>
                     <BodyTextarea
-                    // value={bodyText}
-                    // onChange={(e) => setBodyText(e.target.value)}
+                        value={postContent}
+                        onChange={(e) => setPostContent(e.target.value)}
                     />
                 </InquiryForm>
 
@@ -78,10 +115,10 @@ const AdminPost = () => {
                         첨부파일
                     </KeyText>
                     <input
-                        className='file-input'
                         type="file"
-                        mulitple
-                    //onChange={handleFileChange}
+                        name="pdf"
+                        multiple
+                        onChange={handleFileChange}
                     />
                 </InquiryForm>
 
@@ -90,13 +127,13 @@ const AdminPost = () => {
                         썸네일 사진
                     </KeyText>
                     <input
-                        className='file-input'
                         type="file"
-                        mulitple
-                    //onChange={handleFileChange}
+                        name="jpg"
+                        multiple
+                        onChange={handleFileChange}
                     />
                 </InquiryForm>
-                <Submit>
+                <Submit onClick={handleFileUpload}> 
                     업로드
                 </Submit>
 
