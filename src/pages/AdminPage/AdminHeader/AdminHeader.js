@@ -29,7 +29,9 @@ const AdminHeader = () => {
                 }}>
                     게시판 글 작성
                 </Navcontent>
-                <Navcontent>
+                <Navcontent onClick={() => {
+                    navigate('/AdminPage/AdminFix');
+                }}>
                     게시판 글 삭제 / 수정
                 </Navcontent>
                 <Navcontent onClick={handleLogout}>

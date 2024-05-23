@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
+import axios from 'axios';
 
 import {
     TitleBar,
@@ -18,6 +19,7 @@ import {
     NavigateBox,
     NavigateButton,
     NavigateText,
+    NullText,
 } from './style';
 
 import {
@@ -27,39 +29,28 @@ import {
 } from '../../../components/Body/bodyStyle';
 
 const ReferenceRoom = () => {
-    const location = useLocation();
-    const query = new URLSearchParams(location.search);
-    const index = query.get('index'); // 쿼리 파라미터
-    const dataJson = [
-        {
-            title: "농업용수여과시스템 소개자료 1",
-            date: "2023.12.29",
-            body: "본문 내용입니다.",
-            writer: "admin",
-            num: 0,
-        },
-        {
-            title: "농업용수여과시스템 소개자료 2",
-            date: "2023.12.29",
-            body: "본문 내용입니다.본문 내용입니다.본문 내용입니다.본문 내용입니다.본문 내용입니다.본문 내용입니다.본문 내용입니다.본문 내용입니다.본문 내용입니다.본문 내용입니다.본문 내용입니다.본문 내용입니다.본문 내용입니다.본문 내용입니다.본문 내용입니다.본문 내용입니다.본문 내용입니다.본문 내용입니다.본문 내용입니다.본문 내용입니다.본문 내용입니다.본문 내용입니다.본문 내용입니다.본문 내용입니다.본문 내용입니다.본문 내용입니다.본문 내용입니다.본문 내용입니다.본문 내용입니다.본문 내용입니다.본문 내용입니다.본문 내용입니다.본문 내용입니다.본문 내용입니다.본문 내용입니다.본문 내용입니다.본문 내용입니다.본문 내용입니다.본문 내용입니다.본문 내용입니다.본문 내용입니다.본문 내용입니다.본문 내용입니다.본문 내용입니다.본문 내용입니다.본문 내용입니다.본문 내용입니다.본문 내용입니다.본문 내용입니다.본문 내용입니다.본문 내용입니다.본문 내용입니다.본문 내용입니다.본문 내용입니다.본문 내용입니다.본문 내용입니다.본문 내용입니다.본문 내용입니다.본문 내용입니다.본문 내용입니다.본문 내용입니다.",
-            writer: "admin",
-            num: 1,
-        },
-        {
-            title: "농업용수여과시스템 소개자료 3",
-            date: "2023.12.29",
-            body: "본문 내용입니다.",
-            writer: "admin",
-            num: 2,
-        },
-        {
-            title: "농업용수여과시스템 소개자료 4",
-            date: "2023.12.29",
-            body: "본문 내용입니다.",
-            writer: "admin",
-            num: 3,
-        }
-    ]
+    const { state } = useLocation();
+    const [refId, setRefId] = useState(state);
+    const [posts, setPosts] = useState([]);
+    const [postPre, setPostPre] = useState([]);
+    const [postNext, setPostNext] = useState([]);
+    useEffect(() => {
+        const handleFetchPost = async () => {
+            try {
+                const response = await axios.get(`http://localhost:5000/reference?id=${refId}`);
+                console.log(response.data.current);
+                setPosts(response.data.current);
+                setPostPre(response.data.previous);
+                setPostNext(response.data.next);
+            } catch (err) {
+                setPosts(null);
+                console.error('Error fetching post:', err);
+            }
+        };
+        handleFetchPost();
+
+    }, [refId]);
+
     return (
         <>
             <TitleBar>
@@ -74,47 +65,64 @@ const ReferenceRoom = () => {
                 <BodyContainer>
                     <BodyHr />
                     <TopTitle>
-                        {dataJson[index].title}
+                        {posts.title}
                         <TopSubTitle>
                             작성자
                             <GreyTitle>
-                                {dataJson[index].writer}
+                                {posts.writer}
                             </GreyTitle>
                             작성일
                             <GreyTitle>
-                                {dataJson[index].date}
+                                {posts.date}
                             </GreyTitle>
                         </TopSubTitle>
                     </TopTitle>
                     <BottomHr />
                     <BodyText>
-                        {dataJson[index].body}
+                        {posts.content}
                     </BodyText>
-                    <AttachedBox>
+                    {posts.pdfName !== "" ? <AttachedBox>
                         첨부파일
-                        <AttachedFile>
-                            농업용수여과시스템.pdf
+                        <AttachedFile
+                            href={`data:application/pdf;base64,${posts.pdf}`}
+                            download={`${posts.pdfName}.pdf`}
+                        >
+                            {posts.pdfName}
                         </AttachedFile>
-                    </AttachedBox>
+                    </AttachedBox> : <></>}
                     <BodyHr />
                     <NavigateBox>
                         <NavigateButton>
                             이전 글
-                            <NavigateText>
-                                이전 글이 없습니다.
-                            </NavigateText>
+                            {postPre.title !== null ?
+                                <NavigateText onClick={() => {
+                                    window.scrollTo(0, 0);
+                                    setRefId(postPre.id);
+                                }}>
+                                    {postPre.title}
+                                </NavigateText> :
+                                <NullText>
+                                    이전 글이 없습니다.
+                                </NullText>}
                         </NavigateButton>
                         <BottomHr />
                         <NavigateButton>
                             다음 글
-                            <NavigateText>
-                                양구군 축산분뇨처리 EF 시스템 기술자료
-                            </NavigateText>
+                            {postNext.title !== null ?
+                                <NavigateText onClick={() => {
+                                    window.scrollTo(0, 0);
+                                    setRefId(postNext.id);
+                                }}>
+                                    {postNext.title}
+                                </NavigateText> :
+                                <NullText>
+                                    다음 글이 없습니다.
+                                </NullText>}
                         </NavigateButton>
                     </NavigateBox>
                     <BodyHr />
                 </BodyContainer>
-                
+
             </MainContainer>
         </>
 

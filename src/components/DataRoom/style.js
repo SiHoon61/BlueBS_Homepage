@@ -38,6 +38,8 @@ export const DataBox = styled.div`
 
 export const DataImgs = styled.img`
     width: 100%;
+    height: 75%;
+    object-fit: cover;
     border-radius: 10px 10px 0 0;
 `
 

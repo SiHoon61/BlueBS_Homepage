@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
@@ -10,9 +10,28 @@ import {
     KeyText,
     InputBox,
     BodyTextarea,
-    FileBox,
     Submit,
+    RedText,
+    MedianLine,
+    DataBox,
+    DataDate,
+    DataImgs,
+    DataTitle,
+    BodyContainer,
+    BodyHr,
+    TopTitle,
+    TopSubTitle,
+    GreyTitle,
+    BottomHr,
+    BodyText,
+    AttachedBox,
+    AttachedFile,
+    NavigateBox,
+    NavigateButton,
+    NullText,
 } from './style'
+
+import samplejpg from '../../../assets/blackLogo.png';
 
 const AdminPost = () => {
     const navigate = useNavigate();
@@ -20,33 +39,49 @@ const AdminPost = () => {
     const [postWriter, setPostWriter] = useState('');
     const [postContent, setPostContent] = useState('');
     const [postPDF, setPostPDF] = useState(null);
+    const [postPDFName, setPostPDFName] = useState('');
     const [postJPG, setPostJPG] = useState(null);
-    useEffect(() => {
-        const verifyToken = async () => {
-            try {
-                const response = await axios.get('http://localhost:5000/verifyToken', {
-                    withCredentials: true // 쿠키를 포함하여 요청
-                });
-                console.log(response.data);
-            } catch (error) {
-                console.error('Token verification failed:', error);
-                navigate('/AdminLogin');
-            }
-        };
+    const [jpgPath, setJpgPath] = useState(null);
+    const today = new Date();
+    const formattedDate = `${today.getFullYear()}.${today.getMonth() + 1}.${today.getDate()}`;
+    const jpgInputRef = useRef(null);
+    const pdfInputRef = useRef(null);
 
-        verifyToken();
-    }, []);
+    // useEffect(() => {
+    //     const verifyToken = async () => {
+    //         try {
+    //             const response = await axios.get('http://localhost:5000/verifyToken', {
+    //                 withCredentials: true // 쿠키를 포함하여 요청
+    //             });
+    //             console.log(response.data);
+    //         } catch (error) {
+    //             console.error('Token verification failed:', error);
+    //             navigate('/AdminLogin');
+    //         }
+    //     };
+
+    //     verifyToken();
+    // }, []);
 
 
     //blob으로 변경
     const handleFileChange = (e) => {
+        e.preventDefault();
         const file = e.target.files[0];
         const name = e.target.name;
-
-        if (name === 'pdf') {
-            setPostPDF(file);
-        } else if (name === 'jpg') {
-            setPostJPG(file);
+        console.log(e.target.value);
+        if (e.target.files.length > 0) {
+            if (name === 'pdf') {
+                setPostPDF(file);
+                setPostPDFName(e.target.files[0].name);
+            } else if (name === 'jpg') {
+                const reader = new FileReader();
+                reader.onloadend = () => {
+                    setJpgPath(reader.result);
+                };
+                reader.readAsDataURL(file);
+                setPostJPG(file);
+            }
         }
     };
 
@@ -56,16 +91,28 @@ const AdminPost = () => {
         formData.append('title', postTitle);
         formData.append('writer', postWriter);
         formData.append('content', postContent);
+        formData.append('date', formattedDate);
         formData.append('jpg', postJPG);
         formData.append('pdf', postPDF);
-
+        formData.append('pdfName', postPDFName);
+        setPostTitle('');
+        setPostWriter('');
+        setPostContent('');
+        setPostJPG(null);
+        setPostPDFName('');
+        setPostPDF(null);
+        setJpgPath('');
+        if (jpgInputRef.current && pdfInputRef.current) {
+            jpgInputRef.current.value = '';
+            pdfInputRef.current.value = '';
+        }
         try {
             const response = await axios.post('http://localhost:5000/upload', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                 },
             });
-            console.log(response.data);
+            alert('업로드 완료')
         } catch (error) {
             console.error('Error uploading file:', error);
         }
@@ -80,7 +127,7 @@ const AdminPost = () => {
                 </Title>
                 <InquiryForm>
                     <KeyText>
-                        제목
+                        <RedText>*</RedText>제목
                     </KeyText>
                     <InputBox
                         type="text"
@@ -91,7 +138,7 @@ const AdminPost = () => {
                 </InquiryForm>
                 <InquiryForm>
                     <KeyText>
-                        작성자
+                        <RedText>*</RedText>작성자
                     </KeyText>
                     <InputBox
                         type="text"
@@ -102,7 +149,7 @@ const AdminPost = () => {
                 </InquiryForm>
                 <InquiryForm>
                     <KeyText>
-                        본문
+                        <RedText>*</RedText>본문
                     </KeyText>
                     <BodyTextarea
                         value={postContent}
@@ -112,16 +159,16 @@ const AdminPost = () => {
 
                 <InquiryForm>
                     <KeyText>
-                        첨부파일
+                        첨부파일(PDF)
                     </KeyText>
                     <input
                         type="file"
                         name="pdf"
                         multiple
+                        ref={jpgInputRef}
                         onChange={handleFileChange}
                     />
                 </InquiryForm>
-
                 <InquiryForm>
                     <KeyText>
                         썸네일 사진
@@ -130,12 +177,83 @@ const AdminPost = () => {
                         type="file"
                         name="jpg"
                         multiple
-                        onChange={handleFileChange}
+                        ref={pdfInputRef}
+                        onChange={(e) => handleFileChange(e)}
                     />
                 </InquiryForm>
-                <Submit onClick={handleFileUpload}> 
+                <Submit onClick={handleFileUpload}>
                     업로드
                 </Submit>
+                <MedianLine />
+            </PostContainer>
+
+            <PostContainer>
+                <Title>
+                    게시물 썸네일 미리보기
+                </Title>
+                <DataBox>
+                    <DataImgs
+                        src={jpgPath ? jpgPath : samplejpg}
+                        alt="img"
+                    />
+                    <DataTitle>
+                        {postTitle}
+                    </DataTitle>
+                    <DataDate>
+                        {formattedDate}
+                    </DataDate>
+                </DataBox>
+                <MedianLine />
+            </PostContainer>
+
+            <PostContainer>
+                <Title>
+                    게시물 미리보기
+                </Title>
+
+                <BodyContainer>
+                    <BodyHr />
+                    <TopTitle>
+                        {postTitle}
+                        <TopSubTitle>
+                            작성자
+                            <GreyTitle>
+                                {postWriter}
+                            </GreyTitle>
+                            작성일
+                            <GreyTitle>
+                                {formattedDate}
+                            </GreyTitle>
+                        </TopSubTitle>
+                    </TopTitle>
+                    <BottomHr />
+                    <BodyText>
+                        {postContent}
+                    </BodyText>
+                    {postPDFName !== '' ? <AttachedBox>
+                        첨부파일
+                        <AttachedFile>
+                            {postPDFName}
+                        </AttachedFile>
+                    </AttachedBox> : <></>}
+                    <BodyHr />
+                    <NavigateBox>
+                        <NavigateButton>
+                            이전 글
+                            <NullText>
+                                이전 글이 없습니다.
+                            </NullText>
+                        </NavigateButton>
+                        <BottomHr />
+                        <NavigateButton>
+                            다음 글
+                            <NullText>
+                                다음 글이 없습니다.
+                            </NullText>
+                        </NavigateButton>
+                    </NavigateBox>
+                    <BodyHr />
+                </BodyContainer>
 
             </PostContainer>
         </>

@@ -70,7 +70,7 @@ export const NewsContainer = styled.div`
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    justify-content: space-between;
+    justify-content: flex-start;
 `
 
 export const MedianLine = styled.hr`

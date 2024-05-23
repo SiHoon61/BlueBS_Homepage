@@ -1,8 +1,6 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import { useNavigate } from 'react-router-dom';
-
-//img
-import dataimg from '../../assets/Communication/data1.png';
+import axios from 'axios';
 
 //style
 import {
@@ -14,50 +12,33 @@ import {
 
 const DataRoom = () => {
     const navigate = useNavigate();
-
-    //post로 사진, 제목, 날짜 받아오기
-    const dataJson = [
-        {
-            title: "농업용수여과시스템 소개자료 1",
-            date: "2023.12.29",
-            body: "본문 내용입니다.",
-            writer: "admin",
-            num: 0,
-        },
-        {
-            title: "농업용수여과시스템 소개자료 2",
-            date: "2023.12.29",
-            body: "본문 내용입니다.",
-            writer: "admin",
-            num: 1,
-        },
-        {
-            title: "농업용수여과시스템 소개자료 3",
-            date: "2023.12.29",
-            body: "본문 내용입니다.",
-            writer: "admin",
-            num: 2,
-        },
-        {
-            title: "농업용수여과시스템 소개자료 4",
-            date: "2023.12.29",
-            body: "본문 내용입니다.",
-            writer: "admin",
-            num: 3,
-        }
-    ]
+    const [posts, setPosts] = useState([]);
+    useEffect(() => {
+        const getPosts = async () => {
+            try {
+                const response = await axios.get('http://localhost:5000/dataroom');
+                setPosts(response.data);
+            } catch (error) {
+                console.error('Error fetching posts:', error);
+            }
+        };
+        getPosts();
+    }, []);
     
     const referenceHandler = (props) => {
-        navigate(`/referenceRoom?index=${props}`);
+        navigate(`/referenceRoom`, {state: props});
     }
 
     return (
         <>
-            {dataJson.map((list, index) => (
+            {posts.map((list, index) => (
                 <DataBox key={index} onClick={() => {
-                    referenceHandler(list.num)
+                    referenceHandler(list.id)
                 }}>
-                    <DataImgs src={dataimg} alt="dataimg" />
+                    <DataImgs
+                        src={`data:image/jpeg;base64,${list.jpg}`}
+                        alt="dataimg"
+                    />
                     <DataTitle>
                         {list.title}
                     </DataTitle>

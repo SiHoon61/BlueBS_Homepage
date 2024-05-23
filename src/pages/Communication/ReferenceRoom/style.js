@@ -134,9 +134,10 @@ export const AttachedBox = styled.div`
     box-sizing: border-box;
     font-family: var(--font-sansMedium);
 `
-export const AttachedFile = styled.div`
+export const AttachedFile = styled.a`
     margin-left: 15px;
     font-family: var(--font-sansRegular);
+    text-decoration-line: none;
 `
 
 export const NavigateBox = styled.div`
@@ -155,4 +156,11 @@ export const NavigateButton = styled.div`
 export const NavigateText = styled.div`
     margin-left: 30px;
     font-family: var(--font-sansRegular);
+    cursor: pointer;
+`
+
+export const NullText = styled.div`
+    margin-left: 30px;
+    font-family: var(--font-sansRegular);
+    color: grey;
 `

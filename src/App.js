@@ -34,6 +34,8 @@ import ReferenceRoom from './pages/Communication/ReferenceRoom/ReferenceRoom';
 import AdminHeader from './pages/AdminPage/AdminHeader/AdminHeader';
 import AdminLogin from './pages/AdminPage/AdminLogin';
 import AdminPost from './pages/AdminPage/AdminPost/AdminPost';
+import AdminFix from './pages/AdminPage/AdminFix/AdminFix';
+
 import ScrollToTop from './Util/ScrollToTop';
 
 
@@ -88,6 +90,7 @@ function App() {
           <Route path="/referenceRoom" element={<DefaultLayout><ReferenceRoom /></DefaultLayout>}></Route>
           <Route path="/AdminLogin" element={<AdminLogin />}></Route>
           <Route path="/AdminPage/AdminPost" element={<AdminLayout><AdminPost /></AdminLayout>}></Route>
+          <Route path="/AdminPage/AdminFix" element={<AdminLayout><AdminFix /></AdminLayout>}></Route>
         </Routes>
       </Router>
     </>
