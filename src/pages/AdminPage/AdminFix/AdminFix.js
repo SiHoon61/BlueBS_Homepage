@@ -25,14 +25,17 @@ const AdminFix = () => {
     const [posts, setPosts] = useState([]);
     const [modalState, setModalState] = useState(false);
     const [modalSelect, setModalSelect] = useState('');
-
+    const [modalData, setModalData] = useState('');
     const handleOpenModal = (props) => {
+        setModalData(-1);
         setModalSelect(props);
         setModalState(true);
     };
-    const handleCloseModal = () => {
+    const handleCloseModal = (props) => {
         setModalState(false);
+        setModalData(props);
     };
+
     useEffect(() => {
         const getPosts = async () => {
             try {
@@ -43,10 +46,20 @@ const AdminFix = () => {
             }
         };
         getPosts();
-    }, []);
+    }, [modalData]);
 
     const referenceHandler = (props) => {
         navigate(`/AdminPage/AdminFix`, { state: props });
+    }
+
+    const deleteHandler = async (props) => {
+        try {
+            const response = await axios.delete(`http://localhost:5000/delete?id=${props}`);
+            alert('글이 삭제되었습니다');
+            setModalData(props);
+        } catch (error) {
+            console.error('Error fetching posts:', error);
+        }
     }
 
     return (
@@ -74,7 +87,9 @@ const AdminFix = () => {
                                 }}>
                                     수정
                                 </FixButton>
-                                <DeleteButton>
+                                <DeleteButton onClick={() => {
+                                    deleteHandler(list.id);
+                                }}>
                                     삭제
                                 </DeleteButton>
                             </FixBox>

@@ -19,7 +19,11 @@ import {
     BodyTextarea,
     Submit,
     ExistFile,
+    DeleteButton,
 } from './modalStyle';
+
+//img
+import blackLogo from '../../../assets/blackLogo.png';
 
 const FixModal = ({ show, onClose, content }) => {
     const [postTitle, setPostTitle] = useState('');
@@ -28,8 +32,10 @@ const FixModal = ({ show, onClose, content }) => {
     const [postPDF, setPostPDF] = useState(null);
     const [postPDFName, setPostPDFName] = useState('');
     const [postJPG, setPostJPG] = useState(null);
-    const jpgInputRef = useRef(null);
-    const pdfInputRef = useRef(null);
+    const [keepPDF, setKeepPDF] = useState(true);
+    const [keepJPG, setKeepJPG] = useState(true);
+    const [existPDF, setExistPDF] = useState('');
+    const [deleteJPG, setDeleteJPG] = useState(false);
 
     useEffect(() => {
         const handleFetchPost = async () => {
@@ -39,7 +45,7 @@ const FixModal = ({ show, onClose, content }) => {
                 setPostTitle(response.data.current.title);
                 setPostWriter(response.data.current.writer);
                 setPostContent(response.data.current.content);
-                setPostPDFName(response.data.current.pdfName);
+                setExistPDF(response.data.current.pdfName);
             } catch (err) {
                 setPostTitle(null);
                 console.error('Error fetching post:', err);
@@ -59,43 +65,43 @@ const FixModal = ({ show, onClose, content }) => {
             if (name === 'pdf') {
                 setPostPDF(file);
                 setPostPDFName(e.target.files[0].name);
+                setKeepPDF('');
             } else if (name === 'jpg') {
                 setPostJPG(file);
+                setKeepJPG('');
             }
         }
     };
 
     //서버로 전송 
     const handleFileUpload = async () => {
-        // const formData = new FormData();
-        // formData.append('title', postTitle);
-        // formData.append('writer', postWriter);
-        // formData.append('content', postContent);
-        // formData.append('date', formattedDate);
-        // formData.append('jpg', postJPG);
-        // formData.append('pdf', postPDF);
-        // formData.append('pdfName', postPDFName);
-        // setPostTitle('');
-        // setPostWriter('');
-        // setPostContent('');
-        // setPostJPG(null);
-        // setPostPDFName('');
-        // setPostPDF(null);
-        // setJpgPath('');
-        // if (jpgInputRef.current && pdfInputRef.current) {
-        //     jpgInputRef.current.value = '';
-        //     pdfInputRef.current.value = '';
-        // }
-        // try {
-        //     const response = await axios.post('http://localhost:5000/upload', formData, {
-        //         headers: {
-        //             'Content-Type': 'multipart/form-data',
-        //         },
-        //     });
-        //     alert('업로드 완료')
-        // } catch (error) {
-        //     console.error('Error uploading file:', error);
-        // }
+        const formData = new FormData();
+        formData.append('title', postTitle);
+        formData.append('writer', postWriter);
+        formData.append('content', postContent);
+        formData.append('jpg', postJPG);
+        formData.append('pdf', postPDF);
+        formData.append('pdfName', postPDFName);
+        formData.append('keepPDF', keepPDF);
+        formData.append('keepJPG', keepJPG);
+        setPostTitle('');
+        setPostWriter('');
+        setPostContent('');
+        setPostJPG(null);
+        setPostPDF(null);
+
+        try {
+            const response = await axios.patch(`http://localhost:5000/fixref?id=${content[0]}`, formData, {
+                headers: {
+                    'Content-Type': 'multipart/form-data',
+                },
+            });
+            console.log(response.data);
+            alert('업로드 완료');
+            onClose(content[0]);
+        } catch (error) {
+            console.error('Error fix file:', error);
+        }
     };
 
     //모달 관련 ref
@@ -109,10 +115,10 @@ const FixModal = ({ show, onClose, content }) => {
         <>
             <Modal onClick={handleClickOutside} $show={show}>
                 <Content ref={contentRef} $show={show}>
+                    <Title>
+                        게시글 수정
+                    </Title>
                     <PostContainer>
-                        <Title>
-                            게시글 수정, id = {content[0]}
-                        </Title>
                         <InquiryForm>
                             <KeyText>
                                 제목
@@ -147,40 +153,59 @@ const FixModal = ({ show, onClose, content }) => {
 
                         <InquiryForm>
                             <KeyText>
-                                첨부파일(PDF)
+                                첨부파일변경(PDF)
                             </KeyText>
                             <input
                                 type="file"
                                 name="pdf"
                                 multiple
-                                ref={jpgInputRef}
                                 onChange={handleFileChange}
                             />
                             <ExistFile>
-                                [기존 파일]: {postPDFName ? postPDFName : '없음'}
+                                [기존 파일]: {existPDF ? existPDF : '없음'}
+                                <DeleteButton onClick={() => {
+                                    setExistPDF('');
+                                    setKeepPDF('');
+                                }}>
+                                    기존 파일 삭제
+                                </DeleteButton>
                             </ExistFile>
+
+
                         </InquiryForm>
                         <InquiryForm>
                             <KeyText>
-                                썸네일 사진
+                                사진 변경
                             </KeyText>
                             <input
                                 type="file"
                                 name="jpg"
                                 multiple
-                                ref={pdfInputRef}
                                 onChange={(e) => handleFileChange(e)}
                             />
+
                             <ExistFile>
-                                [기존 사진] <ExistImg src={`data:image/jpeg;base64,${content[1]}`}
+                                [기존 사진] <ExistImg src={deleteJPG ? blackLogo : `data:image/jpeg;base64,${content[1]}`
+                                }
                                     alt="dataimg" />
+                                <DeleteButton onClick={() => {
+                                    setDeleteJPG(true);
+                                    setKeepJPG('');
+                                }}>
+                                    기존 사진 삭제
+                                </DeleteButton>
                             </ExistFile>
                         </InquiryForm>
-                        <Submit onClick={handleFileUpload}>
-                            업로드
-                        </Submit>
-                    </PostContainer>
 
+                        <InquiryForm>
+                            <Submit onClick={() => {
+                                handleFileUpload();
+                            }}>
+                                수정하기
+                            </Submit>
+                        </InquiryForm>
+
+                    </PostContainer>
                     <CloseButton
                         src={close}
                         alt="close"

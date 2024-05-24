@@ -44,8 +44,8 @@ export const Content = styled.div`
     width: 1350px;
     position: relative;
     background: white;
-    padding: 60px 70px 70px 70px;
-    height: 75%;
+    padding: 30px 40px 40px 40px;
+    height: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -85,10 +85,10 @@ export const PostContainer = styled.div`
 
 export const InquiryForm = styled.div`
     display: flex;
-    margin: auto;
     align-items: center;
     flex-direction: row;
-    margin-bottom: 30px;
+    width: 1000px;
+    margin: 0 auto 30px; 
     font-size: 20px;
     font-family: var(--font-sansBold);  
 `
@@ -98,7 +98,7 @@ export const KeyText = styled.div`
     align-items: center;
     font-size: 24px;
     font-family: var(--font-sansBold);  
-    width: 130px;  
+    width: 140px;  
     margin-right: 50px;
 `
 
@@ -122,28 +122,48 @@ export const BodyTextarea = styled.textarea`
 `
 
 export const Submit = styled.div`
-    margin: 10px auto 100px;
+    margin: 10px auto 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 22px;
+    font-size: 20px;
     color: white;
-    width: 280px;
-    height: 60px;
-    cursor: pointer;
+    width: 220px;
+    height: 50px;
     background-color: #0052A7;
+    cursor: pointer;
+    font-family: var(--font-sansMedium); 
 `
 
 export const ExistFile = styled.div`
     display: flex;
     flex-direction: row;
+    margin-left: 80px;
     align-items: center;
     color: #434343;
-    //border: 1px solid black;
 `
 
 export const ExistImg = styled.img`
     width: 200px;
     margin-left: 20px;
     height: auto;
+`
+
+export const DeleteButton = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 15px;
+    width: 110px;
+    height: 22px;
+    font-size: 14px;
+    background-color: #EEEEEE;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 3px;
+    font-family: var(--font-sansRegular); 
+    &:hover{
+        filter: brightness(90%);
+    }
+    transition: filter 0.1s;
 `
