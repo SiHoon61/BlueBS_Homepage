@@ -22,7 +22,7 @@ const AdminLogin = () => {
             },{
                 withCredentials: true
             });
-            alert('성공');
+            alert('로그인 성공');
             console.log(response.headers);
             navigate('/AdminPage/AdminPost');
         } catch (error) {
