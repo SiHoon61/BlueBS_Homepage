@@ -12,7 +12,7 @@ const AdminHeader = () => {
     const navigate = useNavigate();
     const handleLogout = async () => {
         try {
-            await axios.post('http://localhost:5000/logout', {}, { withCredentials: true });
+            await axios.post(`${process.env.REACT_APP_SERVER_URL}/logout`, {}, { withCredentials: true });
             // 로그아웃 후 홈 페이지로 리디렉션
             navigate('/');
         } catch (error) {

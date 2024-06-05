@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import styled, { css, keyframes } from "styled-components";
 
 //
@@ -23,7 +23,7 @@ const fadeOut = keyframes`
 `;
 
 const Modal = styled.div`
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.5);
     position: fixed;
     left: 0;
     top: 0;
@@ -54,7 +54,6 @@ const Content = styled.div`
     align-items: center;
     animation: ${props => props.$show ? fadeIn : fadeOut} 0.2s forwards;
     max-height: 70%;
-    margin-top: 3%;
     @media (max-width: 1230px) {
         padding: 60px 70px 70px 70px;
         width: 70%;
@@ -128,6 +127,20 @@ const NewsModal = ({ show, onClose, content }) => {
             onClose(); // 클릭된 영역이 Content 밖이라면 모달 닫기 함수 호출
         }
     };
+    useEffect(() => {
+        document.body.style.cssText = `
+            position: fixed; 
+            top: -${window.scrollY}px;
+            overflow-y: scroll;
+            width: 100%;`;
+
+        return () => {
+            const scrollY = document.body.style.top;
+            document.body.style.cssText = '';
+            window.scrollTo(0, parseInt(scrollY || '0', 10) * -1);
+        };
+
+    }, []);
     return (
         <>
             <Modal onClick={handleClickOutside} $show={show}>

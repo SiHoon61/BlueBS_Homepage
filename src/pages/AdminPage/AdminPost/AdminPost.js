@@ -47,21 +47,21 @@ const AdminPost = () => {
     const jpgInputRef = useRef(null);
     const pdfInputRef = useRef(null);
 
-    // useEffect(() => {
-    //     const verifyToken = async () => {
-    //         try {
-    //             const response = await axios.get('http://localhost:5000/verifyToken', {
-    //                 withCredentials: true // 쿠키를 포함하여 요청
-    //             });
-    //             console.log(response.data);
-    //         } catch (error) {
-    //             console.error('Token verification failed:', error);
-    //             navigate('/AdminLogin');
-    //         }
-    //     };
+    useEffect(() => {
+        const verifyToken = async () => {
+            try {
+                const response = await axios.get(`${process.env.REACT_APP_SERVER_URL}/verifyToken`, {
+                    withCredentials: true // 쿠키를 포함하여 요청
+                });
+                console.log(response.data);
+            } catch (error) {
+                console.error('Token verification failed:', error);
+                navigate('/AdminLogin');
+            }
+        };
 
-    //     verifyToken();
-    // }, []);
+        verifyToken();
+    }, []);
 
 
     //blob으로 변경
@@ -107,7 +107,7 @@ const AdminPost = () => {
             pdfInputRef.current.value = '';
         }
         try {
-            const response = await axios.post('http://localhost:5000/upload', formData, {
+            const response = await axios.post(`${process.env.REACT_APP_SERVER_URL}/upload`, formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                 },

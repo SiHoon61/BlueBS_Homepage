@@ -38,9 +38,14 @@ const FixModal = ({ show, onClose, content }) => {
     const [deleteJPG, setDeleteJPG] = useState(false);
 
     useEffect(() => {
+        document.body.style.cssText = `
+            position: fixed; 
+            top: -${window.scrollY}px;
+            overflow-y: scroll;
+            width: 100%;`;
         const handleFetchPost = async () => {
             try {
-                const response = await axios.get(`http://localhost:5000/reference?id=${content[0]}`);
+                const response = await axios.get(`${process.env.REACT_APP_SERVER_URL}/reference?id=${content[0]}`);
                 console.log(response.data.current);
                 setPostTitle(response.data.current.title);
                 setPostWriter(response.data.current.writer);
@@ -52,6 +57,11 @@ const FixModal = ({ show, onClose, content }) => {
             }
         };
         handleFetchPost();
+        return () => {
+            const scrollY = document.body.style.top;
+            document.body.style.cssText = '';
+            window.scrollTo(0, parseInt(scrollY || '0', 10) * -1);
+        };
 
     }, [content[0]]);
 
@@ -91,13 +101,13 @@ const FixModal = ({ show, onClose, content }) => {
         setPostPDF(null);
 
         try {
-            const response = await axios.patch(`http://localhost:5000/fixref?id=${content[0]}`, formData, {
+            const response = await axios.patch(`${process.env.REACT_APP_SERVER_URL}/fixref?id=${content[0]}`, formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                 },
             });
             console.log(response.data);
-            alert('업로드 완료');
+            alert('수정이 완료되었습니다');
             onClose(content[0]);
         } catch (error) {
             console.error('Error fix file:', error);

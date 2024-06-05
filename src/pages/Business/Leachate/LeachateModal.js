@@ -23,7 +23,7 @@ const fadeOut = keyframes`
 `;
 
 const Modal = styled.div`
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.5);
     position: fixed;
     left: 0;
     top: 0;
@@ -54,11 +54,9 @@ const Content = styled.div`
     align-items: center;
     animation: ${props => props.show ? fadeIn : fadeOut} 0.2s forwards;
     max-height: 60%;
-    margin-top: 5%;
     @media (max-width: 1230px) {
         width: 70%;
         max-height: 60%;
-        margin-top: 6%;
     }
     @media (max-width: 600px) {
         width: 80%;
@@ -217,6 +215,11 @@ const Table = () => {
     const [returnValue, setReturnValue] = useState('');
 
     useEffect(() => {
+        document.body.style.cssText = `
+            position: fixed; 
+            top: -${window.scrollY}px;
+            overflow-y: scroll;
+            width: 100%;`;
         const updateValue = () => {
             if (window.innerWidth > 1600) {
                 setReturnValue('20px');
@@ -232,6 +235,9 @@ const Table = () => {
         window.addEventListener('resize', updateValue);
 
         return () => {
+            const scrollY = document.body.style.top;
+            document.body.style.cssText = '';
+            window.scrollTo(0, parseInt(scrollY || '0', 10) * -1);
             window.removeEventListener('resize', updateValue);
         };
     }, []);

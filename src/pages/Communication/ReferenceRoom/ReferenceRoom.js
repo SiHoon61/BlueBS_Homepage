@@ -37,7 +37,7 @@ const ReferenceRoom = () => {
     useEffect(() => {
         const handleFetchPost = async () => {
             try {
-                const response = await axios.get(`http://localhost:5000/reference?id=${refId}`);
+                const response = await axios.get(`${process.env.REACT_APP_SERVER_URL}/reference?id=${refId}`);
                 console.log(response.data.current);
                 setPosts(response.data.current);
                 setPostPre(response.data.previous);

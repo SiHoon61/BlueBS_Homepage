@@ -37,14 +37,26 @@ const AdminFix = () => {
     };
 
     useEffect(() => {
+        const verifyToken = async () => {
+            try {
+                const response = await axios.get(`${process.env.REACT_APP_SERVER_URL}/verifyToken`, {
+                    withCredentials: true // 쿠키를 포함하여 요청
+                });
+                console.log(response.data);
+            } catch (error) {
+                console.error('Token verification failed:', error);
+                navigate('/AdminLogin');
+            }
+        };
         const getPosts = async () => {
             try {
-                const response = await axios.get('http://localhost:5000/dataroom');
+                const response = await axios.get(`${process.env.REACT_APP_SERVER_URL}/dataroom`);
                 setPosts(response.data);
             } catch (error) {
                 console.error('Error fetching posts:', error);
             }
         };
+        verifyToken();
         getPosts();
     }, [modalData]);
 
@@ -54,7 +66,7 @@ const AdminFix = () => {
 
     const deleteHandler = async (props) => {
         try {
-            const response = await axios.delete(`http://localhost:5000/delete?id=${props}`);
+            const response = await axios.delete(`${process.env.REACT_APP_SERVER_URL}/delete?id=${props}`);
             alert('글이 삭제되었습니다');
             setModalData(props);
         } catch (error) {
