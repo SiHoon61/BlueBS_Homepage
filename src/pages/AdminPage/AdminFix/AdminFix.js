@@ -74,6 +74,20 @@ const AdminFix = () => {
         }
     }
 
+    // app.get('/dataroom', async (req, res) => {
+    //     try {
+    //         const { rows } = await sql`SELECT (id, title, date, jpg) FROM reference`;
+    //         const formattedRows = rows.map(row => ({
+    //             ...row,
+    //             jpg: row.jpg ? row.jpg.toString('base64') : null
+    //         }));
+    //         res.json(formattedRows);
+    //     } catch (err) {
+    //         console.error('Error retrieving data from database:', err);
+    //         res.status(500).json({ message: 'Internal server error' });
+    //     }
+    // });
+
     return (
         <>
             <NewsContainer>
