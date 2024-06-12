@@ -189,7 +189,7 @@ const AdminPost = () => {
 
             <PostContainer>
                 <Title>
-                    게시물 썸네일 미리보기
+                    게시물 사진 미리보기
                 </Title>
                 <DataBox>
                     <DataImgs

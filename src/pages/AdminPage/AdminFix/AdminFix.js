@@ -67,7 +67,7 @@ const AdminFix = () => {
     const deleteHandler = async (props) => {
         try {
             const response = await axios.delete(`${process.env.REACT_APP_SERVER_URL}/delete?id=${props}`);
-            alert('글이 삭제되었습니다');
+            alert( '글이 삭제되었습니다');
             setModalData(props);
         } catch (error) {
             console.error('Error fetching posts:', error);
