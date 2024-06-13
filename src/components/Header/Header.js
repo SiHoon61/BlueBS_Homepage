@@ -106,7 +106,7 @@ const Header = () => {
     const goInquiry = () => {
         navigate("/inquiry");
     }
-    
+
     //마우스 호버
     const [companyHovered, setCompanyHovered] = useState(false);
     const [technologyHovered, setTechnologyHovered] = useState(false);
@@ -198,7 +198,7 @@ const Header = () => {
                                 $width={140}>
                                 <TextTextBox onClick={goInquiry}>1:1 문의하기</TextTextBox>
                                 <TextTextBox onClick={goNewsRoom}>홍보자료실</TextTextBox>
-                                <TextTextBox onClick={goMap}>오시는길</TextTextBox>
+                                <TextTextBox onClick={goMap}>오시는 길</TextTextBox>
                             </HoverBox>
                         </IndexLI>
                     </IndexUL>
@@ -206,9 +206,9 @@ const Header = () => {
                 <EmptyBox />
                 {headerStyle === 'top' ? <WhiteMenu onClick={openModal}></WhiteMenu> : <BlackMenu onClick={openModal}></BlackMenu>}
             </Container>
-                <ModalPortal>
-                    <MenuModal isOpen={isModalOpen} onClose={closeModal} />
-                </ModalPortal>
+            <ModalPortal>
+                <MenuModal isOpen={isModalOpen} onClose={closeModal} />
+            </ModalPortal>
         </>
     );
 };
