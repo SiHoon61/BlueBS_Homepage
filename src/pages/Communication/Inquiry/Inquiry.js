@@ -125,7 +125,7 @@ const Inquiry = () => {
             },
             error => {
                 console.log(error.text);
-                alert("문의 접수에 실패했습니다.전화 주시면 감사드리겠습니다.");
+                alert("문의 접수에 실패했습니다. 전화 주시면 감사하겠습니다.");
             },
         );
     };
