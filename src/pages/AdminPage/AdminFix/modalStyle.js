@@ -87,7 +87,18 @@ export const InquiryForm = styled.div`
     display: flex;
     align-items: center;
     flex-direction: row;
-    width: 1000px;
+    width: 75%;
+    justify-content: space-between;
+    margin: 0 auto 30px; 
+    font-size: 20px;
+    font-family: var(--font-sansBold);  
+`
+
+export const InquiryInputForm = styled.div`
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 75%;
     margin: 0 auto 30px; 
     font-size: 20px;
     font-family: var(--font-sansBold);  
@@ -96,10 +107,10 @@ export const InquiryForm = styled.div`
 export const KeyText = styled.div`
     display: flex;
     align-items: center;
-    font-size: 24px;
+    justify-content: center;
+    font-size: 22px;
     font-family: var(--font-sansBold);  
-    width: 140px;  
-    margin-right: 50px;
+    width: 100px;  
 `
 
 export const InputBox = styled.input`
@@ -135,12 +146,26 @@ export const Submit = styled.div`
     font-family: var(--font-sansMedium); 
 `
 
-export const ExistFile = styled.div`
+export const InputText = styled.div`
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    font-family: var(--font-sansBold);  
+    width: 150px;  
+`
+
+export const InputContainer = styled.div`
     display: flex;
     flex-direction: row;
-    margin-left: 80px;
     align-items: center;
-    color: #434343;
+    width: 50%;
+`
+
+export const FileText = styled.div`
+    max-width: 320px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 `
 
 export const ExistImg = styled.img`

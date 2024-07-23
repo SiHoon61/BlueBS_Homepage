@@ -60,7 +60,7 @@ const AdminPost = () => {
             }
         };
 
-        verifyToken();
+        //verifyToken();
     }, []);
 
 

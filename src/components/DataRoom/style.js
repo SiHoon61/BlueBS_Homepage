@@ -1,39 +1,27 @@
 import styled from "styled-components";
 
 export const DataBox = styled.div`
-    display: flex;
+   display: flex;
     position: relative;
     flex-direction: column;
-    height: 400px;
-    width: 450px;
+    width: 32%;
+    aspect-ratio: 9 / 8;
     border-radius: 10px;
     margin-bottom: 50px;
     box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
-    margin: 0 15px 35px;
     &:hover{
         filter: brightness(70%);
     }
     transition: filter 0.3s;
     cursor: pointer;
-    @media (max-width: 1600px) {
-        width: 350px;
-        height: 350px;
-    }
-    @media (max-width: 1450px) {
-        width: 300px;
-        height: 300px;
-    }
     @media (max-width: 1250px) {
-        width: 45%;
+        width: 48%;
         height: auto;
     }
     @media (max-width: 750px) {
         margin: 0 10px 35px;
-    }
-    @media (max-width: 750px) {
         width: 100%;
     }
-
 `
 
 export const DataImgs = styled.img`

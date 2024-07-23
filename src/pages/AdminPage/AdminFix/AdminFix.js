@@ -11,6 +11,7 @@ import {
     DataDate,
     DataTitle,
     FixBox,
+    DateText,
     FixButton,
     DeleteButton,
 } from './style';
@@ -56,7 +57,7 @@ const AdminFix = () => {
                 console.error('Error fetching posts:', error);
             }
         };
-        verifyToken();
+        //verifyToken();
         getPosts();
     }, [modalData]);
 
@@ -106,7 +107,9 @@ const AdminFix = () => {
                             {list.title}
                         </DataTitle>
                         <DataDate>
-                            {list.date}
+                            <DateText>
+                                {list.date}
+                            </DateText>
                             <FixBox>
                                 <FixButton onClick={() => {
                                     handleOpenModal([list.id, list.jpg]);

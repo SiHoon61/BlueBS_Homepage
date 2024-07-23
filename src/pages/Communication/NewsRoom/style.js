@@ -57,6 +57,18 @@ export const MainContainer = styled.div`
     }
 `
 
+export const SubContainer = styled.div`
+    margin: 0 auto 150px auto;
+    display: flex;
+    width: 85%;
+    flex-direction: column;
+    align-items: flex-start;
+    @media (max-width: 600px) {
+        margin: 0 auto 50px auto;
+        max-width: 90%;
+    }
+`
+
 export const SubTitle = styled.div`
     margin-top: 10px;
     width: 1500px;
@@ -70,7 +82,14 @@ export const NewsContainer = styled.div`
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    gap: 1%;
     justify-content: flex-start;
+    @media (max-width: 1250px) {
+        gap: 3%;
+    }
+    @media (max-width: 750px) {
+        justify-content: center;
+    }
 `
 
 export const MedianLine = styled.hr`

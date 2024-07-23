@@ -44,7 +44,7 @@ export const DataImgs = styled.img`
 `
 
 export const DataTitle = styled.div`
-    margin: 10px 10px 30px 10px;
+    margin: 10px;
     height: 40px;
     font-size: 18px;
     font-family: var(--font-sansMedium);
@@ -52,20 +52,21 @@ export const DataTitle = styled.div`
 
 export const DataDate = styled.div`
     display: flex;
-    position: absolute;
+    justify-content: space-between;
     color: #717171;
     font-size: 14px;
     bottom: 10px;
     left: 10px;
 `
 
+export const DateText = styled.div`
+    margin: 0 10px;
+`
+
 export const FixBox = styled.div`
     display: flex;
+    margin: 0 10px;
     flex-direction: row;
-    margin-left: 200px;
-    @media (max-width: 1450px) {
-    margin-left: 50px;
-    }
 `
 
 export const FixButton = styled.div`

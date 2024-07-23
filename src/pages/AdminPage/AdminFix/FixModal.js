@@ -14,11 +14,14 @@ import {
     Title,
     PostContainer,
     InquiryForm,
+    InquiryInputForm,
+    FileText,
     KeyText,
+    InputText,
     InputBox,
     BodyTextarea,
     Submit,
-    ExistFile,
+    InputContainer,
     DeleteButton,
 } from './modalStyle';
 
@@ -161,40 +164,43 @@ const FixModal = ({ show, onClose, content }) => {
                             />
                         </InquiryForm>
 
-                        <InquiryForm>
-                            <KeyText>
-                                첨부파일변경(PDF)
-                            </KeyText>
-                            <input
-                                type="file"
-                                name="pdf"
-                                multiple
-                                onChange={handleFileChange}
-                            />
-                            <ExistFile>
-                                [기존 파일]: {existPDF ? existPDF : '없음'}
+                        <InquiryInputForm>
+                            <InputContainer>
+                                <InputText>
+                                    첨부파일변경(PDF)
+                                </InputText>
+                                <input
+                                    type="file"
+                                    name="pdf"
+                                    multiple
+                                    onChange={handleFileChange}
+                                />
+                            </InputContainer>       
+                            <InputContainer>
+                                <FileText>
+                                    [기존 파일]: {existPDF ? existPDF : '없음'}
+                                </FileText>
                                 <DeleteButton onClick={() => {
                                     setExistPDF('');
                                     setKeepPDF('');
                                 }}>
                                     기존 파일 삭제
                                 </DeleteButton>
-                            </ExistFile>
-
-
-                        </InquiryForm>
-                        <InquiryForm>
-                            <KeyText>
-                                사진 변경
-                            </KeyText>
-                            <input
-                                type="file"
-                                name="jpg"
-                                multiple
-                                onChange={(e) => handleFileChange(e)}
-                            />
-
-                            <ExistFile>
+                            </InputContainer>
+                        </InquiryInputForm>
+                        <InquiryInputForm>
+                            <InputContainer>
+                                <InputText>
+                                    사진 변경
+                                </InputText>
+                                <input
+                                    type="file"
+                                    name="jpg"
+                                    multiple
+                                    onChange={(e) => handleFileChange(e)}
+                                />
+                            </InputContainer>
+                            <InputContainer>
                                 [기존 사진] <ExistImg src={deleteJPG ? blackLogo : `data:image/jpeg;base64,${content[1]}`
                                 }
                                     alt="dataimg" />
@@ -204,8 +210,8 @@ const FixModal = ({ show, onClose, content }) => {
                                 }}>
                                     기존 사진 삭제
                                 </DeleteButton>
-                            </ExistFile>
-                        </InquiryForm>
+                            </InputContainer>
+                        </InquiryInputForm>
 
                         <InquiryForm>
                             <Submit onClick={() => {

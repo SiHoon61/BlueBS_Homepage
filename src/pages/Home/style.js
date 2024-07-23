@@ -274,7 +274,8 @@ export const NewsContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 90%;
+    margin: auto;
     overflow: hidden;
 `
 
@@ -288,15 +289,18 @@ export const NewsText = styled.div`
 `
 
 export const NewsBox = styled.div`
+    margin-top: 30px;
     display: flex;
     flex-wrap: wrap;
-    width: 1500px;
-    justify-content: space-between;
-    @media (max-width: 1600px) {
-        width: 80%;
+    width: 100%;
+    gap: 1%;
+    justify-content: center;
+    @media (max-width: 1250px) {
+        justify-content: flex-start;
+        gap: 3%;
     }
-    @media (max-width: 1600px) {
-        width: 90%;
+    @media (max-width: 750px) {
+        justify-content: center;
     }
 `
 

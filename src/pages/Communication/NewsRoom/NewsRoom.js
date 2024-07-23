@@ -6,14 +6,12 @@ import {
     TitleMainText,
     MainContainer,
     NewsContainer,
+    SubContainer,
     MedianLine,
 } from './style';
 
 import {
-    SubColumnContainer,
-    SubLargeTitle,
     SubTitle,
-    FullSubContent,
 } from '../../../components/Body/bodyStyle';
 
 //News & Data
@@ -32,23 +30,23 @@ const NewsRoom = () => {
                 </TitleTextBox>
             </TitleBar>
             <MainContainer>
-                <SubColumnContainer>
+                <SubContainer>
                     <SubTitle>
                         최신뉴스
                     </SubTitle>
                     <NewsContainer>
                         <NewsBox/>
                     </NewsContainer>
-                </SubColumnContainer>
+                </SubContainer>
                 <MedianLine/>
-                <SubColumnContainer>
+                <SubContainer>
                     <SubTitle>
                         자료실
                     </SubTitle>
                     <NewsContainer>
                         <DataRoom />
                     </NewsContainer>
-                </SubColumnContainer>
+                </SubContainer>
             </MainContainer>
         </>
     );
