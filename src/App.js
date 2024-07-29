@@ -35,6 +35,7 @@ import AdminHeader from './pages/AdminPage/AdminHeader/AdminHeader';
 import AdminLogin from './pages/AdminPage/AdminLogin';
 import AdminPost from './pages/AdminPage/AdminPost/AdminPost';
 import AdminFix from './pages/AdminPage/AdminFix/AdminFix';
+import AdminTest from './pages/AdminPage/AdminTest/AdminTest';
 
 import ScrollToTop from './Util/ScrollToTop';
 
@@ -49,7 +50,7 @@ const DefaultLayout = ({ children }) => (
 
 const AdminLayout = ({ children }) => (
   <>
-    <AdminHeader/>
+    <AdminHeader />
     <div>{children}</div>
   </>
 );
@@ -91,6 +92,7 @@ function App() {
           <Route path="/AdminLogin" element={<AdminLogin />}></Route>
           <Route path="/AdminPage/AdminPost" element={<AdminLayout><AdminPost /></AdminLayout>}></Route>
           <Route path="/AdminPage/AdminFix" element={<AdminLayout><AdminFix /></AdminLayout>}></Route>
+          <Route path="/AdminPage/AdminTest" element={<AdminLayout><AdminTest /></AdminLayout>}></Route>
         </Routes>
       </Router>
     </>
