@@ -85,7 +85,7 @@ const ReferenceRoom = () => {
                         첨부파일
                         <AttachedFile
                             href={`data:application/pdf;base64,${posts.pdf}`}
-                            download={`${posts.pdfName}.pdf`}
+                            download={`${posts.pdfName}`}
                         >
                             {posts.pdfName}
                         </AttachedFile>
