@@ -15,6 +15,7 @@ import {
     BottomHr,
     BodyText,
     AttachedBox,
+    AttachedText,
     AttachedFile,
     NavigateBox,
     NavigateButton,
@@ -81,19 +82,24 @@ const ReferenceRoom = () => {
                     <BodyText>
                         {posts.content}
                     </BodyText>
-                    {posts.pdfName !== "" ? <AttachedBox>
-                        첨부파일
-                        <AttachedFile
-                            href={`data:application/pdf;base64,${posts.pdf}`}
-                            download={`${posts.pdfName}`}
-                        >
-                            {posts.pdfName}
-                        </AttachedFile>
-                    </AttachedBox> : <></>}
+                    {posts.pdfName !== "" ?
+                        <AttachedBox>
+                            <AttachedText>
+                                첨부파일
+                            </AttachedText>
+                            <AttachedFile
+                                href={`data:application/pdf;base64,${posts.pdf}`}
+                                download={`${posts.pdfName}`}
+                            >
+                                {posts.pdfName}
+                            </AttachedFile>
+                        </AttachedBox> : <></>}
                     <BodyHr />
                     <NavigateBox>
                         <NavigateButton>
-                            이전 글
+                            <AttachedText>
+                                이전 글
+                            </AttachedText>
                             {postPre.title !== null ?
                                 <NavigateText onClick={() => {
                                     window.scrollTo(0, 0);
@@ -107,7 +113,9 @@ const ReferenceRoom = () => {
                         </NavigateButton>
                         <BottomHr />
                         <NavigateButton>
-                            다음 글
+                            <AttachedText>
+                                다음 글
+                            </AttachedText>
                             {postNext.title !== null ?
                                 <NavigateText onClick={() => {
                                     window.scrollTo(0, 0);

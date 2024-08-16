@@ -40,8 +40,11 @@ export const DataTitle = styled.div`
         font-size: 16px;
     }
     @media (max-width: 1000px) {
+        margin: 5px 10px 30px 10px;
         font-size: 14px;
+        line-height: 18px;
     }
+    
 `
 
 export const DataDate = styled.div`

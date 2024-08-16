@@ -64,17 +64,16 @@ export const BodyContainer = styled.div`
     flex-direction: column;
     align-items: flex-start;
     @media (max-width: 1600px) {
-        max-width: 80%;
+        width: 80%;
         margin: 0 auto 100px auto;
     }
     @media (max-width: 600px) {
         margin: 0 auto 50px auto;
-        max-width: 90%;
+        width: 95%;
     }
 `
 
 export const BodyHr = styled.hr`
-
     width: 100%;
     border: 0;
     height: 1px;
@@ -88,13 +87,23 @@ export const TopTitle = styled.div`
     font-size: 32px;
     font-family: var(--font-sansMedium);
     padding: 30px 0 30px 25px;
-
+    @media (max-width: 1000px) {
+        font-size: 28px;
+    }
+    @media (max-width: 600px) {
+        font-size: 24px;
+        padding: 15px 0px 15px 20px;
+    }
 `
 
 export const TopSubTitle = styled.div`
     margin-top: 25px;
     font-size: 16px;
     font-family: var(--font-sansMedium);
+    @media (max-width: 600px) {
+        margin-top: 15px;
+        font-size: 14px;
+    }
 `
 
 export const GreyTitle = styled.span`
@@ -105,7 +114,6 @@ export const GreyTitle = styled.span`
 `
 
 export const BottomHr = styled.hr`
-
     width: 100%;
     border: 0;
     height: 1px;
@@ -115,25 +123,34 @@ export const BottomHr = styled.hr`
 export const BodyText = styled.div`
     font-size: 18px;
     font-family: var(--font-sansRegular);
-    padding: 20px;
-    padding-top: 30px;
-    margin-bottom: 30px;
+    padding: 20px 15px 15px;
     width: 100%;
     box-sizing: border-box;
     min-height: 300px;
+    @media (max-width: 600px) {
+        font-size: 16px;
+        line-height: 28px;
+        padding: 20px 15px 15px;
+    }
+
 `
 
 export const AttachedBox = styled.div`
     width: 100%;
     height: 40px;
     background-color: #F0F0F0;
-    padding-left: 20px;
+    padding: 5px 20px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     box-sizing: border-box;
     font-family: var(--font-sansMedium);
 `
+
+export const AttachedText = styled.span`
+    white-space: nowrap
+`
+
 export const AttachedFile = styled.a`
     margin-left: 15px;
     font-family: var(--font-sansRegular);
